@@ -18,8 +18,18 @@ final class AuthenticationManager: ObservableObject {
     @MainActor func login(username: String, password: String) async {
         // let result = await api.login()
         
-        try! storage.store(true, for: isLoggedInKey)
-        
         isLoggedIn = true
+        
+        updateStorage()
+    }
+    
+    @MainActor func logout() async {
+        isLoggedIn = false
+        
+        updateStorage()
+    }
+    
+    private func updateStorage() {
+        try! storage.store(isLoggedIn, for: isLoggedInKey)
     }
 }

@@ -13,6 +13,14 @@ struct BannerView: View {
         let title: String
         let type: MessageType
         let action: Action?
+        
+        static func success(_ title: String) -> Self {
+            Self(title: title, type: .success)
+        }
+        
+        static func error(_ error: String, action: BannerView.Action? = nil) -> Self {
+            Self(title: error, type: .error, action: action)
+        }
     }
     
     enum MessageType {

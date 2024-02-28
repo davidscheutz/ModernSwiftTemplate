@@ -9,6 +9,9 @@ struct ListView: View, BindableView {
     
     var body: some View {
         VStack {
+            Button("Logout") { handler(.logout) }
+                .frame(maxWidth: .infinity, alignment: .trailing)
+            
             Text("Your Todo's 📋")
                 .font(.title)
                 .foregroundStyle(Color.textPrimary)
@@ -22,7 +25,7 @@ struct ListView: View, BindableView {
                 .clickable { handler(.openTodo(id: todo.id)) }
             }
             
-            Spacer()
+            PrimaryButton(title: "Add Todo") { handler(.createTodo) }
         }
         .padding()
     }

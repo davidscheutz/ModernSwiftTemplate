@@ -18,6 +18,7 @@ struct Todo: Decodable, Identifiable {
 
 /// @Event(ListView)
 enum ListEvent {
+    case createTodo
     case openTodo(id: String)
     case logout
 }

@@ -4,22 +4,30 @@ import Foundation
 /// @Loop(ListState, ListEvent)
 final class ListLoop: GeneratedBaseListLoop {
     private let api: TodoApi
-    private let bannerManager: BannerManager
+    private let authManager: AuthenticationManager
+    private let navigation: Navigation
     
-    init(api: TodoApi, bannerManager: BannerManager) {
+    init(api: TodoApi, authManager: AuthenticationManager, navigation: Navigation) {
         self.api = api
-        self.bannerManager = bannerManager
+        self.authManager = authManager
+        self.navigation = navigation
         super.init(initial: State.initial)
         
         loadTodos()
     }
     
-    override func openTodo(state: State, id: String) {
-        
+    override func openTodo(id: String) {
+        navigation.openDetail(with: id)
     }
     
-    override func logout(state: State) {
-        
+    override func logout() {
+        Task {
+            await authManager.logout()
+        }
+    }
+    
+    override func createTodo() {
+        navigation.openCreateTodo()
     }
     
     private func loadTodos() {

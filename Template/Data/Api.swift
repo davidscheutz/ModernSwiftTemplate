@@ -1,29 +1,108 @@
 import Foundation
 
-protocol UserApi {}
+protocol UserApi {
+    func login(username: String, password: String) async throws -> Bool
+    func logout() async throws
+}
 
 protocol TodoApi {
     func todos() async throws -> [Todo]
+    func create(with title: String, description: String?) async throws -> Todo
+    func todo(for id: String) async throws -> Todo
 }
 
 protocol Api: UserApi, TodoApi {}
 
-/// @Singleton
-struct HttpEngine {}
-
 /// @Singleton(types: [Api, UserApi, TodoApi])
 final class ApiImpl: Api {
     
-    enum ApiError: Error {}
+    enum ApiError: Error {
+        case noNetwork
+        case decodingError
+        case unknwon
+    }
     
-    init(httpEngine: HttpEngine) {}
+    init(httpEngine: HttpEngine) {
+        self.httpEngine = httpEngine
+    }
+    
+    private let baseUrl = "https://myserver.com/api/v1"
+    private let httpEngine: HttpEngine
+    
+    // MARK: - UserApi
+    
+    func login(username: String, password: String) async throws -> Bool {
+        try await httpEngine.execute(URLRequest(url: .init(string: baseUrl + "/login")!))
+    }
+    
+    func logout() async throws {
+        try await httpEngine.execute(URLRequest(url: .init(string: baseUrl + "/logout")!))
+    }
+    
+    // MARK: - TodoApi
     
     func todos() async throws -> [Todo] {
-//        try await httpEngine.execute(.get, url: "\(baseUrl)/todos")
-        [
-            .init(id: "1", createdAt: .now, completed: false, text: "Master", updatedAt: nil),
-            .init(id: "2", createdAt: .now, completed: false, text: "Relax", updatedAt: nil),
-            .init(id: "3", createdAt: .now, completed: false, text: "Enjoy", updatedAt: nil)
-        ]
+        try await httpEngine.execute(URLRequest(url: .init(string: baseUrl + "/todos")!))
+    }
+    
+    func create(with title: String, description: String?) async throws -> Todo {
+        try await httpEngine.execute(URLRequest(url: .init(string: baseUrl + "/todo")!))
+    }
+    
+    func todo(for id: String) async throws -> Todo {
+        try await httpEngine.execute(URLRequest(url: .init(string: baseUrl + "/todos/\(id)")!))
+    }
+    
+    // MARK: - Helper
+    
+    // TODO: URLRequest builder (currently missing HTTP method, headers, body etc.)
+    // https://betterprogramming.pub/building-urlrequests-with-ease-f0136cdd56c3
+}
+
+protocol HttpEngine {
+    func execute<T: Decodable>(_ request: URLRequest) async throws -> T
+    func execute(_ request: URLRequest) async throws
+}
+
+struct HttpEngineImpl: HttpEngine {
+    func execute(_ request: URLRequest) async throws {
+        fatalError("Not implemented")
+    }
+    
+    func execute<T: Decodable>(_ request: URLRequest) async throws -> T {
+        fatalError("Not implemented")
+    }
+}
+
+struct HttpEngineMock: HttpEngine {
+    
+    private let todos = [
+        Todo(id: "1", createdAt: .now, completed: false, text: "Master", updatedAt: nil),
+        Todo(id: "2", createdAt: .now, completed: false, text: "Relax", updatedAt: nil),
+        Todo(id: "3", createdAt: .now, completed: false, text: "Enjoy", updatedAt: nil)
+    ]
+    
+    func execute<T: Decodable>(_ request: URLRequest) async throws -> T {
+        switch T.self {
+        case is [Todo].Type:
+            return todos as! T
+        case is Todo.Type:
+            if let id = Int(request.url!.absoluteString.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()) {
+                // get by ID
+                guard let todo = todos.first(where: { $0.id == "\(id)" }) else {
+                    throw NSError(domain: "No todo found for ID: \(id)", code: 404)
+                }
+                return todo as! T
+            } else {
+                // create
+                // TODO: use values from request body
+                return Todo(id: UUID().uuidString, createdAt: .now, completed: false, text: "Mock Todo", updatedAt: nil) as! T
+            }
+        default: throw NSError(domain: "No mock registered for type: \(T.self)", code: 404)
+        }
+    }
+    
+    func execute(_ request: URLRequest) async throws {
+        // nothing to do here
     }
 }

@@ -2,6 +2,7 @@ import SwiftUI
 import SwiftUDF
 import SwiftEvolution
 
+/// @Bind(DetailLoop)
 struct DetailView: View, BindableView {
     
     let state: State

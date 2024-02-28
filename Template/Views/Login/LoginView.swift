@@ -28,7 +28,7 @@ struct LoginView: View, BindableView {
 }
 
 #Preview("Initial") {
-    LoginView(state: .initial, handler: { _ in })
+    LoginView.preview(.initial)
 }
 
 #Preview("Loading") {
@@ -37,9 +37,9 @@ struct LoginView: View, BindableView {
         .update("my_username", for: .username)
         .update("secret", for: .password)
     
-    return LoginView(state: state, handler: { _ in })
+    return LoginView.preview(state)
 }
 
 #Preview("Input Error") {
-    LoginView(state: .initial.update(error: "Empty input", for: .username), handler: { _ in })
+    LoginView.preview(.initial.update(error: "Empty input", for: .username))
 }

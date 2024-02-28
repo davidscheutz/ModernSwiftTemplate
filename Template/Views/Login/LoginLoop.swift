@@ -12,28 +12,30 @@ final class LoginLoop: GeneratedBaseLoginLoop {
         super.init(initial: .initial)
     }
     
-    override func inputChanged(state: State, inputField1: Input.Field, string2: String) {
-        guard !state.isLoading else { return }
+    override func inputChanged(inputField1: Input.Field, string2: String) {
+        guard !currentState.isLoading else { return }
         
-        update(state.update(string2, for: inputField1))
+        update { $0.update(string2, for: inputField1) }
     }
     
-    override func login(state: State) {
+    override func login() {
+        let state = currentState
+        
         guard !state.isLoading else { return }
         
         let username = state.inputs.value(for: .username)
         let password = state.inputs.value(for: .password)
         
-        let updatedInputs = state.inputs
-            .validate(field: .username) { "Username can't be empty".take(if: $0.isEmpty) }
-            .validate(field: .password) { "Password can't be empty".take(if: $0.isEmpty) }
-        
-        guard !updatedInputs.hasErrors else {
-            update(state.copy(inputs: updatedInputs))
-            return
-        }
-        
-        update(state.copy(inputs: updatedInputs, isLoading: true))
+//        let updatedInputs = state.inputs
+//            .validate(field: .username) { "Username can't be empty".take(if: $0.isEmpty) }
+//            .validate(field: .password) { "Password can't be empty".take(if: $0.isEmpty) }
+//        
+//        guard !updatedInputs.hasErrors else {
+//            update(state.copy(inputs: updatedInputs))
+//            return
+//        }
+//        
+//        update(state.copy(inputs: updatedInputs, isLoading: true))
         
         Task {
             await authenticationManager.login(username: username, password: password)
