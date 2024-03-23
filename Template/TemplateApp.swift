@@ -1,5 +1,6 @@
 import SwiftUI
 import InfiniteNavigation
+import Core
 
 @main
 struct TemplateApp: App {
@@ -18,19 +19,25 @@ struct TemplateApp: App {
     
     var body: some Scene {
         WindowGroup {
-            InfiniteNavigation.create(
-                navAction: navigation.publisher,
-                viewBuilder: navigation.build(_:)
-            ) {
-                // TODO: test changes on iOS 15
-                if authenticationManager.isLoggedIn {
-                    ListView.create(using: ListLoop.create())
-                } else {
-                    LoginView.create(using: LoginLoop.create())
-                }
+            if authenticationManager.isLoggedIn {
+                MainNavigation.start(Dependencies.container)
+            } else {
+                OnboardingNavigation.start(Dependencies.container)
             }
-            .animation(.easeInOut, value: authenticationManager.isLoggedIn)
-            .banner()
+            
+//            InfiniteNavigation.create(
+//                navAction: navigation.publisher,
+//                viewBuilder: navigation.build(_:)
+//            ) {
+//                // TODO: test changes on iOS 15
+//                if authenticationManager.isLoggedIn {
+//                    MainNavigation.start(Dependencies.container)
+//                } else {
+//                    OnboardingNavigation.start(Dependencies.container)
+//                }
+//            }
+//            .animation(.easeInOut, value: authenticationManager.isLoggedIn)
+//            .banner()
         }
     }
 }

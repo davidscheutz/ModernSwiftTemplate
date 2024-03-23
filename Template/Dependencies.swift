@@ -1,5 +1,6 @@
 import Foundation
 import SwiftDependencyContainer
+import Core
 
 struct Dependencies: AutoSetup {
     let container = DependencyContainer()

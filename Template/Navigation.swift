@@ -31,11 +31,12 @@ final class Navigation {
     
     @ViewBuilder
     func build(_ destination: Destination) -> some View {
-        switch destination {
-        case .create:
-            CreateView.create(using: CreateLoop.create())
-        case .todo(let id):
-            DetailView.create(using: DetailLoop.create(id: id))
-        }
+        EmptyView()
+//        switch destination {
+//        case .create:
+//            CreateView.create(using: CreateLoop.create())
+//        case .todo(let id):
+//            DetailView.create(using: DetailLoop.create(id: id))
+//        }
     }
 }

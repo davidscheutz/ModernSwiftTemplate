@@ -1,31 +1,15 @@
 {
+  "originHash" : "ed1e599d1e95f481d7da31d735dc61a395684623f61947f00751b0fbc508ee53",
   "pins" : [
-    {
-      "identity" : "swiftcopy",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/davidscheutz/SwiftCopy.git",
-      "state" : {
-        "revision" : "183e45dca4e0bd3bacc9d1641d42e8041ac204ad",
-        "version" : "1.0.1"
-      }
-    },
     {
       "identity" : "swiftevolution",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/davidscheutz/SwiftEvolution.git",
       "state" : {
+        "branch" : "main",
         "revision" : "2e6e37e4151ff4fee9bef1969eac44bc702d1be2"
-      }
-    },
-    {
-      "identity" : "swiftgenplugin",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SwiftGen/SwiftGenPlugin",
-      "state" : {
-        "revision" : "879b85a470cacd70c19e22eb7e11a3aed66f4068",
-        "version" : "6.6.2"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
