@@ -3,7 +3,6 @@ import SwiftEvolution
 import Core
 
 /// @Factory
-
 /// @Loop(LoginState, LoginEvent)
 final class LoginLoop: GeneratedBaseLoginLoop {
     

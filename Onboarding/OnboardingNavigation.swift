@@ -4,6 +4,6 @@ import SwiftDependencyContainer
 
 public final class OnboardingNavigation {
     public static func start(_ container: DependencyContainer) -> some View {
-        LoginView.create(using: LoginLoop.init(authenticationManager: try! container.resolve()))
+        LoginView.create(using: LoginLoop.create(container))
     }
 }
