@@ -1,6 +1,7 @@
 import SwiftUI
 import Core
 import Onboarding
+import Todos
 
 @main
 struct TemplateApp: App {
@@ -17,9 +18,9 @@ struct TemplateApp: App {
         WindowGroup {
             ZStack {
                 if authenticationManager.isLoggedIn {
-                    MainNavigation.start(Dependencies.container)
+                    Todos.start(Dependencies.container)
                 } else {
-                    OnboardingNavigation.start(Dependencies.container)
+                    Onboarding.start(Dependencies.container)
                 }
             }
             .animation(.easeInOut, value: authenticationManager.isLoggedIn)

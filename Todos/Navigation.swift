@@ -3,7 +3,7 @@ import Combine
 import InfiniteNavigation
 
 /// @Singleton
-final class Navigation {
+public final class Navigation {
     enum Destination: Hashable {
         case create
         case todo(id: String)

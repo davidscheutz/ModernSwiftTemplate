@@ -4,7 +4,7 @@ import SwiftUDF
 import SwiftDependencyContainer
 import InfiniteNavigation
 
-public final class MainNavigation {
+public final class Todos {
     public static func start(_ container: DependencyContainer) -> some View {
         ListView.create(using: ListLoop.create(container))
     }
