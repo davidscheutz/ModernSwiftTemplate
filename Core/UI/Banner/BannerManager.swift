@@ -55,6 +55,8 @@ public final class BannerManager {
     
     public static let defaultDismissDuration: TimeInterval = 2
     
+    public init() {}
+    
 //    @Published private(set) var config: BannerView.Config?
     private let config = CurrentValueSubject<Config?, Never>(nil)
     private var subscriptionsCount = 0

@@ -6,12 +6,12 @@ import Core
 final class ListLoop: GeneratedBaseListLoop {
     private let todosService: TodosService
     private let authManager: AuthenticationManager
-//    private let navigation: Navigation
+    private let navigation: Navigation
     
-    init(todosService: TodosService, authManager: AuthenticationManager) { //, navigation: Navigation
+    init(todosService: TodosService, authManager: AuthenticationManager, navigation: Navigation) {
         self.todosService = todosService
         self.authManager = authManager
-//        self.navigation = navigation
+        self.navigation = navigation
         super.init(initial: State.initial)
         
         loadTodos()

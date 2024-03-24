@@ -1,9 +1,9 @@
 import SwiftUI
-import SwiftUDF
+import Core
 import SwiftDependencyContainer
 
 public final class Onboarding {
-    public static func start(_ container: DependencyContainer) -> some View {
-        LoginView.create(using: LoginLoop.create(container))
+    public static func start(_ resolver: Resolvable) -> some View {
+        LoginView.create(using: LoginLoop.create(using: resolver))
     }
 }

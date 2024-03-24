@@ -13,6 +13,8 @@ public final class Navigation {
     
     private let navigateTo = PassthroughSubject<NavAction<Destination>, Never>()
     
+    public init() {}
+    
     func openCreateTodo() {
         navigateTo.send(.show(.sheet(.create)))
     }

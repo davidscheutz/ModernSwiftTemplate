@@ -1,12 +1,11 @@
-import Foundation
 import SwiftUI
-import SwiftUDF
 import SwiftDependencyContainer
 import InfiniteNavigation
+import Core
 
 public final class Todos {
-    public static func start(_ container: DependencyContainer) -> some View {
-        ListView.create(using: ListLoop.create(container))
+    public static func start(_ resolver: Resolvable) -> some View {
+        ListView.create(using: ListLoop.create(using: resolver))
     }
 }
 

@@ -17,10 +17,12 @@ struct TemplateApp: App {
     var body: some Scene {
         WindowGroup {
             ZStack {
-                if authenticationManager.isLoggedIn {
-                    Todos.start(Dependencies.container)
-                } else {
-                    Onboarding.start(Dependencies.container)
+                Dependencies.apply {
+                    if authenticationManager.isLoggedIn {
+                        Todos.start($0)
+                    } else {
+                        Onboarding.start($0)
+                    }
                 }
             }
             .animation(.easeInOut, value: authenticationManager.isLoggedIn)

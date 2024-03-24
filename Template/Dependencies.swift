@@ -2,7 +2,7 @@ import Foundation
 import SwiftDependencyContainer
 import Core
 
-struct Dependencies: AutoSetup {
+struct Dependencies: AutoSetup, Resolvable {
     let container = DependencyContainer()
     
     func override(_ container: DependencyContainer) throws {
