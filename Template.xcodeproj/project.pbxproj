@@ -18,7 +18,6 @@
 		B927F0512BAB9AB2001D88BB /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9C78D2B8403BB00B15BA8 /* Input.swift */; };
 		B927F0522BAB9AB2001D88BB /* Inputable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9C7C52B85370800B15BA8 /* Inputable.swift */; };
 		B927F0532BAB9AB2001D88BB /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9C78F2B84046400B15BA8 /* TextInput.swift */; };
-		B927F0552BAB9AFC001D88BB /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B927F0542BAB9AFC001D88BB /* SwiftEvolution */; };
 		B93AF5232BACC89200204C06 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B998391C2B69B701003E87A9 /* BannerView.swift */; };
 		B93AF5242BACC89200204C06 /* BannerView+Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9268E9F2B6C637100E8F15F /* BannerView+Present.swift */; };
 		B93AF5252BACC89200204C06 /* BannerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9268E9D2B6C587E00E8F15F /* BannerManager.swift */; };
@@ -53,6 +52,7 @@
 		B9858C2E2BAF378F00DE5BF7 /* CreateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B645A12B8EDDD700FBE7CF /* CreateModels.swift */; };
 		B9858C2F2BAF37A800DE5BF7 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9C7D32B8562CC00B15BA8 /* Navigation.swift */; };
 		B9858C332BAF39E200DE5BF7 /* InfiniteNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = B9858C322BAF39E200DE5BF7 /* InfiniteNavigation */; };
+		B9858C382BB104A100DE5BF7 /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B9858C372BB104A100DE5BF7 /* SwiftEvolution */; };
 		B9908E222B7B1418009D1309 /* SwiftDependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = B9908E212B7B1418009D1309 /* SwiftDependencyContainer */; };
 		B99816E72BAB9B6400349606 /* Completion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99816E42BAB9B6400349606 /* Completion.swift */; };
 		B99816E82BAB9B6400349606 /* LoadableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99816E52BAB9B6400349606 /* LoadableData.swift */; };
@@ -201,8 +201,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9858C382BB104A100DE5BF7 /* SwiftEvolution in Frameworks */,
 				B93AF52E2BACDF3400204C06 /* SwiftDependencyContainer in Frameworks */,
-				B927F0552BAB9AFC001D88BB /* SwiftEvolution in Frameworks */,
 				B998170B2BABD2BC00349606 /* SwiftCopy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,14 +296,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		B90509C32B67092000D3DE33 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				B9D9C77B2B830D9300B15BA8 /* Login */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		B927F0452BAB9A8E001D88BB /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,7 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				B93AF52B2BACD67A00204C06 /* Onboarding.swift */,
-				B90509C32B67092000D3DE33 /* Views */,
+				B9D9C77B2B830D9300B15BA8 /* Login */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -535,9 +527,9 @@
 			);
 			name = Core;
 			packageProductDependencies = (
-				B927F0542BAB9AFC001D88BB /* SwiftEvolution */,
 				B998170A2BABD2BC00349606 /* SwiftCopy */,
 				B93AF52D2BACDF3400204C06 /* SwiftDependencyContainer */,
+				B9858C372BB104A100DE5BF7 /* SwiftEvolution */,
 			);
 			productName = Core;
 			productReference = B927F0442BAB9A8E001D88BB /* Core.framework */;
@@ -638,12 +630,12 @@
 			);
 			mainGroup = B905098B2B6708EC00D3DE33;
 			packageReferences = (
-				B90509C72B6709E000D3DE33 /* XCRemoteSwiftPackageReference "SwiftEvolution" */,
 				B99839182B69AFB1003E87A9 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/swift-unidirectional-data-flow" */,
 				B9908E1B2B7538D5009D1309 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftCodeGen" */,
 				B9D9C7742B7FB39100B15BA8 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftDependencyContainer" */,
 				B936DCAF2B8E89160087AA5F /* XCLocalSwiftPackageReference "../../../../Projects/DSC/InfiniteNavigation" */,
 				B93AF5102BABE62B00204C06 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftCopy" */,
+				B9858C362BB104A100DE5BF7 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftEvolution" */,
 			);
 			productRefGroup = B90509952B6708EC00D3DE33 /* Products */;
 			projectDirPath = "";
@@ -991,8 +983,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -1031,8 +1023,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -1395,6 +1387,10 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../../../../Projects/DSC/SwiftCopy;
 		};
+		B9858C362BB104A100DE5BF7 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftEvolution" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../../../Projects/DSC/SwiftEvolution;
+		};
 		B9908E1B2B7538D5009D1309 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftCodeGen" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../../../../Projects/DSC/SwiftCodeGen;
@@ -1413,23 +1409,7 @@
 		};
 /* End XCLocalSwiftPackageReference section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		B90509C72B6709E000D3DE33 /* XCRemoteSwiftPackageReference "SwiftEvolution" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/davidscheutz/SwiftEvolution.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		B927F0542BAB9AFC001D88BB /* SwiftEvolution */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B90509C72B6709E000D3DE33 /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
-			productName = SwiftEvolution;
-		};
 		B93AF5132BABE72B00204C06 /* SwiftCopyCodeGeneratorPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B93AF5102BABE62B00204C06 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftCopy" */;
@@ -1529,6 +1509,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B936DCAF2B8E89160087AA5F /* XCLocalSwiftPackageReference "../../../../Projects/DSC/InfiniteNavigation" */;
 			productName = InfiniteNavigation;
+		};
+		B9858C372BB104A100DE5BF7 /* SwiftEvolution */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftEvolution;
 		};
 		B9908E212B7B1418009D1309 /* SwiftDependencyContainer */ = {
 			isa = XCSwiftPackageProductDependency;
