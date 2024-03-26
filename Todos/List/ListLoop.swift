@@ -18,7 +18,7 @@ final class ListLoop: GeneratedBaseListLoop {
     }
     
     override func openTodo(id: String) {
-//        navigation.openDetail(with: id)
+        navigation.openDetail(with: id)
     }
     
     override func logout() {
@@ -28,7 +28,7 @@ final class ListLoop: GeneratedBaseListLoop {
     }
     
     override func createTodo() {
-//        navigation.openCreateTodo()
+        navigation.openCreateTodo()
     }
     
 //    private let mutableState: CurrentValueSubject<State, Never>

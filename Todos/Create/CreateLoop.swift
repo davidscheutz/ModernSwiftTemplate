@@ -5,12 +5,12 @@ import Core
 /// @Loop(CreateState, CreateEvent)
 final class CreateLoop: GeneratedBaseCreateLoop {
     private let api: TodoApi
-//    private let navigation: Navigation
+    private let navigation: Navigation
     private let bannerManager: BannerManager
     
-    init(api: TodoApi, bannerManager: BannerManager) { //, navigation: Navigation
+    init(api: TodoApi, bannerManager: BannerManager, navigation: Navigation) {
         self.api = api
-//        self.navigation = navigation
+        self.navigation = navigation
         self.bannerManager = bannerManager
         
         super.init(initial: .initial)
@@ -48,6 +48,6 @@ final class CreateLoop: GeneratedBaseCreateLoop {
     }
     
     override func close() {
-//        navigation.closeSheet()
+        navigation.closeSheet()
     }
 }

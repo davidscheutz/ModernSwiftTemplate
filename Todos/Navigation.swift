@@ -1,6 +1,7 @@
 import SwiftUI
 import Combine
 import InfiniteNavigation
+import SwiftDependencyContainer
 
 /// @Singleton
 public final class Navigation {
@@ -12,8 +13,11 @@ public final class Navigation {
     private(set) lazy var publisher = navigateTo.eraseToAnyPublisher()
     
     private let navigateTo = PassthroughSubject<NavAction<Destination>, Never>()
+    private let resolver: Resolvable
     
-    public init() {}
+    public init(resolver: Resolvable) {
+        self.resolver = resolver
+    }
     
     func openCreateTodo() {
         navigateTo.send(.show(.sheet(.create)))
@@ -33,12 +37,11 @@ public final class Navigation {
     
     @ViewBuilder
     func build(_ destination: Destination) -> some View {
-        EmptyView()
-//        switch destination {
-//        case .create:
-//            CreateView.create(using: CreateLoop.create())
-//        case .todo(let id):
-//            DetailView.create(using: DetailLoop.create(id: id))
-//        }
+        switch destination {
+        case .create:
+            CreateView.create(using: CreateLoop.create(using: resolver))
+        case .todo(let id):
+            DetailView.create(using: DetailLoop.create(id: id, using: resolver))
+        }
     }
 }
