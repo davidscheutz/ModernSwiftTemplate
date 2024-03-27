@@ -7,6 +7,8 @@ import Todos
 struct TemplateApp: App {
 
     init() {
+        Appearance.setup()
+        
         Dependencies.setup()
         
         _authenticationManager = .init(wrappedValue: Dependencies.authenticationManager)

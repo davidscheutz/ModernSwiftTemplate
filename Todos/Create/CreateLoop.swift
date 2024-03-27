@@ -17,16 +17,21 @@ final class CreateLoop: GeneratedBaseCreateLoop {
     }
     
     // TODO: fix parameter name codegen
-    override func titleChanged(string: String) {
+    override func titleChanged(title: String) {
         guard !currentState.isLoading else { return }
         
-        update { $0.copy(title: $0.title.update(string)) }
+        update { $0.copy(title: $0.title.update(title)) }
+        
+        /*
+         update { $0.copy(title: title) }
+         update { title(title) }
+         */
     }
     
-    override func descriptionChanged(string: String) {
+    override func descriptionChanged(title: String) {
         guard !currentState.isLoading else { return }
         
-        update { $0.copy(description: $0.description.update(string)) }
+        update { $0.copy(description: $0.description.update(title)) }
     }
     
     override func create() {

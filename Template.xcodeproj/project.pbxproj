@@ -14,7 +14,6 @@
 		B927F04A2BAB9A8E001D88BB /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B927F0442BAB9A8E001D88BB /* Core.framework */; };
 		B927F04B2BAB9A8E001D88BB /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B927F0442BAB9A8E001D88BB /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B927F04F2BAB9AAC001D88BB /* LoadableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9C7C92B854F8500B15BA8 /* LoadableListView.swift */; };
-		B927F0502BAB9AAC001D88BB /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9C7912B84480200B15BA8 /* PrimaryButton.swift */; };
 		B927F0512BAB9AB2001D88BB /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9C78D2B8403BB00B15BA8 /* Input.swift */; };
 		B927F0522BAB9AB2001D88BB /* Inputable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9C7C52B85370800B15BA8 /* Inputable.swift */; };
 		B927F0532BAB9AB2001D88BB /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9C78F2B84046400B15BA8 /* TextInput.swift */; };
@@ -22,6 +21,19 @@
 		B93AF5242BACC89200204C06 /* BannerView+Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9268E9F2B6C637100E8F15F /* BannerView+Present.swift */; };
 		B93AF5252BACC89200204C06 /* BannerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9268E9D2B6C587E00E8F15F /* BannerManager.swift */; };
 		B93AF52E2BACDF3400204C06 /* SwiftDependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = B93AF52D2BACDF3400204C06 /* SwiftDependencyContainer */; };
+		B9676D582BB32482006F9273 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9676D502BB32482006F9273 /* Poppins-Bold.ttf */; };
+		B9676D592BB32482006F9273 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9676D512BB32482006F9273 /* Poppins-ExtraLight.ttf */; };
+		B9676D5A2BB32482006F9273 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9676D522BB32482006F9273 /* Poppins-Light.ttf */; };
+		B9676D5B2BB32482006F9273 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9676D532BB32482006F9273 /* Poppins-Medium.ttf */; };
+		B9676D5C2BB32482006F9273 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9676D542BB32482006F9273 /* Poppins-Regular.ttf */; };
+		B9676D5D2BB32482006F9273 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9676D552BB32482006F9273 /* Poppins-SemiBold.ttf */; };
+		B9676D5E2BB32482006F9273 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9676D562BB32482006F9273 /* Poppins-Thin.ttf */; };
+		B9676D602BB324EC006F9273 /* Poppins.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9676D5F2BB324EC006F9273 /* Poppins.swift */; };
+		B9676D622BB32508006F9273 /* FontResolvable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9676D612BB32508006F9273 /* FontResolvable.swift */; };
+		B9676D662BB329A6006F9273 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9676D652BB329A6006F9273 /* TextStyle.swift */; };
+		B9676D682BB3338C006F9273 /* ColorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9676D672BB3338C006F9273 /* ColorStyle.swift */; };
+		B9676D6B2BB3349E006F9273 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9676D6A2BB3349E006F9273 /* PrimaryButton.swift */; };
+		B9676D6D2BB334B5006F9273 /* SimpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9676D6C2BB334B5006F9273 /* SimpleButton.swift */; };
 		B9858BE62BAE605400DE5BF7 /* Onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9858BE02BAE605400DE5BF7 /* Onboarding.framework */; };
 		B9858BE72BAE605400DE5BF7 /* Onboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9858BE02BAE605400DE5BF7 /* Onboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9858BEB2BAE607000DE5BF7 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93AF52B2BACD67A00204C06 /* Onboarding.swift */; };
@@ -76,6 +88,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = B90509932B6708EC00D3DE33;
 			remoteInfo = Template;
+		};
+		B90ED49F2BB47C3F00AD2102 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B905098C2B6708EC00D3DE33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9858BDF2BAE605400DE5BF7;
+			remoteInfo = Onboarding;
 		};
 		B927F0482BAB9A8E001D88BB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -147,6 +166,19 @@
 		B927F0442BAB9A8E001D88BB /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B93AF5292BACD64200204C06 /* Todos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todos.swift; sourceTree = "<group>"; };
 		B93AF52B2BACD67A00204C06 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		B9676D502BB32482006F9273 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		B9676D512BB32482006F9273 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		B9676D522BB32482006F9273 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		B9676D532BB32482006F9273 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		B9676D542BB32482006F9273 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		B9676D552BB32482006F9273 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		B9676D562BB32482006F9273 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		B9676D5F2BB324EC006F9273 /* Poppins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poppins.swift; sourceTree = "<group>"; };
+		B9676D612BB32508006F9273 /* FontResolvable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontResolvable.swift; sourceTree = "<group>"; };
+		B9676D652BB329A6006F9273 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
+		B9676D672BB3338C006F9273 /* ColorStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStyle.swift; sourceTree = "<group>"; };
+		B9676D6A2BB3349E006F9273 /* PrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		B9676D6C2BB334B5006F9273 /* SimpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleButton.swift; sourceTree = "<group>"; };
 		B9858BE02BAE605400DE5BF7 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9858C022BAF362F00DE5BF7 /* Todos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Todos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9908E252B7B216F009D1309 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
@@ -169,7 +201,6 @@
 		B9D9C78B2B83917A00B15BA8 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		B9D9C78D2B8403BB00B15BA8 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		B9D9C78F2B84046400B15BA8 /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
-		B9D9C7912B84480200B15BA8 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		B9D9C7972B84F1B200B15BA8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B9D9C79E2B85008300B15BA8 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		B9D9C7C52B85370800B15BA8 /* Inputable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inputable.swift; sourceTree = "<group>"; };
@@ -194,6 +225,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B90ED4972BB47C3F00AD2102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B90ED49E2BB47C3F00AD2102 /* Onboarding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +343,39 @@
 				B99816E62BAB9B6400349606 /* Helper */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		B9676D4F2BB30DCE006F9273 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				B9676D612BB32508006F9273 /* FontResolvable.swift */,
+				B9676D572BB32482006F9273 /* Poppins */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		B9676D572BB32482006F9273 /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				B9676D5F2BB324EC006F9273 /* Poppins.swift */,
+				B9676D502BB32482006F9273 /* Poppins-Bold.ttf */,
+				B9676D512BB32482006F9273 /* Poppins-ExtraLight.ttf */,
+				B9676D522BB32482006F9273 /* Poppins-Light.ttf */,
+				B9676D532BB32482006F9273 /* Poppins-Medium.ttf */,
+				B9676D542BB32482006F9273 /* Poppins-Regular.ttf */,
+				B9676D552BB32482006F9273 /* Poppins-SemiBold.ttf */,
+				B9676D562BB32482006F9273 /* Poppins-Thin.ttf */,
+			);
+			path = Poppins;
+			sourceTree = "<group>";
+		};
+		B9676D692BB33485006F9273 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				B9676D6A2BB3349E006F9273 /* PrimaryButton.swift */,
+				B9676D6C2BB334B5006F9273 /* SimpleButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		B9858BE12BAE605400DE5BF7 /* Onboarding */ = {
@@ -418,10 +490,12 @@
 			isa = PBXGroup;
 			children = (
 				B9D9C79E2B85008300B15BA8 /* Appearance.swift */,
+				B9676D672BB3338C006F9273 /* ColorStyle.swift */,
 				B9D9C7972B84F1B200B15BA8 /* Colors.xcassets */,
+				B9676D4F2BB30DCE006F9273 /* Font */,
 				B998391B2B69B6F4003E87A9 /* Banner */,
 				B9D9C7B32B85016A00B15BA8 /* Text */,
-				B9D9C7912B84480200B15BA8 /* PrimaryButton.swift */,
+				B9676D692BB33485006F9273 /* Button */,
 				B9D9C7C92B854F8500B15BA8 /* LoadableListView.swift */,
 			);
 			path = UI;
@@ -433,6 +507,7 @@
 				B9D9C78F2B84046400B15BA8 /* TextInput.swift */,
 				B9D9C78D2B8403BB00B15BA8 /* Input.swift */,
 				B9D9C7C52B85370800B15BA8 /* Inputable.swift */,
+				B9676D652BB329A6006F9273 /* TextStyle.swift */,
 			);
 			path = Text;
 			sourceTree = "<group>";
@@ -599,7 +674,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1510;
+				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					B90509932B6708EC00D3DE33 = {
@@ -667,11 +742,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B90ED4982BB47C3F00AD2102 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B927F0422BAB9A8E001D88BB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9676D592BB32482006F9273 /* Poppins-ExtraLight.ttf in Resources */,
+				B9676D5D2BB32482006F9273 /* Poppins-SemiBold.ttf in Resources */,
 				B99817022BABA84700349606 /* Colors.xcassets in Resources */,
+				B9676D582BB32482006F9273 /* Poppins-Bold.ttf in Resources */,
+				B9676D5C2BB32482006F9273 /* Poppins-Regular.ttf in Resources */,
+				B9676D5E2BB32482006F9273 /* Poppins-Thin.ttf in Resources */,
+				B9676D5A2BB32482006F9273 /* Poppins-Light.ttf in Resources */,
+				B9676D5B2BB32482006F9273 /* Poppins-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,19 +806,24 @@
 				B927F0512BAB9AB2001D88BB /* Input.swift in Sources */,
 				B927F0522BAB9AB2001D88BB /* Inputable.swift in Sources */,
 				B99816E92BAB9B8B00349606 /* Appearance.swift in Sources */,
+				B9676D662BB329A6006F9273 /* TextStyle.swift in Sources */,
+				B9676D6D2BB334B5006F9273 /* SimpleButton.swift in Sources */,
 				B99816E82BAB9B6400349606 /* LoadableData.swift in Sources */,
 				B99816E72BAB9B6400349606 /* Completion.swift in Sources */,
 				B927F0532BAB9AB2001D88BB /* TextInput.swift in Sources */,
 				B99817012BABA6C300349606 /* Todo.swift in Sources */,
 				B99816FA2BABA66D00349606 /* Api.swift in Sources */,
+				B9676D602BB324EC006F9273 /* Poppins.swift in Sources */,
 				B99816FB2BABA66D00349606 /* AuthenticationManager.swift in Sources */,
+				B9676D622BB32508006F9273 /* FontResolvable.swift in Sources */,
 				B99816FC2BABA66D00349606 /* TodosService.swift in Sources */,
 				B99816FD2BABA66D00349606 /* Storage.swift in Sources */,
 				B99816FE2BABA66D00349606 /* UserDefaults+Storage.swift in Sources */,
 				B93AF5232BACC89200204C06 /* BannerView.swift in Sources */,
 				B93AF5242BACC89200204C06 /* BannerView+Present.swift in Sources */,
+				B9676D6B2BB3349E006F9273 /* PrimaryButton.swift in Sources */,
+				B9676D682BB3338C006F9273 /* ColorStyle.swift in Sources */,
 				B93AF5252BACC89200204C06 /* BannerManager.swift in Sources */,
-				B927F0502BAB9AAC001D88BB /* PrimaryButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,6 +864,11 @@
 			target = B90509932B6708EC00D3DE33 /* Template */;
 			targetProxy = B90509A62B6708EE00D3DE33 /* PBXContainerItemProxy */;
 		};
+		B90ED4A02BB47C3F00AD2102 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9858BDF2BAE605400DE5BF7 /* Onboarding */;
+			targetProxy = B90ED49F2BB47C3F00AD2102 /* PBXContainerItemProxy */;
+		};
 		B927F0492BAB9A8E001D88BB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B927F0432BAB9A8E001D88BB /* Core */;
@@ -782,6 +881,10 @@
 		B93AF51E2BACBE1200204C06 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = B93AF51D2BACBE1200204C06 /* SwiftDependencyContainerPlugin */;
+		};
+		B9676D642BB327AF006F9273 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B9676D632BB327AF006F9273 /* SwiftCodeGenPlugin */;
 		};
 		B9858BD82BAE5CA500DE5BF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1424,6 +1527,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B9D9C7742B7FB39100B15BA8 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftDependencyContainer" */;
 			productName = SwiftDependencyContainer;
+		};
+		B9676D632BB327AF006F9273 /* SwiftCodeGenPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9908E1B2B7538D5009D1309 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftCodeGen" */;
+			productName = "plugin:SwiftCodeGenPlugin";
 		};
 		B9858BD72BAE5CA500DE5BF7 /* SwiftCodeGenPlugin */ = {
 			isa = XCSwiftPackageProductDependency;

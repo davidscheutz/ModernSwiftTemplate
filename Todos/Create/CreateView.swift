@@ -9,11 +9,11 @@ struct CreateView: View, BindableView {
     
     var body: some View {
         VStack {
-            Button("Close") { handler(.close) }
+            SimpleButton("Close") { handler(.close) }
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             Text("Add new Todo")
-                .font(.title)
+                .style(.headlineLarge)
             
             TextInput(input: state.title) { handler(.titleChanged($0)) }
             

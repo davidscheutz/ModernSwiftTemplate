@@ -20,6 +20,7 @@ public struct TextInput: View {
         VStack(alignment: .leading) {
             if let title = input.title {
                 Text(title)
+                    .style(.body)
             }
             
             HStack {
@@ -32,8 +33,7 @@ public struct TextInput: View {
             
             if let error = input.error {
                 Text(error)
-                    .font(.footnote)
-                    .foregroundStyle(Color.error)
+                    .style(.footnote, color: .error)
             }
         }
     }
@@ -43,15 +43,18 @@ public struct TextInput: View {
         switch input.field {
         case .password: 
             SecureField(input.placeholder, text: text)
+                .style()
         case .message(let lineLimit):
             if #available(iOS 16.0, *) {
                 TextField(input.placeholder, text: text, axis: .vertical)
+                    .style()
                     .lineLimit(lineLimit, reservesSpace: true)
             } else {
                 // Fallback on earlier versions
             }
         default:
             TextField(input.placeholder, text: text)
+                .style()
         }
     }
 }

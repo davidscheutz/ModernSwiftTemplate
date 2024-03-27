@@ -16,6 +16,6 @@ struct LoginState: Inputable, Copyable {
 
 /// @Event(LoginView)
 enum LoginEvent {
-    case inputChanged(Input.Field, String)
+    case inputChanged(field: Input.Field, value: String)
     case login
 }

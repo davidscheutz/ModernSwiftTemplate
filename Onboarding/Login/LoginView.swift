@@ -10,13 +10,13 @@ struct LoginView: View, BindableView {
     var body: some View {
         VStack {
             Text("Welcome")
-                .font(.title)
+                .style(.headlineLarge)
                 .padding(.top, 60)
             
             Spacer()
             
             ForEach(state.inputs) { input in
-                TextInput(input: input) { handler(.inputChanged($0, $1)) }
+                TextInput(input: input) { handler(.inputChanged(field: $0, value: $1)) }
             }
             
             PrimaryButton(title: "Login", isLoading: state.isLoading) { handler(.login) }
@@ -24,6 +24,7 @@ struct LoginView: View, BindableView {
             Spacer()
         }
         .padding()
+        .background()
         .animateErrors(state.inputs)
     }
 }

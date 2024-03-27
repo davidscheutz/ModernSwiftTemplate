@@ -15,8 +15,7 @@ public struct PrimaryButton: View {
     public var body: some View {
         Button(action: action) {
             Text(title)
-                .font(.body.weight(.semibold))
-                .foregroundStyle(Color.textInverted)
+                .style(.subheadline, color: .textInverted)
                 .padding(.vertical, 20)
                 .frame(maxWidth: .infinity)
                 .opacity(isLoading ? 0 : 1)
@@ -27,7 +26,7 @@ public struct PrimaryButton: View {
                     }
                 }
         }
-        .background(Color.buttonPrimary)
+        .background(.action)
         .cornerRadius(Appearance.cornerRadius)
     }
 }

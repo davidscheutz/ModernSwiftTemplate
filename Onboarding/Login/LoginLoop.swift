@@ -13,10 +13,9 @@ final class LoginLoop: GeneratedBaseLoginLoop {
         super.init(initial: .initial)
     }
     
-    override func inputChanged(inputField1: Input.Field, string2: String) {
+    override func inputChanged(field: Input.Field, value: String) {
         guard !currentState.isLoading else { return }
-        
-        update { $0.update(string2, for: inputField1) }
+        update { $0.update(value, for: field) }
     }
     
     override func login() {
