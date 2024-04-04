@@ -19,6 +19,14 @@ public struct Input: Copyable, Identifiable {
     public let value: String
     public let error: String?
     
+    public static func username() -> Input {
+        .init(field: .username)
+    }
+    
+    public static func password() -> Input {
+        .init(field: .password)
+    }
+    
     public init(
         id: String = UUID().uuidString,
         field: Input.Field = .other,

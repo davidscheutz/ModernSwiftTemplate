@@ -1,26 +1,14 @@
 import Foundation
+import Core
 
-public protocol UserApi {
-    func login(username: String, password: String) async throws -> Bool
-    func logout() async throws
-}
-
-public protocol TodoApi {
+protocol TodoApi {
     func todos() async throws -> [Todo]
     func create(with title: String, description: String?) async throws -> Todo
     func todo(for id: String) async throws -> Todo
 }
 
-public protocol Api: UserApi, TodoApi {}
-
-/// @Singleton(types: [Api, UserApi, TodoApi])
-public final class ApiImpl: Api {
-    
-    enum ApiError: Error {
-        case noNetwork
-        case decodingError
-        case unknwon
-    }
+/// @Singleton(types: [TodoApi])
+final class TodoApiImpl: TodoApi {
     
     public init(httpEngine: HttpEngine) {
         self.httpEngine = httpEngine
@@ -29,54 +17,21 @@ public final class ApiImpl: Api {
     private let baseUrl = "https://myserver.com/api/v1"
     private let httpEngine: HttpEngine
     
-    // MARK: - UserApi
-    
-    public func login(username: String, password: String) async throws -> Bool {
-        try await httpEngine.execute(URLRequest(url: .init(string: baseUrl + "/login")!))
-    }
-    
-    public func logout() async throws {
-        try await httpEngine.execute(URLRequest(url: .init(string: baseUrl + "/logout")!))
-    }
-    
-    // MARK: - TodoApi
-    
-    public func todos() async throws -> [Todo] {
+    func todos() async throws -> [Todo] {
         try await httpEngine.execute(URLRequest(url: .init(string: baseUrl + "/todos")!))
     }
     
-    public func create(with title: String, description: String?) async throws -> Todo {
+    func create(with title: String, description: String?) async throws -> Todo {
         try await httpEngine.execute(URLRequest(url: .init(string: baseUrl + "/todo")!))
     }
     
-    public func todo(for id: String) async throws -> Todo {
+    func todo(for id: String) async throws -> Todo {
         try await httpEngine.execute(URLRequest(url: .init(string: baseUrl + "/todos/\(id)")!))
     }
-    
-    // MARK: - Helper
-    
-    // TODO: URLRequest builder (currently missing HTTP method, headers, body etc.)
-    // https://betterprogramming.pub/building-urlrequests-with-ease-f0136cdd56c3
 }
 
-public protocol HttpEngine {
-    func execute<T: Decodable>(_ request: URLRequest) async throws -> T
-    func execute(_ request: URLRequest) async throws
-}
-
-public struct HttpEngineImpl: HttpEngine {
-    public init() {}
-    
-    public func execute(_ request: URLRequest) async throws {
-        fatalError("Not implemented")
-    }
-    
-    public func execute<T: Decodable>(_ request: URLRequest) async throws -> T {
-        fatalError("Not implemented")
-    }
-}
-
-public struct HttpEngineMock: HttpEngine {
+// TODO: finish
+public struct TodoApiMock: HttpInterceptable {
     
     private let todos = [
         Todo(id: "1", createdAt: .now, completed: false, text: "Master", updatedAt: nil),
@@ -86,7 +41,11 @@ public struct HttpEngineMock: HttpEngine {
     
     public init() {}
     
-    public func execute<T: Decodable>(_ request: URLRequest) async throws -> T {
+    public func canHandle(_ request: URLRequest) -> Bool {
+        request.url?.absoluteString.contains("todo") == true
+    }
+    
+    public func handle<T>(_ request: URLRequest) async throws -> T where T : Decodable {
         switch T.self {
         case is [Todo].Type:
             return todos as! T
@@ -104,9 +63,5 @@ public struct HttpEngineMock: HttpEngine {
             }
         default: throw NSError(domain: "No mock registered for type: \(T.self)", code: 404)
         }
-    }
-    
-    public func execute(_ request: URLRequest) async throws {
-        // nothing to do here
     }
 }

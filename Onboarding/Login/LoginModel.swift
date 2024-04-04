@@ -7,7 +7,7 @@ struct LoginState: Inputable, Copyable {
     let isLoading: Bool
     let error: String?
     
-    static let initial = Self(inputs: [.init(field: .username), .init(field: .password)], isLoading: false, error: nil)
+    static let initial = Self(inputs: [.username(), .password()], isLoading: false, error: nil)
     
     func update(inputs: [Input]) -> LoginState {
         copy(inputs: inputs)

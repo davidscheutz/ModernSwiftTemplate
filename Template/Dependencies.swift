@@ -1,6 +1,10 @@
 import Foundation
 import SwiftDependencyContainer
 import Core
+#if DEBUG
+import Onboarding
+import Todos
+#endif
 
 struct Dependencies: AutoSetup {
     let container = DependencyContainer()
@@ -8,10 +12,13 @@ struct Dependencies: AutoSetup {
     func override(_ container: DependencyContainer) throws {
         try container.register(Storage.self) { UserDefaults(suiteName: "Template") }
         
-        #if DEBUG
-        try container.register(HttpEngine.self) { HttpEngineMock() }
-        #else
-        try container.register(HttpEngine.self) { HttpEngineImpl() }
-        #endif
+        try container.register(HttpEngine.self) {
+            #if DEBUG
+            HttpEngineMock()
+                .register(TodoApiMock())
+            #else
+            HttpEngineImpl()
+            #endif
+        }
     }
 }

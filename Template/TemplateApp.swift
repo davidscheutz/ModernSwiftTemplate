@@ -11,10 +11,10 @@ struct TemplateApp: App {
         
         Dependencies.setup()
         
-        _authenticationManager = .init(wrappedValue: Dependencies.authenticationManager)
+        _authenticationManager = .init(wrappedValue: Dependencies.authenticationManagerImpl)
     }
     
-    @StateObject private var authenticationManager: AuthenticationManager
+    @StateObject private var authenticationManager: AuthenticationManagerImpl
     
     var body: some Scene {
         WindowGroup {

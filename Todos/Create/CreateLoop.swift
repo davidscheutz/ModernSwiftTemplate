@@ -4,24 +4,24 @@ import Core
 /// @Factory
 /// @Loop(CreateState, CreateEvent)
 final class CreateLoop: GeneratedBaseCreateLoop {
-    private let api: TodoApi
+    private let service: TodosService
     private let navigation: Navigation
     private let bannerManager: BannerManager
     
-    init(api: TodoApi, bannerManager: BannerManager, navigation: Navigation) {
-        self.api = api
+    init(service: TodosService, bannerManager: BannerManager, navigation: Navigation) {
+        self.service = service
         self.navigation = navigation
         self.bannerManager = bannerManager
         
         super.init(initial: .initial)
     }
     
-    // TODO: fix parameter name codegen
     override func titleChanged(title: String) {
-        guard !currentState.isLoading else { return }
+        guard !isLoading else { return }
         
-        update { $0.copy(title: $0.title.update(title)) }
+        updateTitle { $0.update(title) }
         
+        // TODO: add easy update support for 'Input' type
         /*
          update { $0.copy(title: title) }
          update { title(title) }
@@ -29,23 +29,23 @@ final class CreateLoop: GeneratedBaseCreateLoop {
     }
     
     override func descriptionChanged(title: String) {
-        guard !currentState.isLoading else { return }
-        
-        update { $0.copy(description: $0.description.update(title)) }
+        guard !isLoading else { return }
+
+        updateDescription { $0.update(title) }
     }
     
     override func create() {
-        guard !currentState.isLoading else { return }
+        guard !isLoading else { return }
         
-        update { $0.copy(isLoading: true) }
+        updateIsLoading(true)
         
         // TODO: Input validation
         
         Task {
             do {
-                _ = try await api.create(with: currentState.title.value, description: currentState.description.value)
+                _ = try await service.createTodo(title: title.value, description: description.value)
                 bannerManager.present(.success("New Todo created"))
-//                navigation.closeSheet()
+                navigation.closeSheet()
             } catch let error {
                 bannerManager.present(.error(error.localizedDescription))
             }

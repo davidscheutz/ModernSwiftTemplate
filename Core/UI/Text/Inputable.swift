@@ -22,8 +22,8 @@ extension Inputable {
         update(inputs: inputs.update(error: error, for: field))
     }
     
-    public func validate(field: Input.Field, _ validate: (String) -> String?) -> Self {
-        update(inputs: inputs.validate(field: field, validate))
+    public func validate(field: Input.Field, _ message: String, validate: (String) -> Bool) -> Self {
+        update(inputs: inputs.validate(field: field, message, validate: validate))
     }
 }
 
@@ -47,8 +47,8 @@ extension Array where Element == Input {
         update(for: field, resetError: false) { $0.copy(error: .use(error)) }
     }
     
-    public func validate(field: Input.Field, _ validate: (String) -> String?) -> Self {
-        update(for: field, resetError: false) { $0.copy(error: .use(validate($0.value))) }
+    public func validate(field: Input.Field, _ error: String, validate: (String) -> Bool) -> Self {
+        update(for: field, resetError: false) { $0.copy(error: .use(validate($0.value) ? nil : error)) }
     }
     
     // MARK: - Helper

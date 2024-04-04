@@ -1,4 +1,5 @@
 import Foundation
+import Core
 
 extension UserDefaults: Storage {
     public func store<T>(_ value: T?, for key: AnyHashable) throws where T : Encodable {

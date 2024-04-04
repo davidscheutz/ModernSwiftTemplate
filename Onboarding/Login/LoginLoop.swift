@@ -14,31 +14,35 @@ final class LoginLoop: GeneratedBaseLoginLoop {
     }
     
     override func inputChanged(field: Input.Field, value: String) {
-        guard !currentState.isLoading else { return }
+        guard !isLoading else { return }
         update { $0.update(value, for: field) }
     }
     
     override func login() {
-        let state = currentState
+        guard !isLoading else { return }
         
-        guard !state.isLoading else { return }
+        let username = inputs.value(for: .username)
+        let password = inputs.value(for: .password)
         
-        let username = state.inputs.value(for: .username)
-        let password = state.inputs.value(for: .password)
+        let updatedInputs = inputs
+            .validate(field: .username, "Username can't be empty") { !$0.isEmpty }
+            .validate(field: .password, "Password can't be empty") { !$0.isEmpty }
         
-//        let updatedInputs = state.inputs
-//            .validate(field: .username) { "Username can't be empty".take(if: $0.isEmpty) }
-//            .validate(field: .password) { "Password can't be empty".take(if: $0.isEmpty) }
-//        
-//        guard !updatedInputs.hasErrors else {
-//            update(state.copy(inputs: updatedInputs))
-//            return
-//        }
-//        
-//        update(state.copy(inputs: updatedInputs, isLoading: true))
+        guard !updatedInputs.hasErrors else {
+            updateInputs(updatedInputs)
+            return
+        }
+        
+        update { $0.copy(inputs: updatedInputs, isLoading: true) }
         
         Task {
-            await authenticationManager.login(username: username, password: password)
+            do {
+                try await authenticationManager.login(username: username, password: password)
+            } catch let error {
+                // TODO: show error
+            }
+            
+            updateIsLoading(false)
         }
     }
 }
