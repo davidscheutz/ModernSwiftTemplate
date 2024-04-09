@@ -4,7 +4,7 @@ import InfiniteNavigation
 import SwiftDependencyContainer
 
 /// @Singleton
-public final class Navigation {
+final class Navigation {
     enum Destination: Hashable {
         case create
         case todo(id: String)
@@ -15,7 +15,7 @@ public final class Navigation {
     private let navigateTo = PassthroughSubject<NavAction<Destination>, Never>()
     private let resolver: Resolvable
     
-    public init(resolver: Resolvable) {
+    init(resolver: Resolvable) {
         self.resolver = resolver
     }
     

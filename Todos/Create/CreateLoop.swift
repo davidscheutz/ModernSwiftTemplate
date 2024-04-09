@@ -36,11 +36,13 @@ final class CreateLoop: GeneratedBaseCreateLoop {
     
     override func create() {
         guard !isLoading else { return }
+                
+        updateTitle(title.copy(error: .use("Can't be empty".take(if: title.value.isEmpty))))
+        
+        guard title.error == nil else { return }
         
         updateIsLoading(true)
-        
-        // TODO: Input validation
-        
+
         Task {
             do {
                 _ = try await service.createTodo(title: title.value, description: description.value)

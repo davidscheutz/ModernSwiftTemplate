@@ -16,6 +16,14 @@ public struct TextInput: View {
         text = .init(get: { input.value }, set: { onChange($0) })
     }
     
+    public init(input: Binding<Input>) {
+        self.input = input.wrappedValue
+        self.text = .init(
+            get: { input.wrappedValue.value },
+            set: { input.wrappedValue = input.wrappedValue.copy(value: $0) }
+        )
+    }
+    
     public var body: some View {
         VStack(alignment: .leading) {
             if let title = input.title {

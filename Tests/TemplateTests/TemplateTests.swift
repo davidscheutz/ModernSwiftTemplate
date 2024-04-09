@@ -14,7 +14,7 @@ final class TemplateTests: XCTestCase {
     func testExample() throws {
         let sut = LoginLoop.create(with: Dependencies.container)
         
-        sut.handle(.inputChanged(field: .username, value: <#T##String#>))
+//        sut.handle(.inputChanged(field: .username, value: <#T##String#>))
         
         sut.handle(.login)
         

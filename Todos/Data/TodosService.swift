@@ -16,6 +16,10 @@ final class TodosService {
         load()
     }
     
+    func todo(with id: String) async throws -> Todo {
+        try await api.todo(for: id)
+    }
+    
     @discardableResult
     func createTodo(title: String, description: String) async throws -> Todo {
         let todo = try await api.create(with: title, description: description)

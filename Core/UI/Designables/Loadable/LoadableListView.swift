@@ -13,13 +13,7 @@ public struct LoadableListView<T: Identifiable, ItemView: View>: View {
     }
     
     public var body: some View {
-        switch data {
-        case .initial:
-            EmptyView()
-        case .loading:
-            ProgressView()
-                .stretch()
-        case .loaded(let items):
+        LoadableView(data: data) { items in
             if items.isEmpty {
                 Text(emptyMessage)
                     .foregroundStyle(Color.textSecondary)
@@ -32,9 +26,6 @@ public struct LoadableListView<T: Identifiable, ItemView: View>: View {
                     }
                 }
             }
-        case .error(let message):
-            Text(message)
-                .stretch()
         }
     }
 }

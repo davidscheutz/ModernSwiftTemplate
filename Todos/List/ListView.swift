@@ -10,15 +10,14 @@ struct ListView: View, BindableView {
     
     var body: some View {
         VStack {
-            SimpleButton("Logout") { handler(.logout) }
-                .frame(maxWidth: .infinity, alignment: .trailing)
-            
-            Text("Your Todo's 📋")
-                .style(.headlineLarge)
+            NavigationHeader(
+                title: "Your Todo's 📋",
+                actions: [.init(value: .title("Logout"), position: .right, perform: { handler(.logout) })]
+            )
             
             LoadableListView(data: state.todos) { todo in
                 HStack {
-                    Text(todo.text).style()
+                    Text(todo.title).style()
                     Spacer()
                     // TODO: icon
                 }
@@ -37,12 +36,7 @@ struct ListView: View, BindableView {
 }
 
 #Preview("Loaded") {
-    let state = ListState(todos: .loaded(data: [
-        .init(id: "1", createdAt: .now, completed: false, text: "Master", updatedAt: nil),
-        .init(id: "2", createdAt: .now, completed: false, text: "Relax", updatedAt: nil),
-        .init(id: "3", createdAt: .now, completed: false, text: "Enjoy", updatedAt: nil)
-    ]))
-    return ListView.preview(state)
+    ListView.preview(.init(todos: .loaded(data: [.preview1, .preview2, .preview3])))
 }
 
 #Preview("Error") {

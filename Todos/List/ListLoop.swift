@@ -37,6 +37,7 @@ final class ListLoop: GeneratedBaseListLoop {
         updateTodos(.loading)
         
         todosService.todos
+            .receiveOnMain()
             .sink { [weak self] in self?.updateTodos(.loaded(data: $0)) }
             .store(in: &subscriptions)
     }

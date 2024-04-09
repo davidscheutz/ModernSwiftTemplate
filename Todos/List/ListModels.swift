@@ -6,7 +6,7 @@ import Core
 struct ListState: Copyable {
     let todos: LoadableData<[Todo]>
     
-    static let initial = Self.init(todos: .initial)
+    static let initial = ListState(todos: .initial)
 }
 
 /// @Event(ListView)

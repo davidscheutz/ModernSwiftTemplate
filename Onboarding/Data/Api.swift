@@ -19,16 +19,15 @@ final class OnboardingApiImpl: OnboardingApi {
         self.httpEngine = httpEngine
     }
     
+    // TODO: inject and resolve using key?
     private let baseUrl = "https://myserver.com/api/v1"
     private let httpEngine: HttpEngine
     
-    // MARK: - UserApi
-    
-    public func login(username: String, password: String) async throws -> Bool {
+    func login(username: String, password: String) async throws -> Bool {
         try await httpEngine.execute(URLRequest(url: .init(string: baseUrl + "/login")!))
     }
     
-    public func logout() async throws {
+    func logout() async throws {
         try await httpEngine.execute(URLRequest(url: .init(string: baseUrl + "/logout")!))
     }
 }

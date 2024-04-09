@@ -8,12 +8,11 @@ struct CreateView: View, BindableView {
     let handler: (Event) -> Void
     
     var body: some View {
-        VStack {
-            SimpleButton("Close") { handler(.close) }
-                .frame(maxWidth: .infinity, alignment: .leading)
-            
-            Text("Add new Todo")
-                .style(.headlineLarge)
+        VStack(spacing: 24) {
+            NavigationHeader(
+                title: "Add new Todo",
+                actions: [.init(value: .title("Close"), position: .left, perform: { handler(.close) })]
+            )
             
             TextInput(input: state.title) { handler(.titleChanged($0)) }
             
@@ -21,14 +20,13 @@ struct CreateView: View, BindableView {
 
             Spacer()
             
-//            banner()
-            
             PrimaryButton(
                 title: "Add",
                 isLoading: state.isLoading,
                 action: { handler(.create) }
             )
         }
+        .animateErrors([state.title])
         .padding()
     }
 }
