@@ -1,5 +1,6 @@
 import Core
 import Foundation
+import SwiftEvolution
 
 // TODO: simplify singleton type registration
 /// @Singleton(AuthenticationManager)

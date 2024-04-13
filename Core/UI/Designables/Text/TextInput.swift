@@ -25,7 +25,7 @@ public struct TextInput: View {
     }
     
     public var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 4) {
             if let title = input.title {
                 Text(title)
                     .style(.body)
@@ -33,10 +33,10 @@ public struct TextInput: View {
             
             HStack {
                 inputField()
-                    .layoutPriority(1)
-                    .padding(.vertical, 16)
+                    .padding(.vertical, 8)
                     .padding(.horizontal, 10)
             }
+            .frame(minHeight: 46)
             .roundedBorder(Appearance.cornerRadius, color: Color.textSecondary)
             
             if let error = input.error {

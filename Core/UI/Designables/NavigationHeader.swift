@@ -75,6 +75,7 @@ public struct NavigationHeader: View {
                 }.clickable($0.perform)
             case .icon(let image):
                 renderImage(image, small: false)
+                    .clickable($0.perform)
             case .loading:
                 ProgressView()
             }

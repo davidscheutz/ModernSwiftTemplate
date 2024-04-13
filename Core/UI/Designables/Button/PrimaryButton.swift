@@ -15,14 +15,14 @@ public struct PrimaryButton: View {
     public var body: some View {
         Button(action: action) {
             Text(title)
-                .style(.subheadline, color: .textInverted)
+                .style(.subheadline, color: .textLight)
                 .padding(.vertical, 20)
                 .frame(maxWidth: .infinity)
                 .opacity(isLoading ? 0 : 1)
                 .overlay {
                     if isLoading {
                         ProgressView()
-                            .tint(Color.textInverted)
+                            .tint(Color.textLight)
                     }
                 }
         }

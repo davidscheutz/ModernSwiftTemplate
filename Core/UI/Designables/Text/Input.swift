@@ -20,11 +20,11 @@ public struct Input: Copyable, Identifiable {
     public let error: String?
     
     public static func username() -> Input {
-        .init(field: .username)
+        .init(field: .username, title: "Email")
     }
     
     public static func password() -> Input {
-        .init(field: .password)
+        .init(field: .password, title: "Password")
     }
     
     public init(

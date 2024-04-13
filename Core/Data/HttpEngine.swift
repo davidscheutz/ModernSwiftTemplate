@@ -5,7 +5,9 @@ public protocol HttpEngine {
     func execute(_ request: URLRequest) async throws
 }
 
-private struct Empty: Decodable {}
+public struct Empty: Decodable {
+    public init() {}
+}
 
 public struct HttpEngineImpl: HttpEngine {
     public init() {}

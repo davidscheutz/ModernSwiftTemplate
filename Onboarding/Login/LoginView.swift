@@ -11,20 +11,27 @@ struct LoginView: View, BindableView {
         VStack {
             Text("Welcome")
                 .style(.headlineLarge)
-                .padding(.top, 60)
+                .padding(.top)
             
             Spacer()
             
             ForEach(state.inputs) { input in
                 TextInput(input: input) { handler(.inputChanged(field: $0, value: $1)) }
+                    .padding(.bottom, 8)
+            }
+            
+            Spacer()
+            
+            if let error = state.error {
+                Text(error)
+                    .style(.footnote, color: .error)
             }
             
             PrimaryButton(title: "Login", isLoading: state.isLoading) { handler(.login) }
-            
-            Spacer()
         }
         .padding()
         .background()
+        .animation(.easeInOut, value: state.error)
         .animateErrors(state.inputs)
     }
 }
@@ -44,4 +51,8 @@ struct LoginView: View, BindableView {
 
 #Preview("Input Error") {
     LoginView.preview(.initial.update(error: "Empty input", for: .username))
+}
+
+#Preview("Error") {
+    LoginView.preview(.initial.copy(error: .update("Preview error")))
 }

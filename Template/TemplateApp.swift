@@ -26,6 +26,7 @@ struct TemplateApp: App {
                         Onboarding.start($0)
                     }
                 }
+                .transition(.opacity)
             }
             .animation(.easeInOut, value: authenticationManager.isLoggedIn)
         }

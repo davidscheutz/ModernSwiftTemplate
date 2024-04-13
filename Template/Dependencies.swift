@@ -15,6 +15,7 @@ struct Dependencies: AutoSetup {
         try container.register(HttpEngine.self) {
             #if DEBUG
             HttpEngineMock()
+                .register(OnboardingApiMock())
                 .register(TodoApiMock())
             #else
             HttpEngineImpl()

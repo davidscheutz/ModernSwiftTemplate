@@ -39,7 +39,7 @@ final class LoginLoop: GeneratedBaseLoginLoop {
             do {
                 try await authenticationManager.login(username: username, password: password)
             } catch let error {
-                // TODO: show error
+                updateError(error.localizedDescription)
             }
             
             updateIsLoading(false)
