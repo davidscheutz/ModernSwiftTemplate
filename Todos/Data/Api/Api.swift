@@ -8,7 +8,7 @@ protocol TodoApi {
     func todo(for id: String) async throws -> Todo
 }
 
-/// @Singleton(types: [TodoApi])
+/// @Singleton(TodoApi)
 final class TodoApiImpl: TodoApi {
     
     init(httpEngine: HttpEngine) {

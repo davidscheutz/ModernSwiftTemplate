@@ -1,5 +1,5 @@
 {
-  "originHash" : "6afc810198504308d0c8f7761bd2353158e6704c3de366aa0802cb270b9268a8",
+  "originHash" : "706a318a26e57e359253a6b96025e1ed49a173f5dfcf0fa027dc65a639c0270c",
   "pins" : [
     {
       "identity" : "swiftevolution",
@@ -7,7 +7,7 @@
       "location" : "https://github.com/davidscheutz/SwiftEvolution.git",
       "state" : {
         "branch" : "main",
-        "revision" : "09e52970d838f7c2809df7ff79ce24de0718a514"
+        "revision" : "147091a43a1bb726d5ab16bf576a3babded7122e"
       }
     }
   ],

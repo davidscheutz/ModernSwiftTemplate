@@ -2,9 +2,6 @@ import Core
 import Foundation
 import SwiftEvolution
 
-// TODO: simplify singleton type registration
-/// @Singleton(AuthenticationManager)
-
 /// @Singleton(types: [AuthenticationManager, AuthenticationManagerImpl])
 public final class AuthenticationManagerImpl: AuthenticationManager, ObservableObject {
     private let api: OnboardingApi

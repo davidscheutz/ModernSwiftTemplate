@@ -658,8 +658,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				B9858BDA2BAE5CA800DE5BF7 /* PBXTargetDependency */,
-				B9858BD82BAE5CA500DE5BF7 /* PBXTargetDependency */,
 				B9908E242B7B1424009D1309 /* PBXTargetDependency */,
 				B927F0492BAB9A8E001D88BB /* PBXTargetDependency */,
 				B9858BE52BAE605400DE5BF7 /* PBXTargetDependency */,
@@ -1043,14 +1041,6 @@
 		B9676D642BB327AF006F9273 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = B9676D632BB327AF006F9273 /* SwiftCodeGenPlugin */;
-		};
-		B9858BD82BAE5CA500DE5BF7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = B9858BD72BAE5CA500DE5BF7 /* SwiftCodeGenPlugin */;
-		};
-		B9858BDA2BAE5CA800DE5BF7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = B9858BD92BAE5CA800DE5BF7 /* SwiftCopyCodeGeneratorPlugin */;
 		};
 		B9858BE52BAE605400DE5BF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1746,16 +1736,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B9908E1B2B7538D5009D1309 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftCodeGen" */;
 			productName = "plugin:SwiftCodeGenPlugin";
-		};
-		B9858BD72BAE5CA500DE5BF7 /* SwiftCodeGenPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B9908E1B2B7538D5009D1309 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftCodeGen" */;
-			productName = "plugin:SwiftCodeGenPlugin";
-		};
-		B9858BD92BAE5CA800DE5BF7 /* SwiftCopyCodeGeneratorPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B93AF5102BABE62B00204C06 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftCopy" */;
-			productName = "plugin:SwiftCopyCodeGeneratorPlugin";
 		};
 		B9858BEF2BAE609000DE5BF7 /* SwiftUDF */ = {
 			isa = XCSwiftPackageProductDependency;

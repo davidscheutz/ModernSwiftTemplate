@@ -34,14 +34,3 @@ public class HttpEngineMock: HttpEngine {
         }
     }
 }
-
-extension HttpEngine {
-    // TODO: fix error: static member 'mock' cannot be used on protocol metatype '(any HttpEngine).Type'
-//    public static func mock() -> HttpEngine {
-//        HttpEngineMock(real: HttpEngineImpl())
-//    }
-    
-    public func mock() -> HttpEngine {
-        HttpEngineMock(real: self)
-    }
-}

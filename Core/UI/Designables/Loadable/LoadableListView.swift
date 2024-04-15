@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftEvolution
 
 public struct LoadableListView<T: Identifiable, ItemView: View>: View {
     
@@ -28,12 +29,4 @@ public struct LoadableListView<T: Identifiable, ItemView: View>: View {
             }
         }
     }
-}
-
-// TODO: SwiftEvolution
- extension View {
-     // edges: 'horizontal,vertical,all'} = .all
-     public func stretch() -> some View {
-         frame(maxWidth: .infinity, maxHeight: .infinity)
-     }
 }

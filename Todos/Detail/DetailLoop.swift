@@ -2,8 +2,6 @@ import Foundation
 import SwiftUDF
 import Core
 
-// TODO: spike protocol 'DetailLoopEventReceiver' to replace override functions with protocol functions
-
 /// @Factory
 /// @Loop(DetailState, DetailEvent)
 final class DetailLoop: GeneratedBaseDetailLoop {

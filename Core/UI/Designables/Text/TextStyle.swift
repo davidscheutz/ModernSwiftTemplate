@@ -10,6 +10,7 @@ public class TextStyle {
     public static let headlineLarge = TextStyle(lineHeight: 36, size: 24, system: .largeTitle, font: Poppins.bold)
     public static let headline = TextStyle(lineHeight: 28, size: 22, system: .title, font: Poppins.semibold)
     public static let subheadline = TextStyle(lineHeight: 20, size: 18, system: .headline, font: Poppins.semibold)
+    public static let title = TextStyle(lineHeight: 24, size: 16, system: .body, font: Poppins.regular)
     public static let body = TextStyle(lineHeight: 24, size: 14, system: .body, font: Poppins.regular)
     public static let footnote = TextStyle(lineHeight: 16, size: 12, system: .footnote, font: Poppins.light)
     

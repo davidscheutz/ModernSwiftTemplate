@@ -6,7 +6,7 @@ protocol OnboardingApi {
     func logout() async throws
 }
 
-/// @Singleton(types: [OnboardingApi])
+/// @Singleton(OnboardingApi)
 final class OnboardingApiImpl: OnboardingApi {
     
     enum ApiError: Error {

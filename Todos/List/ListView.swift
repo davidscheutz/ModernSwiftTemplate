@@ -1,6 +1,5 @@
 import SwiftUI
 import SwiftUDF
-import SwiftEvolution
 import Core
 
 struct ListView: View, BindableView {
@@ -14,12 +13,16 @@ struct ListView: View, BindableView {
                 title: "Your Todo's 📋",
                 actions: [.init(value: .title("Logout"), position: .right, perform: { handler(.logout) })]
             )
+            .padding(.bottom)
             
             LoadableListView(data: state.todos) { todo in
                 HStack {
-                    Text(todo.title).style()
+                    Text(todo.title).style(.title)
                     Spacer()
-                    // TODO: icon
+                    Image(systemName: "chevron.right")
+                        .font(.footnote)
+                        .frame(width: 14, height: 12)
+                        .foreground(.textSecondary)
                 }
                 .clickable { handler(.openTodo(id: todo.id)) }
             }
