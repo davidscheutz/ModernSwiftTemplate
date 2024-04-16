@@ -11,16 +11,16 @@ struct DetailView: View, BindableView {
     
     var body: some View {
         VStack {
+            NavigationHeader(
+                title: state.todo.loaded?.title,
+                actions: [
+                    .init(value: .titleIcon("Back", .init(systemName: "arrowshape.backward.fill")), position: .left, perform: { handler(.close) }),
+                    deleteNavigationAction
+                ].compactMap { $0 }
+            )
+            .padding(.bottom)
+            
             LoadableView(data: state.todo) { todo in
-                NavigationHeader(
-                    title: todo.title,
-                    actions: [
-                        .init(value: .titleIcon("Back", .init(systemName: "arrowshape.backward.fill")), position: .left, perform: { handler(.close) }),
-                        deleteNavigationAction
-                    ]
-                )
-                .padding(.bottom)
-                
                 TodoInputView(
                     title: .init(get: { state.title }, set: { handler(.titleChanged($0.value)) }),
                     description: .init(get: { state.description }, set: { handler(.descriptionChanged($0.value)) })
@@ -36,30 +36,40 @@ struct DetailView: View, BindableView {
         .padding()
     }
     
-    private var deleteNavigationAction: NavigationHeader.Action {
-        state.isDeleting ?
+    private var deleteNavigationAction: NavigationHeader.Action? {
+        guard state.todo.loaded != nil else { return nil }
+        
+        return state.isDeleting ?
             .init(value: .loading, position: .right, perform: {}) :
             .init(value: .icon(.init(systemName: "trash")), position: .right, perform: { handler(.delete) })
     }
 }
 
 #Preview("Loaded") {
-    DetailView.preview(.loadedPreviewState)
+    DetailView.preview(.preview())
 }
 
 #Preview("Invalid Update") {
-    DetailView.preview(.loadedPreviewState.copy(
+    DetailView.preview(.preview().copy(
         updatedDescription: .init(value: "Invalid description", error: "Error")
     ))
 }
 
 #Preview("Updating") {
-    DetailView.preview(.loadedPreviewState.copy(
+    DetailView.preview(.preview().copy(
         updatedDescription: .init(value: "Updated description", error: nil),
         isUpdating: true
     ))
 }
 
 #Preview("Deletion") {
-    DetailView.preview(.loadedPreviewState.copy(isDeleting: true))
+    DetailView.preview(.preview().copy(isDeleting: true))
+}
+
+#Preview("Error") {
+    DetailView.preview(.preview(todo: .error(message: "Preview Error")))
+}
+
+#Preview("Initial") {
+    DetailView.preview(.preview(todo: .initial))
 }

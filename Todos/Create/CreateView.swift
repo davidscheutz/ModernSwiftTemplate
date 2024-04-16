@@ -14,9 +14,10 @@ struct CreateView: View, BindableView {
                 actions: [.init(value: .title("Close"), position: .left, perform: { handler(.close) })]
             )
             
-            TextInput(input: state.title) { handler(.titleChanged($0)) }
-            
-            TextInput(input: state.description) { handler(.descriptionChanged($0)) }
+            TodoInputView(
+                title: .init(get: { state.title }, set: { handler(.titleChanged($0.value)) }),
+                description: .init(get: { state.description }, set: { handler(.descriptionChanged($0.value)) })
+            )
 
             Spacer()
             

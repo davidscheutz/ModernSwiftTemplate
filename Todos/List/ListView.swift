@@ -34,7 +34,7 @@ struct ListView: View, BindableView {
     }
 }
 
-#Preview("Empty") {
+#Preview("Initial") {
     ListView.preview(.initial)
 }
 

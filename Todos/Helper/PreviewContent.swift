@@ -17,6 +17,8 @@ extension Input {
 }
 
 extension DetailView.State {
-    static let loadedPreviewState = DetailView.State(todo: .loaded(data: .preview1), updatedTitle: .empty, updatedDescription: .empty, isUpdating: false, isDeleting: false)
+    static func preview(todo: LoadableData<Todo> = .loaded(data: .preview1)) -> DetailView.State {
+        DetailView.State(todo: todo, updatedTitle: .empty, updatedDescription: .empty, isUpdating: false, isDeleting: false)
+    }
 }
 #endif

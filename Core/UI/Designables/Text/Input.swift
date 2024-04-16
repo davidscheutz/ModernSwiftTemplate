@@ -47,9 +47,3 @@ public struct Input: Copyable, Identifiable {
         copy(value: value, error: resetError ? .reset : .noChange)
     }
 }
-
-extension View {
-    public func animateErrors(_ inputs: [Input], animation: Animation = .easeInOut) -> some View {
-        self.animation(animation, value: inputs.map { $0.error })
-    }
-}

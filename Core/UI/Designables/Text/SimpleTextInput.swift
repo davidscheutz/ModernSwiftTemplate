@@ -1,7 +1,8 @@
 import Foundation
 import SwiftUI
+import SwiftCopy
 
-public struct SimpleTextInput {
+public struct SimpleTextInput: Copyable {
     public let value: String
     public let error: String?
     
@@ -15,13 +16,13 @@ public struct SimpleTextInput {
 }
 
 extension TextInput {
-    public init(input: SimpleTextInput, onChange: @escaping (String) -> Void) {
-        self.init(input: Input(value: input.value, error: input.error), onChange: onChange)
+    public init(input: SimpleTextInput, field: Input.Field = .other, title: String? = nil, onChange: @escaping (String) -> Void) {
+        self.init(input: Input(field: field, title: title, value: input.value, error: input.error), onChange: onChange)
     }
     
-    public init(input: Binding<SimpleTextInput>) {
+    public init(input: Binding<SimpleTextInput>, field: Input.Field = .other, title: String? = nil) {
         self.init(input: Binding<Input>(
-            get: { Input(value: input.wrappedValue.value, error: input.wrappedValue.error) },
+            get: { Input(field: field, title: title, value: input.wrappedValue.value, error: input.wrappedValue.error) },
             set: { input.wrappedValue = SimpleTextInput(value: $0.value, error: $0.error) }
         ))
     }

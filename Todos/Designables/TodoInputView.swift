@@ -8,8 +8,8 @@ struct TodoInputView: View {
     
     var body: some View {
         VStack(spacing: 24) {
-            TextInput(input: $title)
-            TextInput(input: $description)
+            TextInput(input: $title, title: "Title")
+            TextInput(input: $description, field: .message(lineLimit: 5), title: "Description")
         }
     }
 }

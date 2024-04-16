@@ -19,19 +19,13 @@ final class CreateLoop: GeneratedBaseCreateLoop {
     override func titleChanged(title: String) {
         guard !isLoading else { return }
         
-        updateTitle { $0.update(title) }
-        
-        // TODO: add easy update support for 'Input' type
-        /*
-         update { $0.copy(title: title) }
-         update { title(title) }
-         */
+        updateTitle(.update(title))
     }
     
-    override func descriptionChanged(title: String) {
+    override func descriptionChanged(description: String) {
         guard !isLoading else { return }
 
-        updateDescription { $0.update(title) }
+        updateDescription(.update(description))
     }
     
     override func create() {
