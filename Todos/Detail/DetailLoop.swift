@@ -64,7 +64,14 @@ final class DetailLoop: GeneratedBaseDetailLoop {
         updateIsDeleting(true)
         
         Task {
-            
+            do {
+                try await todosService.deleteTodo(with: id)
+                
+                navigation.closeDetail()
+            } catch let error {
+                // TODO: display error
+                updateIsDeleting(false)
+            }
         }
     }
     

@@ -5,12 +5,12 @@ import SwiftEvolution
 /// @Singleton(types: [AuthenticationManager, AuthenticationManagerImpl])
 public final class AuthenticationManagerImpl: AuthenticationManager, ObservableObject {
     private let api: OnboardingApi
-    private let storage: Storage
+    private let storage: LocalStorage
     private let isLoggedInKey = "isLoggedInKey"
     
     @Published public private(set) var isLoggedIn: Bool
     
-    init(api: OnboardingApi, storage: Storage) {
+    init(api: OnboardingApi, storage: LocalStorage) {
         self.api = api
         self.storage = storage
         

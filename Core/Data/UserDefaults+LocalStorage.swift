@@ -1,6 +1,6 @@
 import Foundation
 
-extension UserDefaults: Storage {
+extension UserDefaults: LocalStorage {
     public func store<T>(_ value: T?, for key: AnyHashable) throws where T : Encodable {
         guard let value else {
             removeValue(for: key)

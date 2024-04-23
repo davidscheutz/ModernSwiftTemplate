@@ -16,6 +16,10 @@ final class ListLoop: GeneratedBaseListLoop {
     }
     
     override func start() {
+        todosService.todos
+            .sink { [weak self] in self?.updateTodos(.loaded(data: $0)) }
+            .store(in: &subscriptions)
+        
         loadTodos()
     }
     
@@ -35,9 +39,6 @@ final class ListLoop: GeneratedBaseListLoop {
     
     private func loadTodos() {
         updateTodos(.loading)
-        
-        todosService.todos
-            .sink { [weak self] in self?.updateTodos(.loaded(data: $0)) }
-            .store(in: &subscriptions)
+        todosService.load()
     }
 }

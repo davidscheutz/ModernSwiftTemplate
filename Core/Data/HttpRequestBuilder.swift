@@ -9,10 +9,11 @@ public final class HttpRequestBuilder {
         case delete = "DELETE"
         case patch = "PATCH"
     }
-    
+        
     private let url: String
     private let timeoutInterval: TimeInterval
     private var path = ""
+    private var accessToken: String?
     private var httpMethod: HTTPMethod = .get
     private var headers: [String: Any]?
     private var body: Encodable?
@@ -24,6 +25,16 @@ public final class HttpRequestBuilder {
     
     public func path(_ path: String) -> HttpRequestBuilder {
         self.path = path
+        return self
+    }
+    
+    public func authenticate(_ accessToken: String) -> HttpRequestBuilder {
+        self.accessToken = accessToken
+        return self
+    }
+    
+    public func authenticate(using storage: AuthenticationStore) throws -> HttpRequestBuilder {
+        self.accessToken = storage.acccessToken
         return self
     }
     
@@ -51,6 +62,10 @@ public final class HttpRequestBuilder {
         var request = URLRequest(url: url.appendingPathComponent(path), timeoutInterval: timeoutInterval)
         
         request.httpMethod = httpMethod.rawValue
+        
+        if let accessToken {
+            request.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        }
         
         headers?.forEach { request.addValue("\($0.value)", forHTTPHeaderField: $0.key) }
         

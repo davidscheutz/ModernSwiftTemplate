@@ -13,8 +13,6 @@ final class TodosService {
         self.api = api
         
         todos = .init(source)
-        
-        load()
     }
     
     func todo(with id: String) async throws -> Todo {
@@ -31,6 +29,12 @@ final class TodosService {
         load()
         
         return todo
+    }
+    
+    func deleteTodo(with id: String) async throws {
+        try await api.delete(with: id)
+        
+        load()
     }
     
     func load() {

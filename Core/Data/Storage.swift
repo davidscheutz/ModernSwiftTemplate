@@ -4,3 +4,6 @@ public protocol Storage {
     func value<T: Decodable>(for key: AnyHashable) throws -> T
     func removeValue(for key: AnyHashable)
 }
+
+public typealias LocalStorage = Storage
+public typealias SecureStorage = Storage
