@@ -17,7 +17,7 @@ public struct LoadableListView<T: Identifiable, ItemView: View>: View {
         LoadableView(data: data) { items in
             if items.isEmpty {
                 Text(emptyMessage)
-                    .foregroundStyle(Color.textSecondary)
+                    .foreground(.textSecondary)
                     .stretch()
             } else {
                 ScrollView {

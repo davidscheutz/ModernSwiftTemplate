@@ -22,7 +22,7 @@ final class DetailLoop: GeneratedBaseDetailLoop {
         self.navigation = navigation
         self.bannerManager = bannerManager
 
-        super.init(initial: State(todo: .initial, updatedTitle: .empty, updatedDescription: .empty, isUpdating: false, isDeleting: false))
+        super.init(initial: State(todo: .loading, updatedTitle: .empty, updatedDescription: .empty, isUpdating: false, isDeleting: false))
     }
 
     override func start() {

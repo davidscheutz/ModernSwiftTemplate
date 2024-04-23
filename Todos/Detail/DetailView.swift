@@ -70,6 +70,6 @@ struct DetailView: View, BindableView {
     DetailView.preview(.preview(todo: .error(message: "Preview Error")))
 }
 
-#Preview("Initial") {
-    DetailView.preview(.preview(todo: .initial))
+#Preview("Loading") {
+    DetailView.preview(.preview(todo: .loading))
 }
