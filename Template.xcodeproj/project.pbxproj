@@ -419,7 +419,6 @@
 			children = (
 				B99839222B69B9B0003E87A9 /* Data */,
 				B9D9C7862B83914600B15BA8 /* UI */,
-				B99816E62BAB9B6400349606 /* Helper */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -536,6 +535,7 @@
 				B9EBFCD72BB5D22E005E3A2E /* HttpEngine.swift */,
 				B9EBFCED2BBEEEA2005E3A2E /* HttpEngine+Mock.swift */,
 				B993F8DE2BD7E5CB0055161C /* ApiConfig.swift */,
+				B99816E62BAB9B6400349606 /* Helper */,
 			);
 			path = Data;
 			sourceTree = "<group>";

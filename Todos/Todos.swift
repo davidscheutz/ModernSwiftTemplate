@@ -4,7 +4,7 @@ import InfiniteNavigation
 import Core
 
 public final class Todos {
-    public static func start(_ resolver: Resolvable) -> some View {
+    public static func start(_ resolver: Resolver) -> some View {
         let navigation = Navigation.resolve(resolver)
         
         return InfiniteNavigation.create(

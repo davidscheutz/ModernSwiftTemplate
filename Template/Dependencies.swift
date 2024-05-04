@@ -15,9 +15,7 @@ struct Dependencies: AutoSetup {
         // TODO: replace with Keychain once implemented
         try container.register(SecureStorage.self) { UserDefaults(suiteName: "Template_SecureStorage") }
         
-        try container.register {
-            ApiConfig(baseUrl: "https://example.server.com/api", authStore: resolve())
-        }
+        try container.register { ApiConfig(baseUrl: "https://example.server.com/api", authStore: resolve()) }
         
         try container.register(HttpEngine.self) {
             #if DEBUG

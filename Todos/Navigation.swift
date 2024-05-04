@@ -13,9 +13,9 @@ final class Navigation {
     private(set) lazy var publisher = navigateTo.eraseToAnyPublisher()
     
     private let navigateTo = PassthroughSubject<NavAction<Destination>, Never>()
-    private let resolver: Resolvable
+    private let resolver: Resolver
     
-    init(resolver: Resolvable) {
+    init(resolver: Resolver) {
         self.resolver = resolver
     }
     
