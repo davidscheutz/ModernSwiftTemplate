@@ -97,7 +97,6 @@
 		B9EBFCD82BB5D22E005E3A2E /* HttpEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFCD72BB5D22E005E3A2E /* HttpEngine.swift */; };
 		B9EBFCDA2BB5D28D005E3A2E /* Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFCD92BB5D28D005E3A2E /* Todos.swift */; };
 		B9EBFCE22BBED9F5005E3A2E /* AuthenticationManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFCE02BBED9E4005E3A2E /* AuthenticationManagerMock.swift */; };
-		B9EBFCE32BBED9F5005E3A2E /* AuthenticationManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFCE02BBED9E4005E3A2E /* AuthenticationManagerMock.swift */; };
 		B9EBFCE52BBEDA46005E3A2E /* ValueSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFCE42BBEDA46005E3A2E /* ValueSpy.swift */; };
 		B9EBFCE62BBEDA46005E3A2E /* ValueSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFCE42BBEDA46005E3A2E /* ValueSpy.swift */; };
 		B9EBFCE72BBEDA46005E3A2E /* ValueSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFCE42BBEDA46005E3A2E /* ValueSpy.swift */; };
@@ -362,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				B90509A92B6708EE00D3DE33 /* TemplateTests.swift */,
+				B9EBFCDE2BBED9CA005E3A2E /* Helper */,
 			);
 			path = TemplateTests;
 			sourceTree = "<group>";
@@ -370,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				B90ED49C2BB47C3F00AD2102 /* OnboardingTests.swift */,
+				B9EBFCDF2BBED9DB005E3A2E /* Mocks */,
 			);
 			path = OnboardingTests;
 			sourceTree = "<group>";
@@ -619,7 +620,6 @@
 			children = (
 				B90509A82B6708EE00D3DE33 /* TemplateTests */,
 				B90ED49B2BB47C3F00AD2102 /* OnboardingTests */,
-				B9EBFCDE2BBED9CA005E3A2E /* Helper */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -628,7 +628,6 @@
 			isa = PBXGroup;
 			children = (
 				B9EBFCE42BBEDA46005E3A2E /* ValueSpy.swift */,
-				B9EBFCDF2BBED9DB005E3A2E /* Mocks */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -959,7 +958,6 @@
 			files = (
 				B90509AA2B6708EE00D3DE33 /* TemplateTests.swift in Sources */,
 				B9EBFCE52BBEDA46005E3A2E /* ValueSpy.swift in Sources */,
-				B9EBFCE32BBED9F5005E3A2E /* AuthenticationManagerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
