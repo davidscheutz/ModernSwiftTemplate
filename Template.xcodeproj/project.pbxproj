@@ -81,6 +81,8 @@
 		B98D9CC12BD001D6001EF14F /* ApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98D9CC02BD001D6001EF14F /* ApiMock.swift */; };
 		B9908E222B7B1418009D1309 /* SwiftDependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = B9908E212B7B1418009D1309 /* SwiftDependencyContainer */; };
 		B993F8DF2BD7E5CB0055161C /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993F8DE2BD7E5CB0055161C /* ApiConfig.swift */; };
+		B993F8E32BE7DFD40055161C /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993F8E22BE7DFD40055161C /* RootCoordinator.swift */; };
+		B993F8E52BE7F9FB0055161C /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B993F8E42BE7F9FB0055161C /* SwiftEvolution */; };
 		B99816E72BAB9B6400349606 /* Completion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99816E42BAB9B6400349606 /* Completion.swift */; };
 		B99816E82BAB9B6400349606 /* LoadableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99816E52BAB9B6400349606 /* LoadableData.swift */; };
 		B99816E92BAB9B8B00349606 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9C79E2B85008300B15BA8 /* Appearance.swift */; };
@@ -214,6 +216,7 @@
 		B98D9CC02BD001D6001EF14F /* ApiMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMock.swift; sourceTree = "<group>"; };
 		B9908E252B7B216F009D1309 /* HttpRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequestBuilder.swift; sourceTree = "<group>"; };
 		B993F8DE2BD7E5CB0055161C /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
+		B993F8E22BE7DFD40055161C /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		B99816E42BAB9B6400349606 /* Completion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Completion.swift; sourceTree = "<group>"; };
 		B99816E52BAB9B6400349606 /* LoadableData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadableData.swift; sourceTree = "<group>"; };
 		B99817002BABA6C300349606 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
@@ -252,6 +255,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B993F8E52BE7F9FB0055161C /* SwiftEvolution in Frameworks */,
 				B9D9C7762B7FB39100B15BA8 /* SwiftDependencyContainer in Frameworks */,
 				B9858C082BAF362F00DE5BF7 /* Todos.framework in Frameworks */,
 				B9908E222B7B1418009D1309 /* SwiftDependencyContainer in Frameworks */,
@@ -346,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				B90509972B6708EC00D3DE33 /* TemplateApp.swift */,
+				B993F8E22BE7DFD40055161C /* RootCoordinator.swift */,
 				B998391E2B69B71B003E87A9 /* Dependencies.swift */,
 				B905099B2B6708EE00D3DE33 /* AppIcon.xcassets */,
 				B905099D2B6708EE00D3DE33 /* Template.entitlements */,
@@ -684,6 +689,7 @@
 			packageProductDependencies = (
 				B9908E212B7B1418009D1309 /* SwiftDependencyContainer */,
 				B9D9C7752B7FB39100B15BA8 /* SwiftDependencyContainer */,
+				B993F8E42BE7F9FB0055161C /* SwiftEvolution */,
 			);
 			productName = Template;
 			productReference = B90509942B6708EC00D3DE33 /* Template.app */;
@@ -935,6 +941,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B998391F2B69B71B003E87A9 /* Dependencies.swift in Sources */,
+				B993F8E32BE7DFD40055161C /* RootCoordinator.swift in Sources */,
 				B90509982B6708EC00D3DE33 /* TemplateApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1853,6 +1860,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B9908E202B7B1418009D1309 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftDependencyContainer" */;
 			productName = "plugin:SwiftDependencyContainerPlugin";
+		};
+		B993F8E42BE7F9FB0055161C /* SwiftEvolution */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B98D9CAA2BCAEDAE001EF14F /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
+			productName = SwiftEvolution;
 		};
 		B998170A2BABD2BC00349606 /* SwiftCopy */ = {
 			isa = XCSwiftPackageProductDependency;

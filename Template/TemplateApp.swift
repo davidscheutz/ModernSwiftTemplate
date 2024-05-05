@@ -10,25 +10,35 @@ struct TemplateApp: App {
         Appearance.setup()
         
         Dependencies.setup()
-        
-        _authenticationManager = .init(wrappedValue: Dependencies.authenticationManagerImpl)
     }
     
-    @StateObject private var authenticationManager: AuthenticationManagerImpl
+    @StateObject private var coordinator = Dependencies.rootCoordinator
     
     var body: some Scene {
         WindowGroup {
+            /// Depending on your app this will vary.
+            /// Most apps I've seen :
+            
+            /// - UNAUTHENTICATED
+            /// -- Login
+            /// -- Signup/Onboarding
+            
+            /// - AUTHENTICATED
+            /// -- TabBar
+            /// --- Features Scope A
+            /// --- Features Scope B
+            /// ...
+            
             ZStack {
                 Dependencies.apply {
-                    if authenticationManager.isLoggedIn {
-                        Todos.start($0)
-                    } else {
-                        Onboarding.start($0)
+                    switch coordinator.state {
+                    case .loggedIn: Todos.start($0)
+                    case .loggedOut: Onboarding.start($0)
                     }
                 }
                 .transition(.opacity)
             }
-            .animation(.easeInOut, value: authenticationManager.isLoggedIn)
+            .animation(.easeInOut, value: coordinator.state)
         }
     }
 }
