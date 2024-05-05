@@ -97,9 +97,6 @@
 		B9EBFCD82BB5D22E005E3A2E /* HttpEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFCD72BB5D22E005E3A2E /* HttpEngine.swift */; };
 		B9EBFCDA2BB5D28D005E3A2E /* Todos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFCD92BB5D28D005E3A2E /* Todos.swift */; };
 		B9EBFCE22BBED9F5005E3A2E /* AuthenticationManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFCE02BBED9E4005E3A2E /* AuthenticationManagerMock.swift */; };
-		B9EBFCE52BBEDA46005E3A2E /* ValueSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFCE42BBEDA46005E3A2E /* ValueSpy.swift */; };
-		B9EBFCE62BBEDA46005E3A2E /* ValueSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFCE42BBEDA46005E3A2E /* ValueSpy.swift */; };
-		B9EBFCE72BBEDA46005E3A2E /* ValueSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFCE42BBEDA46005E3A2E /* ValueSpy.swift */; };
 		B9EBFCEA2BBEDE8D005E3A2E /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFCE92BBEDE8D005E3A2E /* Api.swift */; };
 		B9EBFCEC2BBEE055005E3A2E /* AuthenticationManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFCEB2BBEE055005E3A2E /* AuthenticationManagerImpl.swift */; };
 		B9EBFCEE2BBEEEA2005E3A2E /* HttpEngine+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFCED2BBEEEA2005E3A2E /* HttpEngine+Mock.swift */; };
@@ -245,7 +242,6 @@
 		B9EBFCD72BB5D22E005E3A2E /* HttpEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpEngine.swift; sourceTree = "<group>"; };
 		B9EBFCD92BB5D28D005E3A2E /* Todos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todos.swift; sourceTree = "<group>"; };
 		B9EBFCE02BBED9E4005E3A2E /* AuthenticationManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManagerMock.swift; sourceTree = "<group>"; };
-		B9EBFCE42BBEDA46005E3A2E /* ValueSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueSpy.swift; sourceTree = "<group>"; };
 		B9EBFCE92BBEDE8D005E3A2E /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		B9EBFCEB2BBEE055005E3A2E /* AuthenticationManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManagerImpl.swift; sourceTree = "<group>"; };
 		B9EBFCED2BBEEEA2005E3A2E /* HttpEngine+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HttpEngine+Mock.swift"; sourceTree = "<group>"; };
@@ -361,7 +357,6 @@
 			isa = PBXGroup;
 			children = (
 				B90509A92B6708EE00D3DE33 /* TemplateTests.swift */,
-				B9EBFCDE2BBED9CA005E3A2E /* Helper */,
 			);
 			path = TemplateTests;
 			sourceTree = "<group>";
@@ -622,14 +617,6 @@
 				B90ED49B2BB47C3F00AD2102 /* OnboardingTests */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		B9EBFCDE2BBED9CA005E3A2E /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				B9EBFCE42BBEDA46005E3A2E /* ValueSpy.swift */,
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 		B9EBFCDF2BBED9DB005E3A2E /* Mocks */ = {
@@ -957,7 +944,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B90509AA2B6708EE00D3DE33 /* TemplateTests.swift in Sources */,
-				B9EBFCE52BBEDA46005E3A2E /* ValueSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -966,7 +952,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B90ED49D2BB47C3F00AD2102 /* OnboardingTests.swift in Sources */,
-				B9EBFCE62BBEDA46005E3A2E /* ValueSpy.swift in Sources */,
 				B9EBFCE22BBED9F5005E3A2E /* AuthenticationManagerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1037,7 +1022,6 @@
 				B9858C292BAF377200DE5BF7 /* DetailView.swift in Sources */,
 				B9EBFCD42BB5D1CC005E3A2E /* Todo.swift in Sources */,
 				B9858C2A2BAF377200DE5BF7 /* DetailModel.swift in Sources */,
-				B9EBFCE72BBEDA46005E3A2E /* ValueSpy.swift in Sources */,
 				B9858C2B2BAF377200DE5BF7 /* DetailLoop.swift in Sources */,
 				B9858C1D2BAF36D200DE5BF7 /* ListLoop.swift in Sources */,
 				B9858C1E2BAF36D200DE5BF7 /* ListModels.swift in Sources */,
