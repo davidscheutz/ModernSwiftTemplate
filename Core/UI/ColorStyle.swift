@@ -23,8 +23,13 @@ public enum ColorStyle {
 }
 
 extension View {
+    @ViewBuilder
     public func foreground(_ colorStyle: ColorStyle) -> some View {
-        foregroundStyle(colorStyle.color)
+        if #available(iOS 15.0, *) {
+            foregroundStyle(colorStyle.color)
+        } else {
+            foregroundColor(colorStyle.color)
+        }
     }
     
     public func background() -> some View {

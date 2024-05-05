@@ -22,13 +22,18 @@ final class DetailLoop: GeneratedBaseDetailLoop {
         self.navigation = navigation
         self.bannerManager = bannerManager
 
-        super.init(initial: State(todo: .loading, updatedTitle: .empty, updatedDescription: .empty, isUpdating: false, isDeleting: false))
+        super.init(initial: State(todo: .loading, updatedTitle: .empty, updatedDescription: .empty, isUpdating: false, isDeleting: false, error: nil))
     }
 
     override func start() {
         Task { @MainActor in
-            // TODO: replace with subscription
-            updateTodo(.loaded(data: try await todosService.todo(with: id)))
+            do {
+                let todo = try await todosService.todo(with: id)
+                updateTodo(.loaded(data: todo))
+            } catch let error {
+                updateTodo(.error(message: error.localizedDescription))
+            }
+            
         }
     }
     
@@ -52,9 +57,16 @@ final class DetailLoop: GeneratedBaseDetailLoop {
         
         updateIsUpdating(true)
         
-        // TODO: wrap async operation within loop function e.g. 'executeAsync {}'
         Task {
-//            try await todosService.updateTodo(title: )
+            do {
+                try await todosService.updateTodo(with: id, title: title.value, description: description.value)
+                updateIsUpdating(false)
+                close()
+            } catch {
+                update {
+                    $0.copy(isUpdating: false, error: .use(error.localizedDescription))
+                }
+            }
         }
     }
     
@@ -66,11 +78,12 @@ final class DetailLoop: GeneratedBaseDetailLoop {
         Task {
             do {
                 try await todosService.deleteTodo(with: id)
-                
-                navigation.closeDetail()
-            } catch let error {
-                // TODO: display error
                 updateIsDeleting(false)
+                close()
+            } catch {
+                update {
+                    $0.copy(isDeleting: false, error: .use(error.localizedDescription))
+                }
             }
         }
     }

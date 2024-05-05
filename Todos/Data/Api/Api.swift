@@ -4,6 +4,7 @@ import Core
 protocol TodoApi {
     func todos() async throws -> [Todo]
     func create(with title: String, description: String?) async throws -> Todo
+    func update(with id: String, title: String, description: String) async throws -> Todo
     func delete(with id: String) async throws
     func todo(for id: String) async throws -> Todo
 }
@@ -33,7 +34,16 @@ final class TodoApiImpl: TodoApi {
             .path("todos")
             .authenticate(using: authStore)
             .httpMethod(.post)
-            .body(CreateTodoRequest(title: title, description: description))
+            .body(TodoRequestBody(title: title, description: description))
+            .execute(using: httpEngine)
+    }
+    
+    func update(with id: String, title: String, description: String) async throws -> Todo {
+        try await HttpRequestBuilder(url: baseUrl)
+            .path("todos/\(id)")
+            .authenticate(using: authStore)
+            .httpMethod(.patch)
+            .body(TodoRequestBody(title: title, description: description))
             .execute(using: httpEngine)
     }
     

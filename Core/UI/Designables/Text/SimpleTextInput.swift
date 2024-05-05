@@ -8,6 +8,7 @@ public struct SimpleTextInput: Copyable {
     
     public static let empty = SimpleTextInput(value: "", error: nil)
     public static func update(_ value: String) -> SimpleTextInput { .init(value: value, error: nil) }
+    public func error(_ value: String) -> SimpleTextInput { copy(error: .use(error)) }
     
     public init(value: String, error: String? = nil) {
         self.value = value

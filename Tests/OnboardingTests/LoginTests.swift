@@ -29,10 +29,10 @@ final class OnboardingTests: XCTestCase {
         auth.delay = 0.1
         sut.handle(.login)
         
-        update(username: "change attempt")
+        update(username: "change username attempt")
         XCTAssertEqual(sut.inputs.value(for: .username), username)
         
-        update(password: "change attempt")
+        update(password: "change password attempt")
         XCTAssertEqual(sut.inputs.value(for: .password), password)
     }
     

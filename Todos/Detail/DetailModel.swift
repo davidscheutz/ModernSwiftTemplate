@@ -9,15 +9,16 @@ struct DetailState: Copyable {
     let updatedDescription: SimpleTextInput
     let isUpdating: Bool
     let isDeleting: Bool
+    let error: String?
 }
 
 extension DetailState {
     var title: SimpleTextInput {
-        updatedTitle.value.isEmpty ? .init(value: todo.loaded?.title ?? "") : updatedTitle
+        hasChanges ? updatedTitle : .init(value: todo.loaded?.title ?? "")
     }
     
     var description: SimpleTextInput {
-        updatedDescription.value.isEmpty ? .init(value: todo.loaded?.description ?? "") : updatedDescription
+        hasChanges ? updatedDescription : .init(value: todo.loaded?.description ?? "")
     }
     
     var canEdit: Bool {

@@ -20,28 +20,42 @@ public final class TodoApiMock: HttpInterceptable {
         case is [Todo].Type:
             return todos as! T
         case is Todo.Type:
-//            switch request.httpMethod {
-//            case "GET":
-//            case "POST":
-//            case "DELETE":
-//            default: throw NSError(domain: "No mock registered for type: \(T.self)", code: 404)
-//            }
-            if let id = id(from: request) {
-                // get by ID
-                guard let todo = todos.first(where: { $0.id == id }) else {
-                    throw NSError(domain: "No todo found for ID: \(id)", code: 404)
+            switch HttpRequestBuilder.HTTPMethod(rawValue: request.httpMethod ?? "") {
+            case .get:
+                if let id = id(from: request) {
+                    // get by ID
+                    guard let todo = todos.first(where: { $0.id == id }) else {
+                        throw NSError(domain: "No todo found for ID: \(id)", code: 404)
+                    }
+                    return todo as! T
                 }
-                return todo as! T
-            } else {
-                let body = try JSONDecoder().decode(CreateTodoRequest.self, from: request.httpBody!)
+            case .patch:
+                if let id = id(from: request) {
+                    // get by ID
+                    guard let index = todos.firstIndex(where: { $0.id == id }) else {
+                        throw NSError(domain: "No todo found for ID: \(id)", code: 404)
+                    }
+                    let body = try JSONDecoder().decode(TodoRequestBody.self, from: request.httpBody!)
+                    let todo = todos[index]
+                    let updated = Todo(id: todo.id, createdAt: todo.createdAt, completed: body.completed, title: body.title, description: body.description, updatedAt: Date())
+                    todos[index] = updated
+                    return updated as! T
+                }
+            case .post:
+                let body = try JSONDecoder().decode(TodoRequestBody.self, from: request.httpBody!)
                 let todo = Todo(id: "\(abs(UUID().uuidString.hashValue))", createdAt: .now, completed: false, title: body.title, description: body.description, updatedAt: nil)
                 todos.append(todo)
                 return todo as! T
+            default: break
             }
         case is Empty.Type:
-            if request.httpMethod == HttpRequestBuilder.HTTPMethod.delete.rawValue, let id = id(from: request) {
-                todos.removeAll(where: { $0.id == id })
-                return Empty() as! T
+            switch HttpRequestBuilder.HTTPMethod(rawValue: request.httpMethod ?? "") {
+            case .delete:
+                if request.httpMethod == HttpRequestBuilder.HTTPMethod.delete.rawValue, let id = id(from: request) {
+                    todos.removeAll(where: { $0.id == id })
+                    return Empty() as! T
+                }
+            default: break
             }
         default: break
         }

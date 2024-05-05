@@ -23,12 +23,18 @@ final class TodosService {
     func createTodo(title: String, description: String) async throws -> Todo {
         let todo = try await api.create(with: title, description: description)
         
-        // optimistic update
-//        source.append(todo)
+        // insert optimistically
+        source.append(todo)
         
         load()
         
         return todo
+    }
+    
+    func updateTodo(with id: String, title: String, description: String) async throws {
+        _ = try await api.update(with: id, title: title, description: description)
+        
+        load()
     }
     
     func deleteTodo(with id: String) async throws {

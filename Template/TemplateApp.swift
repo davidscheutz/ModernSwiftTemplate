@@ -16,17 +16,17 @@ struct TemplateApp: App {
     
     var body: some Scene {
         WindowGroup {
-            /// Depending on your app this will vary.
-            /// Most apps I've seen :
+            /// Depending on your app's view hierarchy, this will vary.
+            /// An example of a slighlty more complex structure could be:
             
-            /// - UNAUTHENTICATED
-            /// -- Login
-            /// -- Signup/Onboarding
+            /// UNAUTHENTICATED
+            /// - Login
+            /// - Signup/Onboarding
             
-            /// - AUTHENTICATED
-            /// -- TabBar
-            /// --- Features Scope A
-            /// --- Features Scope B
+            /// AUTHENTICATED
+            /// - TabBar
+            /// -- Feature A
+            /// -- Feature B
             /// ...
             
             ZStack {

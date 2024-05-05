@@ -1,14 +1,18 @@
 import Foundation
+import Combine
 import Core
+import SwiftEvolution
 
 final class AuthenticationManagerMock: AuthenticationManager {
     var delay: TimeInterval = 0
     var shouldLoginPass = true
     var shouldLogoutPass = true
     
-    private(set) var isLoggedIn = false
     private(set) var loginCallCount = 0
     private(set) var logoutCallCount = 0
+    
+    private(set) lazy var isLoggedIn = CurrentValuePublisher<Bool>(_isLoggedIn)
+    private let _isLoggedIn = CurrentValueSubject<Bool, Never>(false)
     
     func login(username: String, password: String) async throws {
         loginCallCount += 1
@@ -19,7 +23,7 @@ final class AuthenticationManagerMock: AuthenticationManager {
         }
         
         if shouldLoginPass {
-            isLoggedIn = true
+            _isLoggedIn.send(true)
         } else {
             throw NSError(domain: "Login failed", code: 400)
         }
@@ -29,12 +33,12 @@ final class AuthenticationManagerMock: AuthenticationManager {
         logoutCallCount += 1
         
         if shouldLogoutPass {
-            isLoggedIn = false
+            _isLoggedIn.send(false)
         }
     }
     
     func reset() {
-        isLoggedIn = false
+        _isLoggedIn.send(false)
         shouldLoginPass = true
         shouldLogoutPass = true
         loginCallCount = 0

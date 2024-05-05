@@ -1,6 +1,13 @@
 import Foundation
 import Core
 
+/// Used to coordinate the transition between independent features.
+/// In this example the 'Onboarding' and 'Todos' framework both
+/// handle their navigation stack. The handover in this case is triggered
+/// using the observable authentication boolean. Another example
+/// would be the usage of completions, where one feature's work is
+/// completed and another feature takes over.
+
 /// @Singleton
 final class RootCoordinator: ObservableObject {
     
