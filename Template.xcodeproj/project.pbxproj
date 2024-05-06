@@ -32,8 +32,14 @@
 		B93AF52E2BACDF3400204C06 /* SwiftDependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = B93AF52D2BACDF3400204C06 /* SwiftDependencyContainer */; };
 		B9555D872BE84A94002CAA3E /* DetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9555D862BE84A94002CAA3E /* DetailTests.swift */; };
 		B9555D882BE84A94002CAA3E /* Todos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9858C022BAF362F00DE5BF7 /* Todos.framework */; };
-		B9555D8F2BE84FD8002CAA3E /* SwiftDependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = B9555D8E2BE84FD8002CAA3E /* SwiftDependencyContainer */; };
 		B9555D932BE85139002CAA3E /* InMemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9555D912BE850F4002CAA3E /* InMemoryStorage.swift */; };
+		B9555D962BE90EA8002CAA3E /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B9555D952BE90EA8002CAA3E /* SwiftEvolution */; };
+		B9555D9E2BE90EEE002CAA3E /* SwiftDependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = B9555D9D2BE90EEE002CAA3E /* SwiftDependencyContainer */; };
+		B9555DA02BE90EEE002CAA3E /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B9555D9F2BE90EEE002CAA3E /* SwiftEvolution */; };
+		B9555DA22BE90EF9002CAA3E /* SwiftUDF in Frameworks */ = {isa = PBXBuildFile; productRef = B9555DA12BE90EF9002CAA3E /* SwiftUDF */; };
+		B9555DA42BE90EF9002CAA3E /* SwiftDependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = B9555DA32BE90EF9002CAA3E /* SwiftDependencyContainer */; };
+		B9555DA62BE90EF9002CAA3E /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B9555DA52BE90EF9002CAA3E /* SwiftEvolution */; };
+		B9555DA82BE90F09002CAA3E /* SwiftUDF in Frameworks */ = {isa = PBXBuildFile; productRef = B9555DA72BE90F09002CAA3E /* SwiftUDF */; };
 		B9676D582BB32482006F9273 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9676D502BB32482006F9273 /* Poppins-Bold.ttf */; };
 		B9676D592BB32482006F9273 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9676D512BB32482006F9273 /* Poppins-ExtraLight.ttf */; };
 		B9676D5A2BB32482006F9273 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9676D522BB32482006F9273 /* Poppins-Light.ttf */; };
@@ -137,6 +143,20 @@
 			remoteGlobalIDString = B9858C012BAF362F00DE5BF7;
 			remoteInfo = Todos;
 		};
+		B9555D992BE90ED5002CAA3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B905098C2B6708EC00D3DE33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B90509932B6708EC00D3DE33;
+			remoteInfo = Template;
+		};
+		B9555D9B2BE90ED9002CAA3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B905098C2B6708EC00D3DE33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B90509932B6708EC00D3DE33;
+			remoteInfo = Template;
+		};
 		B9858BE42BAE605400DE5BF7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B905098C2B6708EC00D3DE33 /* Project object */;
@@ -209,6 +229,7 @@
 		B9555D842BE84A94002CAA3E /* TodosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9555D862BE84A94002CAA3E /* DetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTests.swift; sourceTree = "<group>"; };
 		B9555D912BE850F4002CAA3E /* InMemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryStorage.swift; sourceTree = "<group>"; };
+		B9555D942BE90E34002CAA3E /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
 		B9676D502BB32482006F9273 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		B9676D512BB32482006F9273 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
 		B9676D522BB32482006F9273 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
@@ -282,6 +303,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9555D962BE90EA8002CAA3E /* SwiftEvolution in Frameworks */,
 				B9154E222BC0C94900A14BEF /* SwiftDependencyContainer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +312,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9555DA62BE90EF9002CAA3E /* SwiftEvolution in Frameworks */,
+				B9555DA42BE90EF9002CAA3E /* SwiftDependencyContainer in Frameworks */,
+				B9555DA22BE90EF9002CAA3E /* SwiftUDF in Frameworks */,
 				B90ED49E2BB47C3F00AD2102 /* Onboarding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,8 +333,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9555DA82BE90F09002CAA3E /* SwiftUDF in Frameworks */,
+				B9555DA02BE90EEE002CAA3E /* SwiftEvolution in Frameworks */,
 				B9555D882BE84A94002CAA3E /* Todos.framework in Frameworks */,
-				B9555D8F2BE84FD8002CAA3E /* SwiftDependencyContainer in Frameworks */,
+				B9555D9E2BE90EEE002CAA3E /* SwiftDependencyContainer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				B90509962B6708EC00D3DE33 /* Template */,
+				B9555D942BE90E34002CAA3E /* TestPlan.xctestplan */,
 				B9EBFCDD2BBED9AB005E3A2E /* Tests */,
 				B9858BE12BAE605400DE5BF7 /* Onboarding */,
 				B9858C032BAF362F00DE5BF7 /* Todos */,
@@ -753,6 +781,7 @@
 			name = TemplateTests;
 			packageProductDependencies = (
 				B9154E212BC0C94900A14BEF /* SwiftDependencyContainer */,
+				B9555D952BE90EA8002CAA3E /* SwiftEvolution */,
 			);
 			productName = TemplateTests;
 			productReference = B90509A52B6708EE00D3DE33 /* TemplateTests.xctest */;
@@ -770,8 +799,14 @@
 			);
 			dependencies = (
 				B90ED4A02BB47C3F00AD2102 /* PBXTargetDependency */,
+				B9555D9A2BE90ED5002CAA3E /* PBXTargetDependency */,
 			);
 			name = OnboardingTests;
+			packageProductDependencies = (
+				B9555DA12BE90EF9002CAA3E /* SwiftUDF */,
+				B9555DA32BE90EF9002CAA3E /* SwiftDependencyContainer */,
+				B9555DA52BE90EF9002CAA3E /* SwiftEvolution */,
+			);
 			productName = OnboardingTests;
 			productReference = B90ED49A2BB47C3F00AD2102 /* OnboardingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -814,10 +849,13 @@
 			);
 			dependencies = (
 				B9555D8A2BE84A94002CAA3E /* PBXTargetDependency */,
+				B9555D9C2BE90ED9002CAA3E /* PBXTargetDependency */,
 			);
 			name = TodosTests;
 			packageProductDependencies = (
-				B9555D8E2BE84FD8002CAA3E /* SwiftDependencyContainer */,
+				B9555D9D2BE90EEE002CAA3E /* SwiftDependencyContainer */,
+				B9555D9F2BE90EEE002CAA3E /* SwiftEvolution */,
+				B9555DA72BE90F09002CAA3E /* SwiftUDF */,
 			);
 			productName = TodosTests;
 			productReference = B9555D842BE84A94002CAA3E /* TodosTests.xctest */;
@@ -1150,6 +1188,16 @@
 			isa = PBXTargetDependency;
 			target = B9858C012BAF362F00DE5BF7 /* Todos */;
 			targetProxy = B9555D892BE84A94002CAA3E /* PBXContainerItemProxy */;
+		};
+		B9555D9A2BE90ED5002CAA3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B90509932B6708EC00D3DE33 /* Template */;
+			targetProxy = B9555D992BE90ED5002CAA3E /* PBXContainerItemProxy */;
+		};
+		B9555D9C2BE90ED9002CAA3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B90509932B6708EC00D3DE33 /* Template */;
+			targetProxy = B9555D9B2BE90ED9002CAA3E /* PBXContainerItemProxy */;
 		};
 		B9676D642BB327AF006F9273 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1893,10 +1941,40 @@
 			package = B9D9C7742B7FB39100B15BA8 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftDependencyContainer" */;
 			productName = SwiftDependencyContainer;
 		};
-		B9555D8E2BE84FD8002CAA3E /* SwiftDependencyContainer */ = {
+		B9555D952BE90EA8002CAA3E /* SwiftEvolution */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B98D9CAA2BCAEDAE001EF14F /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
+			productName = SwiftEvolution;
+		};
+		B9555D9D2BE90EEE002CAA3E /* SwiftDependencyContainer */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B9D9C7742B7FB39100B15BA8 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftDependencyContainer" */;
 			productName = SwiftDependencyContainer;
+		};
+		B9555D9F2BE90EEE002CAA3E /* SwiftEvolution */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B98D9CAA2BCAEDAE001EF14F /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
+			productName = SwiftEvolution;
+		};
+		B9555DA12BE90EF9002CAA3E /* SwiftUDF */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B99839182B69AFB1003E87A9 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/swift-unidirectional-data-flow" */;
+			productName = SwiftUDF;
+		};
+		B9555DA32BE90EF9002CAA3E /* SwiftDependencyContainer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9D9C7742B7FB39100B15BA8 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftDependencyContainer" */;
+			productName = SwiftDependencyContainer;
+		};
+		B9555DA52BE90EF9002CAA3E /* SwiftEvolution */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B98D9CAA2BCAEDAE001EF14F /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
+			productName = SwiftEvolution;
+		};
+		B9555DA72BE90F09002CAA3E /* SwiftUDF */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B99839182B69AFB1003E87A9 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/swift-unidirectional-data-flow" */;
+			productName = SwiftUDF;
 		};
 		B9676D632BB327AF006F9273 /* SwiftCodeGenPlugin */ = {
 			isa = XCSwiftPackageProductDependency;

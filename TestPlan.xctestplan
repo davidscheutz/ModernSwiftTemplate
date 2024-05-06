@@ -1,0 +1,53 @@
+{
+  "configurations" : [
+    {
+      "id" : "AA26C70D-DEB6-46FF-A2A1-C7532EAFB33D",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "environmentVariableEntries" : [
+      {
+        "key" : "IDEPreferLogStreaming",
+        "value" : "YES"
+      },
+      {
+        "key" : "API_URL",
+        "value" : ""
+      }
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Template.xcodeproj",
+      "identifier" : "B90509932B6708EC00D3DE33",
+      "name" : "Template"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Template.xcodeproj",
+        "identifier" : "B90509A42B6708EE00D3DE33",
+        "name" : "TemplateTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Template.xcodeproj",
+        "identifier" : "B90ED4992BB47C3F00AD2102",
+        "name" : "OnboardingTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Template.xcodeproj",
+        "identifier" : "B9555D832BE84A94002CAA3E",
+        "name" : "TodosTests"
+      }
+    }
+  ],
+  "version" : 1
+}
