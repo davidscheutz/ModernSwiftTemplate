@@ -30,8 +30,10 @@
 		B93AF5242BACC89200204C06 /* BannerView+Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9268E9F2B6C637100E8F15F /* BannerView+Present.swift */; };
 		B93AF5252BACC89200204C06 /* BannerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9268E9D2B6C587E00E8F15F /* BannerManager.swift */; };
 		B93AF52E2BACDF3400204C06 /* SwiftDependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = B93AF52D2BACDF3400204C06 /* SwiftDependencyContainer */; };
-		B9555D872BE84A94002CAA3E /* TodosDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9555D862BE84A94002CAA3E /* TodosDetailTests.swift */; };
+		B9555D872BE84A94002CAA3E /* DetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9555D862BE84A94002CAA3E /* DetailTests.swift */; };
 		B9555D882BE84A94002CAA3E /* Todos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9858C022BAF362F00DE5BF7 /* Todos.framework */; };
+		B9555D8F2BE84FD8002CAA3E /* SwiftDependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = B9555D8E2BE84FD8002CAA3E /* SwiftDependencyContainer */; };
+		B9555D932BE85139002CAA3E /* InMemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9555D912BE850F4002CAA3E /* InMemoryStorage.swift */; };
 		B9676D582BB32482006F9273 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9676D502BB32482006F9273 /* Poppins-Bold.ttf */; };
 		B9676D592BB32482006F9273 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9676D512BB32482006F9273 /* Poppins-ExtraLight.ttf */; };
 		B9676D5A2BB32482006F9273 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9676D522BB32482006F9273 /* Poppins-Light.ttf */; };
@@ -205,7 +207,8 @@
 		B927F0442BAB9A8E001D88BB /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B93AF52B2BACD67A00204C06 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		B9555D842BE84A94002CAA3E /* TodosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9555D862BE84A94002CAA3E /* TodosDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosDetailTests.swift; sourceTree = "<group>"; };
+		B9555D862BE84A94002CAA3E /* DetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTests.swift; sourceTree = "<group>"; };
+		B9555D912BE850F4002CAA3E /* InMemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryStorage.swift; sourceTree = "<group>"; };
 		B9676D502BB32482006F9273 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		B9676D512BB32482006F9273 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
 		B9676D522BB32482006F9273 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
@@ -306,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9555D882BE84A94002CAA3E /* Todos.framework in Frameworks */,
+				B9555D8F2BE84FD8002CAA3E /* SwiftDependencyContainer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,9 +451,18 @@
 		B9555D852BE84A94002CAA3E /* TodosTests */ = {
 			isa = PBXGroup;
 			children = (
-				B9555D862BE84A94002CAA3E /* TodosDetailTests.swift */,
+				B9555D862BE84A94002CAA3E /* DetailTests.swift */,
+				B9555D902BE850E2002CAA3E /* Mocks */,
 			);
 			path = TodosTests;
+			sourceTree = "<group>";
+		};
+		B9555D902BE850E2002CAA3E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B9555D912BE850F4002CAA3E /* InMemoryStorage.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		B9676D4F2BB30DCE006F9273 /* Font */ = {
@@ -803,6 +816,9 @@
 				B9555D8A2BE84A94002CAA3E /* PBXTargetDependency */,
 			);
 			name = TodosTests;
+			packageProductDependencies = (
+				B9555D8E2BE84FD8002CAA3E /* SwiftDependencyContainer */,
+			);
 			productName = TodosTests;
 			productReference = B9555D842BE84A94002CAA3E /* TodosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -1060,7 +1076,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9555D872BE84A94002CAA3E /* TodosDetailTests.swift in Sources */,
+				B9555D872BE84A94002CAA3E /* DetailTests.swift in Sources */,
+				B9555D932BE85139002CAA3E /* InMemoryStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1868,6 +1885,11 @@
 			productName = "plugin:SwiftDependencyContainerPlugin";
 		};
 		B93AF52D2BACDF3400204C06 /* SwiftDependencyContainer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9D9C7742B7FB39100B15BA8 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftDependencyContainer" */;
+			productName = SwiftDependencyContainer;
+		};
+		B9555D8E2BE84FD8002CAA3E /* SwiftDependencyContainer */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B9D9C7742B7FB39100B15BA8 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftDependencyContainer" */;
 			productName = SwiftDependencyContainer;

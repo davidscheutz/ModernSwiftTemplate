@@ -3,7 +3,7 @@ import Core
 
 public final class TodoApiMock: HttpInterceptable {
     
-    private var todos = [
+    private(set) var todos = [
         Todo(id: "1", createdAt: .now, completed: false, title: "Master", description: nil, updatedAt: nil),
         Todo(id: "2", createdAt: .now, completed: false, title: "Relax", description: "Preferably outside", updatedAt: nil),
         Todo(id: "3", createdAt: .now, completed: false, title: "Enjoy", description: nil, updatedAt: nil)

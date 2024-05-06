@@ -6,11 +6,20 @@ public enum LoadableData<T> {
     case error(message: String)
     
     public var loaded: T? {
-        switch self {
+        return switch self {
         case .loading, .error:
-            return nil
+            nil
         case .loaded(let data):
-            return data
+            data
+        }
+    }
+    
+    public var isError: Bool {
+        return switch self {
+        case .loading, .loaded:
+            false
+        case .error:
+            true
         }
     }
 }
