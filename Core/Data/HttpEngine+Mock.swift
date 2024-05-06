@@ -7,10 +7,12 @@ public protocol HttpInterceptable {
 
 public class HttpEngineMock: HttpEngine {
     private let real: HttpEngine
+    private let simulateDelay: Bool
     private var interceptors = [HttpInterceptable]()
     
-    public init(real: HttpEngine = HttpEngineImpl()) {
+    public init(simulateDelay: Bool = true, real: HttpEngine = HttpEngineImpl()) {
         self.real = real
+        self.simulateDelay = simulateDelay
     }
     
     public func register(_ interceptor: HttpInterceptable) -> HttpEngineMock {
@@ -23,7 +25,9 @@ public class HttpEngineMock: HttpEngine {
     }
     
     public func execute<T: Decodable>(_ request: URLRequest) async throws -> T {
-        try await Task.sleep(nanoseconds: UInt64(Double.random(in: 0.3...1.2) * 1_000_000_000))
+        if simulateDelay {
+            try await Task.sleep(nanoseconds: UInt64(Double.random(in: 0.3...1.2) * 1_000_000_000))
+        }
         
         if let interceptor = interceptors.first(where: { $0.canHandle(request) }) {
             return try await interceptor.handle(request)

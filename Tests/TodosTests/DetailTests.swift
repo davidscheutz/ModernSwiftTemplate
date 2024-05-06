@@ -15,7 +15,7 @@ final class DetailTests: XCTestCase {
         try TodosContainer.register(using: container)
         try CoreContainer.register(using: container)
         
-        try container.register(HttpEngine.self) { HttpEngineMock().register(self.api) }
+        try container.register(HttpEngine.self) { HttpEngineMock(simulateDelay: false).register(self.api) }
         try container.register { ApiConfig(baseUrl: "tests", authStore: try! self.container.resolve()) }
         
         try container.register(LocalStorage.self) { InMemoryStorage() }
