@@ -1,6 +1,15 @@
 {
-  "originHash" : "706a318a26e57e359253a6b96025e1ed49a173f5dfcf0fa027dc65a639c0270c",
+  "originHash" : "c6af160de1e2c436205f6a20d911d81a567b274590dde713103cee0a9c899446",
   "pins" : [
+    {
+      "identity" : "swiftcopy",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/davidscheutz/SwiftCopy.git",
+      "state" : {
+        "revision" : "d5c8fd7072724fd632efe7e1e80632cbded151fd",
+        "version" : "1.2.0"
+      }
+    },
     {
       "identity" : "swiftevolution",
       "kind" : "remoteSourceControl",
