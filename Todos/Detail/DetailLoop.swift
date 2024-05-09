@@ -8,19 +8,16 @@ final class DetailLoop: GeneratedBaseDetailLoop {
     private let id: String
     private let todosService: TodosService
     private let navigation: Navigation
-    private let bannerManager: BannerManager
     
     init(
         // sourcery: configurable
         id: String,
         todosService: TodosService,
-        navigation: Navigation,
-        bannerManager: BannerManager
+        navigation: Navigation
     ) {
         self.id = id
         self.todosService = todosService
         self.navigation = navigation
-        self.bannerManager = bannerManager
 
         super.init(initial: State(todo: .loading, updatedTitle: .empty, updatedDescription: .empty, isUpdating: false, isDeleting: false, error: nil))
     }

@@ -6,12 +6,10 @@ import Core
 final class CreateLoop: GeneratedBaseCreateLoop {
     private let service: TodosService
     private let navigation: Navigation
-    private let bannerManager: BannerManager
     
-    init(service: TodosService, bannerManager: BannerManager, navigation: Navigation) {
+    init(service: TodosService, navigation: Navigation) {
         self.service = service
         self.navigation = navigation
-        self.bannerManager = bannerManager
         
         super.init(initial: .initial)
     }
@@ -40,10 +38,11 @@ final class CreateLoop: GeneratedBaseCreateLoop {
         Task {
             do {
                 _ = try await service.createTodo(title: title.value, description: description.value)
-                bannerManager.present(.success("New Todo created"))
                 navigation.closeSheet()
             } catch let error {
-                bannerManager.present(.error(error.localizedDescription))
+                update {
+                    $0.copy(isLoading: false, error: .use(error.localizedDescription))
+                }
             }
         }
     }

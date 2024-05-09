@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/davidscheutz/SwiftCopy.git",
       "state" : {
-        "revision" : "d5c8fd7072724fd632efe7e1e80632cbded151fd",
-        "version" : "1.2.0"
+        "revision" : "f8641bb37efab57cdd2ccfb09071ba7f90129be7",
+        "version" : "1.2.1"
       }
     },
     {
