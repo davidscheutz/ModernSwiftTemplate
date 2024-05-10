@@ -1,5 +1,5 @@
 {
-  "originHash" : "c6af160de1e2c436205f6a20d911d81a567b274590dde713103cee0a9c899446",
+  "originHash" : "ead621873e59b73f713aa938a54e8a9fb70d7300fba3e158c2ea79974503dca6",
   "pins" : [
     {
       "identity" : "swiftcopy",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "f8641bb37efab57cdd2ccfb09071ba7f90129be7",
         "version" : "1.2.1"
+      }
+    },
+    {
+      "identity" : "swiftdependencycontainer",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/davidscheutz/SwiftDependencyContainer.git",
+      "state" : {
+        "revision" : "486c57b864172e83925c41a1587fd65fea3c03a9",
+        "version" : "0.4.0"
       }
     },
     {
