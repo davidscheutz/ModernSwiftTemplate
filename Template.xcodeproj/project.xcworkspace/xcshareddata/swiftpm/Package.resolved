@@ -1,5 +1,5 @@
 {
-  "originHash" : "b4610394f3e22d4da88488717c535a42bbd43895fcf54e639f5419069cead48e",
+  "originHash" : "6ba51d441b41ce350e0ee5c02606a4e894807a7a656c88d7b4f48f5bab6677a7",
   "pins" : [
     {
       "identity" : "swiftcopy",
@@ -35,6 +35,15 @@
       "state" : {
         "branch" : "master",
         "revision" : "3b352bcc8ef087520dd222f123584ca9212c8077"
+      }
+    },
+    {
+      "identity" : "swiftui-infinite-navigation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/davidscheutz/swiftui-infinite-navigation.git",
+      "state" : {
+        "revision" : "e63c9ea58de6baf075e2c2a2ad978eec2050db3e",
+        "version" : "1.1.0"
       }
     }
   ],

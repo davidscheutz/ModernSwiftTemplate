@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		B900AB5C2BEFC57000F0A241 /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB5B2BEFC57000F0A241 /* SwiftEvolution */; };
 		B900AB5E2BEFC57600F0A241 /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB5D2BEFC57600F0A241 /* SwiftEvolution */; };
 		B900AB602BEFC58800F0A241 /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB5F2BEFC58800F0A241 /* SwiftEvolution */; };
+		B900AB632BEFCFCC00F0A241 /* InfiniteNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB622BEFCFCC00F0A241 /* InfiniteNavigation */; };
 		B90509982B6708EC00D3DE33 /* TemplateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90509972B6708EC00D3DE33 /* TemplateApp.swift */; };
 		B905099C2B6708EE00D3DE33 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B905099B2B6708EE00D3DE33 /* AppIcon.xcassets */; };
 		B90509AA2B6708EE00D3DE33 /* TemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90509A92B6708EE00D3DE33 /* TemplateTests.swift */; };
@@ -79,7 +80,6 @@
 		B9858C2D2BAF378F00DE5BF7 /* CreateLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B645A32B8EDDDE00FBE7CF /* CreateLoop.swift */; };
 		B9858C2E2BAF378F00DE5BF7 /* CreateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B645A12B8EDDD700FBE7CF /* CreateModels.swift */; };
 		B9858C2F2BAF37A800DE5BF7 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9C7D32B8562CC00B15BA8 /* Navigation.swift */; };
-		B9858C332BAF39E200DE5BF7 /* InfiniteNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = B9858C322BAF39E200DE5BF7 /* InfiniteNavigation */; };
 		B98D9CBB2BCD5EC8001EF14F /* ErrorDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98D9CBA2BCD5EC8001EF14F /* ErrorDisplayable.swift */; };
 		B98D9CBD2BCFF6E7001EF14F /* ApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98D9CBC2BCFF6E7001EF14F /* ApiMock.swift */; };
 		B98D9CBF2BCFFE7C001EF14F /* Keychain+SecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98D9CBE2BCFFE7C001EF14F /* Keychain+SecureStorage.swift */; };
@@ -345,8 +345,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B900AB5C2BEFC57000F0A241 /* SwiftEvolution in Frameworks */,
-				B9858C332BAF39E200DE5BF7 /* InfiniteNavigation in Frameworks */,
 				B9858C1F2BAF372A00DE5BF7 /* Core.framework in Frameworks */,
+				B900AB632BEFCFCC00F0A241 /* InfiniteNavigation in Frameworks */,
 				B900AB4D2BEFA49800F0A241 /* SwiftUDF in Frameworks */,
 				B9555DAD2BED09D4002CAA3E /* SwiftCopy in Frameworks */,
 				B900AB422BEE5BDF00F0A241 /* SwiftDependencyContainer in Frameworks */,
@@ -881,11 +881,11 @@
 			);
 			name = Todos;
 			packageProductDependencies = (
-				B9858C322BAF39E200DE5BF7 /* InfiniteNavigation */,
 				B9555DAC2BED09D4002CAA3E /* SwiftCopy */,
 				B900AB412BEE5BDF00F0A241 /* SwiftDependencyContainer */,
 				B900AB4C2BEFA49800F0A241 /* SwiftUDF */,
 				B900AB5B2BEFC57000F0A241 /* SwiftEvolution */,
+				B900AB622BEFCFCC00F0A241 /* InfiniteNavigation */,
 			);
 			productName = Todos;
 			productReference = B9858C022BAF362F00DE5BF7 /* Todos.framework */;
@@ -935,11 +935,11 @@
 			);
 			mainGroup = B905098B2B6708EC00D3DE33;
 			packageReferences = (
-				B936DCAF2B8E89160087AA5F /* XCLocalSwiftPackageReference "../../../../Projects/DSC/InfiniteNavigation" */,
 				B9555DA92BED09B9002CAA3E /* XCRemoteSwiftPackageReference "SwiftCopy" */,
 				B900AB3A2BEE5BA100F0A241 /* XCRemoteSwiftPackageReference "SwiftDependencyContainer" */,
 				B900AB472BEFA47300F0A241 /* XCRemoteSwiftPackageReference "SwiftUDF" */,
 				B900AB582BEFC53600F0A241 /* XCRemoteSwiftPackageReference "SwiftEvolution" */,
+				B900AB612BEFCFBF00F0A241 /* XCRemoteSwiftPackageReference "swiftui-infinite-navigation" */,
 			);
 			productRefGroup = B90509952B6708EC00D3DE33 /* Products */;
 			projectDirPath = "";
@@ -1850,10 +1850,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		B936DCAF2B8E89160087AA5F /* XCLocalSwiftPackageReference "../../../../Projects/DSC/InfiniteNavigation" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../../../Projects/DSC/InfiniteNavigation;
-		};
 		B93AF5102BABE62B00204C06 /* XCLocalSwiftPackageReference "https://github.com/davidscheutz/SwiftCopy.git" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = "https://github.com/davidscheutz/SwiftCopy.git";
@@ -1891,6 +1887,14 @@
 			requirement = {
 				branch = main;
 				kind = branch;
+			};
+		};
+		B900AB612BEFCFBF00F0A241 /* XCRemoteSwiftPackageReference "swiftui-infinite-navigation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/davidscheutz/swiftui-infinite-navigation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
 			};
 		};
 		B9555DA92BED09B9002CAA3E /* XCRemoteSwiftPackageReference "SwiftCopy" */ = {
@@ -1994,6 +1998,11 @@
 			package = B900AB582BEFC53600F0A241 /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
 			productName = SwiftEvolution;
 		};
+		B900AB622BEFCFCC00F0A241 /* InfiniteNavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B900AB612BEFCFBF00F0A241 /* XCRemoteSwiftPackageReference "swiftui-infinite-navigation" */;
+			productName = InfiniteNavigation;
+		};
 		B93AF5132BABE72B00204C06 /* SwiftCopyCodeGeneratorPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B93AF5102BABE62B00204C06 /* XCLocalSwiftPackageReference "https://github.com/davidscheutz/SwiftCopy.git" */;
@@ -2038,11 +2047,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B93AF5102BABE62B00204C06 /* XCLocalSwiftPackageReference "https://github.com/davidscheutz/SwiftCopy.git" */;
 			productName = "plugin:SwiftCopyCodeGeneratorPlugin";
-		};
-		B9858C322BAF39E200DE5BF7 /* InfiniteNavigation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B936DCAF2B8E89160087AA5F /* XCLocalSwiftPackageReference "../../../../Projects/DSC/InfiniteNavigation" */;
-			productName = InfiniteNavigation;
 		};
 		B9908E212B7B1418009D1309 /* SwiftDependencyContainer */ = {
 			isa = XCSwiftPackageProductDependency;
