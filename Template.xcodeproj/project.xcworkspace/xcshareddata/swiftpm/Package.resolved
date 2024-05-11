@@ -1,5 +1,5 @@
 {
-  "originHash" : "ead621873e59b73f713aa938a54e8a9fb70d7300fba3e158c2ea79974503dca6",
+  "originHash" : "b4610394f3e22d4da88488717c535a42bbd43895fcf54e639f5419069cead48e",
   "pins" : [
     {
       "identity" : "swiftcopy",
@@ -26,6 +26,15 @@
       "state" : {
         "branch" : "main",
         "revision" : "147091a43a1bb726d5ab16bf576a3babded7122e"
+      }
+    },
+    {
+      "identity" : "swiftudf",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/davidscheutz/SwiftUDF.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "3b352bcc8ef087520dd222f123584ca9212c8077"
       }
     }
   ],

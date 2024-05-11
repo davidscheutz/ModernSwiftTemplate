@@ -13,6 +13,15 @@
 		B900AB422BEE5BDF00F0A241 /* SwiftDependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB412BEE5BDF00F0A241 /* SwiftDependencyContainer */; };
 		B900AB442BEE5BE500F0A241 /* SwiftDependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB432BEE5BE500F0A241 /* SwiftDependencyContainer */; };
 		B900AB462BEE5BED00F0A241 /* SwiftDependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB452BEE5BED00F0A241 /* SwiftDependencyContainer */; };
+		B900AB492BEFA48D00F0A241 /* SwiftUDF in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB482BEFA48D00F0A241 /* SwiftUDF */; };
+		B900AB4B2BEFA49300F0A241 /* SwiftUDF in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB4A2BEFA49300F0A241 /* SwiftUDF */; };
+		B900AB4D2BEFA49800F0A241 /* SwiftUDF in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB4C2BEFA49800F0A241 /* SwiftUDF */; };
+		B900AB4F2BEFA49C00F0A241 /* SwiftUDF in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB4E2BEFA49C00F0A241 /* SwiftUDF */; };
+		B900AB512BEFA4A100F0A241 /* SwiftUDF in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB502BEFA4A100F0A241 /* SwiftUDF */; };
+		B900AB5A2BEFC54700F0A241 /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB592BEFC54700F0A241 /* SwiftEvolution */; };
+		B900AB5C2BEFC57000F0A241 /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB5B2BEFC57000F0A241 /* SwiftEvolution */; };
+		B900AB5E2BEFC57600F0A241 /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB5D2BEFC57600F0A241 /* SwiftEvolution */; };
+		B900AB602BEFC58800F0A241 /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB5F2BEFC58800F0A241 /* SwiftEvolution */; };
 		B90509982B6708EC00D3DE33 /* TemplateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90509972B6708EC00D3DE33 /* TemplateApp.swift */; };
 		B905099C2B6708EE00D3DE33 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B905099B2B6708EE00D3DE33 /* AppIcon.xcassets */; };
 		B90509AA2B6708EE00D3DE33 /* TemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90509A92B6708EE00D3DE33 /* TemplateTests.swift */; };
@@ -34,11 +43,6 @@
 		B9555D872BE84A94002CAA3E /* DetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9555D862BE84A94002CAA3E /* DetailTests.swift */; };
 		B9555D882BE84A94002CAA3E /* Todos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9858C022BAF362F00DE5BF7 /* Todos.framework */; };
 		B9555D932BE85139002CAA3E /* InMemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9555D912BE850F4002CAA3E /* InMemoryStorage.swift */; };
-		B9555D962BE90EA8002CAA3E /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B9555D952BE90EA8002CAA3E /* SwiftEvolution */; };
-		B9555DA02BE90EEE002CAA3E /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B9555D9F2BE90EEE002CAA3E /* SwiftEvolution */; };
-		B9555DA22BE90EF9002CAA3E /* SwiftUDF in Frameworks */ = {isa = PBXBuildFile; productRef = B9555DA12BE90EF9002CAA3E /* SwiftUDF */; };
-		B9555DA62BE90EF9002CAA3E /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B9555DA52BE90EF9002CAA3E /* SwiftEvolution */; };
-		B9555DA82BE90F09002CAA3E /* SwiftUDF in Frameworks */ = {isa = PBXBuildFile; productRef = B9555DA72BE90F09002CAA3E /* SwiftUDF */; };
 		B9555DAB2BED09C3002CAA3E /* SwiftCopy in Frameworks */ = {isa = PBXBuildFile; productRef = B9555DAA2BED09C3002CAA3E /* SwiftCopy */; };
 		B9555DAD2BED09D4002CAA3E /* SwiftCopy in Frameworks */ = {isa = PBXBuildFile; productRef = B9555DAC2BED09D4002CAA3E /* SwiftCopy */; };
 		B9555DAF2BED09E1002CAA3E /* SwiftCopy in Frameworks */ = {isa = PBXBuildFile; productRef = B9555DAE2BED09E1002CAA3E /* SwiftCopy */; };
@@ -61,12 +65,8 @@
 		B9858BEC2BAE607700DE5BF7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9C7872B83915C00B15BA8 /* LoginView.swift */; };
 		B9858BED2BAE607700DE5BF7 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9C78B2B83917A00B15BA8 /* LoginModel.swift */; };
 		B9858BEE2BAE607700DE5BF7 /* LoginLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9C7892B83917300B15BA8 /* LoginLoop.swift */; };
-		B9858BF02BAE609000DE5BF7 /* SwiftUDF in Frameworks */ = {isa = PBXBuildFile; productRef = B9858BEF2BAE609000DE5BF7 /* SwiftUDF */; };
-		B9858BF22BAE609500DE5BF7 /* SwiftCodeGen in Frameworks */ = {isa = PBXBuildFile; productRef = B9858BF12BAE609500DE5BF7 /* SwiftCodeGen */; };
 		B9858C082BAF362F00DE5BF7 /* Todos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9858C022BAF362F00DE5BF7 /* Todos.framework */; };
 		B9858C092BAF362F00DE5BF7 /* Todos.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9858C022BAF362F00DE5BF7 /* Todos.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B9858C0E2BAF366900DE5BF7 /* SwiftUDF in Frameworks */ = {isa = PBXBuildFile; productRef = B9858C0D2BAF366900DE5BF7 /* SwiftUDF */; };
-		B9858C102BAF366900DE5BF7 /* SwiftCodeGen in Frameworks */ = {isa = PBXBuildFile; productRef = B9858C0F2BAF366900DE5BF7 /* SwiftCodeGen */; };
 		B9858C1C2BAF36D200DE5BF7 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90509992B6708EC00D3DE33 /* ListView.swift */; };
 		B9858C1D2BAF36D200DE5BF7 /* ListLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90509D92B671A8900D3DE33 /* ListLoop.swift */; };
 		B9858C1E2BAF36D200DE5BF7 /* ListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90509DB2B671B4600D3DE33 /* ListModels.swift */; };
@@ -80,9 +80,6 @@
 		B9858C2E2BAF378F00DE5BF7 /* CreateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B645A12B8EDDD700FBE7CF /* CreateModels.swift */; };
 		B9858C2F2BAF37A800DE5BF7 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9C7D32B8562CC00B15BA8 /* Navigation.swift */; };
 		B9858C332BAF39E200DE5BF7 /* InfiniteNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = B9858C322BAF39E200DE5BF7 /* InfiniteNavigation */; };
-		B98D9CAC2BCAEDAE001EF14F /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B98D9CAB2BCAEDAE001EF14F /* SwiftEvolution */; };
-		B98D9CB22BCAEFEE001EF14F /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B98D9CB12BCAEFEE001EF14F /* SwiftEvolution */; };
-		B98D9CB82BCAEFF8001EF14F /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B98D9CB72BCAEFF8001EF14F /* SwiftEvolution */; };
 		B98D9CBB2BCD5EC8001EF14F /* ErrorDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98D9CBA2BCD5EC8001EF14F /* ErrorDisplayable.swift */; };
 		B98D9CBD2BCFF6E7001EF14F /* ApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98D9CBC2BCFF6E7001EF14F /* ApiMock.swift */; };
 		B98D9CBF2BCFFE7C001EF14F /* Keychain+SecureStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98D9CBE2BCFFE7C001EF14F /* Keychain+SecureStorage.swift */; };
@@ -90,7 +87,6 @@
 		B9908E222B7B1418009D1309 /* SwiftDependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = B9908E212B7B1418009D1309 /* SwiftDependencyContainer */; };
 		B993F8DF2BD7E5CB0055161C /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993F8DE2BD7E5CB0055161C /* ApiConfig.swift */; };
 		B993F8E32BE7DFD40055161C /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993F8E22BE7DFD40055161C /* RootCoordinator.swift */; };
-		B993F8E52BE7F9FB0055161C /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B993F8E42BE7F9FB0055161C /* SwiftEvolution */; };
 		B99816E72BAB9B6400349606 /* Completion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99816E42BAB9B6400349606 /* Completion.swift */; };
 		B99816E82BAB9B6400349606 /* LoadableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99816E52BAB9B6400349606 /* LoadableData.swift */; };
 		B99816E92BAB9B8B00349606 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9C79E2B85008300B15BA8 /* Appearance.swift */; };
@@ -284,7 +280,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B993F8E52BE7F9FB0055161C /* SwiftEvolution in Frameworks */,
+				B900AB602BEFC58800F0A241 /* SwiftEvolution in Frameworks */,
 				B9D9C7762B7FB39100B15BA8 /* SwiftDependencyContainer in Frameworks */,
 				B9858C082BAF362F00DE5BF7 /* Todos.framework in Frameworks */,
 				B9908E222B7B1418009D1309 /* SwiftDependencyContainer in Frameworks */,
@@ -297,7 +293,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9555D962BE90EA8002CAA3E /* SwiftEvolution in Frameworks */,
 				B900AB3C2BEE5BC200F0A241 /* SwiftDependencyContainer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,9 +301,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9555DA62BE90EF9002CAA3E /* SwiftEvolution in Frameworks */,
-				B9555DA22BE90EF9002CAA3E /* SwiftUDF in Frameworks */,
 				B90ED49E2BB47C3F00AD2102 /* Onboarding.framework in Frameworks */,
+				B900AB4B2BEFA49300F0A241 /* SwiftUDF in Frameworks */,
 				B900AB402BEE5BDA00F0A241 /* SwiftDependencyContainer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,8 +311,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B900AB5A2BEFC54700F0A241 /* SwiftEvolution in Frameworks */,
 				B900AB462BEE5BED00F0A241 /* SwiftDependencyContainer in Frameworks */,
-				B98D9CAC2BCAEDAE001EF14F /* SwiftEvolution in Frameworks */,
+				B900AB512BEFA4A100F0A241 /* SwiftUDF in Frameworks */,
 				B9555DAF2BED09E1002CAA3E /* SwiftCopy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,9 +322,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9555DA82BE90F09002CAA3E /* SwiftUDF in Frameworks */,
-				B9555DA02BE90EEE002CAA3E /* SwiftEvolution in Frameworks */,
 				B9555D882BE84A94002CAA3E /* Todos.framework in Frameworks */,
+				B900AB4F2BEFA49C00F0A241 /* SwiftUDF in Frameworks */,
 				B900AB442BEE5BE500F0A241 /* SwiftDependencyContainer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,12 +332,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B98D9CB82BCAEFF8001EF14F /* SwiftEvolution in Frameworks */,
-				B9858BF22BAE609500DE5BF7 /* SwiftCodeGen in Frameworks */,
+				B900AB492BEFA48D00F0A241 /* SwiftUDF in Frameworks */,
 				B9858C242BAF373300DE5BF7 /* Core.framework in Frameworks */,
 				B900AB3E2BEE5BC900F0A241 /* SwiftDependencyContainer in Frameworks */,
-				B9858BF02BAE609000DE5BF7 /* SwiftUDF in Frameworks */,
 				B9555DAB2BED09C3002CAA3E /* SwiftCopy in Frameworks */,
+				B900AB5E2BEFC57600F0A241 /* SwiftEvolution in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,11 +344,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B900AB5C2BEFC57000F0A241 /* SwiftEvolution in Frameworks */,
 				B9858C332BAF39E200DE5BF7 /* InfiniteNavigation in Frameworks */,
-				B9858C102BAF366900DE5BF7 /* SwiftCodeGen in Frameworks */,
 				B9858C1F2BAF372A00DE5BF7 /* Core.framework in Frameworks */,
-				B98D9CB22BCAEFEE001EF14F /* SwiftEvolution in Frameworks */,
-				B9858C0E2BAF366900DE5BF7 /* SwiftUDF in Frameworks */,
+				B900AB4D2BEFA49800F0A241 /* SwiftUDF in Frameworks */,
 				B9555DAD2BED09D4002CAA3E /* SwiftCopy in Frameworks */,
 				B900AB422BEE5BDF00F0A241 /* SwiftDependencyContainer in Frameworks */,
 			);
@@ -742,7 +734,7 @@
 			packageProductDependencies = (
 				B9908E212B7B1418009D1309 /* SwiftDependencyContainer */,
 				B9D9C7752B7FB39100B15BA8 /* SwiftDependencyContainer */,
-				B993F8E42BE7F9FB0055161C /* SwiftEvolution */,
+				B900AB5F2BEFC58800F0A241 /* SwiftEvolution */,
 			);
 			productName = Template;
 			productReference = B90509942B6708EC00D3DE33 /* Template.app */;
@@ -763,7 +755,6 @@
 			);
 			name = TemplateTests;
 			packageProductDependencies = (
-				B9555D952BE90EA8002CAA3E /* SwiftEvolution */,
 				B900AB3B2BEE5BC200F0A241 /* SwiftDependencyContainer */,
 			);
 			productName = TemplateTests;
@@ -786,9 +777,8 @@
 			);
 			name = OnboardingTests;
 			packageProductDependencies = (
-				B9555DA12BE90EF9002CAA3E /* SwiftUDF */,
-				B9555DA52BE90EF9002CAA3E /* SwiftEvolution */,
 				B900AB3F2BEE5BDA00F0A241 /* SwiftDependencyContainer */,
+				B900AB4A2BEFA49300F0A241 /* SwiftUDF */,
 			);
 			productName = OnboardingTests;
 			productReference = B90ED49A2BB47C3F00AD2102 /* OnboardingTests.xctest */;
@@ -806,15 +796,16 @@
 			buildRules = (
 			);
 			dependencies = (
-				B9676D642BB327AF006F9273 /* PBXTargetDependency */,
+				B900AB532BEFA4AA00F0A241 /* PBXTargetDependency */,
 				B93AF51E2BACBE1200204C06 /* PBXTargetDependency */,
 				B93AF5142BABE72B00204C06 /* PBXTargetDependency */,
 			);
 			name = Core;
 			packageProductDependencies = (
-				B98D9CAB2BCAEDAE001EF14F /* SwiftEvolution */,
 				B9555DAE2BED09E1002CAA3E /* SwiftCopy */,
 				B900AB452BEE5BED00F0A241 /* SwiftDependencyContainer */,
+				B900AB502BEFA4A100F0A241 /* SwiftUDF */,
+				B900AB592BEFC54700F0A241 /* SwiftEvolution */,
 			);
 			productName = Core;
 			productReference = B927F0442BAB9A8E001D88BB /* Core.framework */;
@@ -836,9 +827,8 @@
 			);
 			name = TodosTests;
 			packageProductDependencies = (
-				B9555D9F2BE90EEE002CAA3E /* SwiftEvolution */,
-				B9555DA72BE90F09002CAA3E /* SwiftUDF */,
 				B900AB432BEE5BE500F0A241 /* SwiftDependencyContainer */,
+				B900AB4E2BEFA49C00F0A241 /* SwiftUDF */,
 			);
 			productName = TodosTests;
 			productReference = B9555D842BE84A94002CAA3E /* TodosTests.xctest */;
@@ -856,18 +846,17 @@
 			buildRules = (
 			);
 			dependencies = (
-				B9858BF82BAE60B300DE5BF7 /* PBXTargetDependency */,
+				B900AB572BEFA4B700F0A241 /* PBXTargetDependency */,
 				B9858BFA2BAE60B300DE5BF7 /* PBXTargetDependency */,
 				B9858BFC2BAE60B300DE5BF7 /* PBXTargetDependency */,
 				B9858C272BAF373300DE5BF7 /* PBXTargetDependency */,
 			);
 			name = Onboarding;
 			packageProductDependencies = (
-				B9858BEF2BAE609000DE5BF7 /* SwiftUDF */,
-				B9858BF12BAE609500DE5BF7 /* SwiftCodeGen */,
-				B98D9CB72BCAEFF8001EF14F /* SwiftEvolution */,
 				B9555DAA2BED09C3002CAA3E /* SwiftCopy */,
 				B900AB3D2BEE5BC900F0A241 /* SwiftDependencyContainer */,
+				B900AB482BEFA48D00F0A241 /* SwiftUDF */,
+				B900AB5D2BEFC57600F0A241 /* SwiftEvolution */,
 			);
 			productName = Onboarding;
 			productReference = B9858BE02BAE605400DE5BF7 /* Onboarding.framework */;
@@ -885,19 +874,18 @@
 			buildRules = (
 			);
 			dependencies = (
-				B9858C162BAF367E00DE5BF7 /* PBXTargetDependency */,
+				B900AB552BEFA4B100F0A241 /* PBXTargetDependency */,
 				B9858C182BAF367E00DE5BF7 /* PBXTargetDependency */,
 				B9858C1A2BAF367E00DE5BF7 /* PBXTargetDependency */,
 				B9858C222BAF372A00DE5BF7 /* PBXTargetDependency */,
 			);
 			name = Todos;
 			packageProductDependencies = (
-				B9858C0D2BAF366900DE5BF7 /* SwiftUDF */,
-				B9858C0F2BAF366900DE5BF7 /* SwiftCodeGen */,
 				B9858C322BAF39E200DE5BF7 /* InfiniteNavigation */,
-				B98D9CB12BCAEFEE001EF14F /* SwiftEvolution */,
 				B9555DAC2BED09D4002CAA3E /* SwiftCopy */,
 				B900AB412BEE5BDF00F0A241 /* SwiftDependencyContainer */,
+				B900AB4C2BEFA49800F0A241 /* SwiftUDF */,
+				B900AB5B2BEFC57000F0A241 /* SwiftEvolution */,
 			);
 			productName = Todos;
 			productReference = B9858C022BAF362F00DE5BF7 /* Todos.framework */;
@@ -947,12 +935,11 @@
 			);
 			mainGroup = B905098B2B6708EC00D3DE33;
 			packageReferences = (
-				B99839182B69AFB1003E87A9 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/swift-unidirectional-data-flow" */,
-				B9908E1B2B7538D5009D1309 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftCodeGen" */,
 				B936DCAF2B8E89160087AA5F /* XCLocalSwiftPackageReference "../../../../Projects/DSC/InfiniteNavigation" */,
-				B98D9CAA2BCAEDAE001EF14F /* XCRemoteSwiftPackageReference "SwiftEvolution" */,
 				B9555DA92BED09B9002CAA3E /* XCRemoteSwiftPackageReference "SwiftCopy" */,
 				B900AB3A2BEE5BA100F0A241 /* XCRemoteSwiftPackageReference "SwiftDependencyContainer" */,
+				B900AB472BEFA47300F0A241 /* XCRemoteSwiftPackageReference "SwiftUDF" */,
+				B900AB582BEFC53600F0A241 /* XCRemoteSwiftPackageReference "SwiftEvolution" */,
 			);
 			productRefGroup = B90509952B6708EC00D3DE33 /* Products */;
 			projectDirPath = "";
@@ -1141,6 +1128,18 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B900AB532BEFA4AA00F0A241 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B900AB522BEFA4AA00F0A241 /* SwiftUDFCodeGeneratorPlugin */;
+		};
+		B900AB552BEFA4B100F0A241 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B900AB542BEFA4B100F0A241 /* SwiftUDFCodeGeneratorPlugin */;
+		};
+		B900AB572BEFA4B700F0A241 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = B900AB562BEFA4B700F0A241 /* SwiftUDFCodeGeneratorPlugin */;
+		};
 		B90509A72B6708EE00D3DE33 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B90509932B6708EC00D3DE33 /* Template */;
@@ -1179,18 +1178,10 @@
 			target = B90509932B6708EC00D3DE33 /* Template */;
 			targetProxy = B9555D9B2BE90ED9002CAA3E /* PBXContainerItemProxy */;
 		};
-		B9676D642BB327AF006F9273 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = B9676D632BB327AF006F9273 /* SwiftCodeGenPlugin */;
-		};
 		B9858BE52BAE605400DE5BF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B9858BDF2BAE605400DE5BF7 /* Onboarding */;
 			targetProxy = B9858BE42BAE605400DE5BF7 /* PBXContainerItemProxy */;
-		};
-		B9858BF82BAE60B300DE5BF7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = B9858BF72BAE60B300DE5BF7 /* SwiftCodeGenPlugin */;
 		};
 		B9858BFA2BAE60B300DE5BF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1204,10 +1195,6 @@
 			isa = PBXTargetDependency;
 			target = B9858C012BAF362F00DE5BF7 /* Todos */;
 			targetProxy = B9858C062BAF362F00DE5BF7 /* PBXContainerItemProxy */;
-		};
-		B9858C162BAF367E00DE5BF7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = B9858C152BAF367E00DE5BF7 /* SwiftCodeGenPlugin */;
 		};
 		B9858C182BAF367E00DE5BF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1871,17 +1858,9 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = "https://github.com/davidscheutz/SwiftCopy.git";
 		};
-		B9908E1B2B7538D5009D1309 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftCodeGen" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../../../Projects/DSC/SwiftCodeGen;
-		};
 		B9908E202B7B1418009D1309 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftDependencyContainer" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../../../../Projects/DSC/SwiftDependencyContainer;
-		};
-		B99839182B69AFB1003E87A9 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/swift-unidirectional-data-flow" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../../../../Projects/DSC/swift-unidirectional-data-flow";
 		};
 		B9D9C7742B7FB39100B15BA8 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftDependencyContainer" */ = {
 			isa = XCLocalSwiftPackageReference;
@@ -1898,20 +1877,28 @@
 				minimumVersion = 0.4.0;
 			};
 		};
+		B900AB472BEFA47300F0A241 /* XCRemoteSwiftPackageReference "SwiftUDF" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/davidscheutz/SwiftUDF.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		B900AB582BEFC53600F0A241 /* XCRemoteSwiftPackageReference "SwiftEvolution" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/davidscheutz/SwiftEvolution.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		B9555DA92BED09B9002CAA3E /* XCRemoteSwiftPackageReference "SwiftCopy" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/davidscheutz/SwiftCopy.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.2.0;
-			};
-		};
-		B98D9CAA2BCAEDAE001EF14F /* XCRemoteSwiftPackageReference "SwiftEvolution" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/davidscheutz/SwiftEvolution.git";
-			requirement = {
-				branch = main;
-				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1947,6 +1934,66 @@
 			package = B900AB3A2BEE5BA100F0A241 /* XCRemoteSwiftPackageReference "SwiftDependencyContainer" */;
 			productName = SwiftDependencyContainer;
 		};
+		B900AB482BEFA48D00F0A241 /* SwiftUDF */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B900AB472BEFA47300F0A241 /* XCRemoteSwiftPackageReference "SwiftUDF" */;
+			productName = SwiftUDF;
+		};
+		B900AB4A2BEFA49300F0A241 /* SwiftUDF */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B900AB472BEFA47300F0A241 /* XCRemoteSwiftPackageReference "SwiftUDF" */;
+			productName = SwiftUDF;
+		};
+		B900AB4C2BEFA49800F0A241 /* SwiftUDF */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B900AB472BEFA47300F0A241 /* XCRemoteSwiftPackageReference "SwiftUDF" */;
+			productName = SwiftUDF;
+		};
+		B900AB4E2BEFA49C00F0A241 /* SwiftUDF */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B900AB472BEFA47300F0A241 /* XCRemoteSwiftPackageReference "SwiftUDF" */;
+			productName = SwiftUDF;
+		};
+		B900AB502BEFA4A100F0A241 /* SwiftUDF */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B900AB472BEFA47300F0A241 /* XCRemoteSwiftPackageReference "SwiftUDF" */;
+			productName = SwiftUDF;
+		};
+		B900AB522BEFA4AA00F0A241 /* SwiftUDFCodeGeneratorPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B900AB472BEFA47300F0A241 /* XCRemoteSwiftPackageReference "SwiftUDF" */;
+			productName = "plugin:SwiftUDFCodeGeneratorPlugin";
+		};
+		B900AB542BEFA4B100F0A241 /* SwiftUDFCodeGeneratorPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B900AB472BEFA47300F0A241 /* XCRemoteSwiftPackageReference "SwiftUDF" */;
+			productName = "plugin:SwiftUDFCodeGeneratorPlugin";
+		};
+		B900AB562BEFA4B700F0A241 /* SwiftUDFCodeGeneratorPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B900AB472BEFA47300F0A241 /* XCRemoteSwiftPackageReference "SwiftUDF" */;
+			productName = "plugin:SwiftUDFCodeGeneratorPlugin";
+		};
+		B900AB592BEFC54700F0A241 /* SwiftEvolution */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B900AB582BEFC53600F0A241 /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
+			productName = SwiftEvolution;
+		};
+		B900AB5B2BEFC57000F0A241 /* SwiftEvolution */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B900AB582BEFC53600F0A241 /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
+			productName = SwiftEvolution;
+		};
+		B900AB5D2BEFC57600F0A241 /* SwiftEvolution */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B900AB582BEFC53600F0A241 /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
+			productName = SwiftEvolution;
+		};
+		B900AB5F2BEFC58800F0A241 /* SwiftEvolution */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B900AB582BEFC53600F0A241 /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
+			productName = SwiftEvolution;
+		};
 		B93AF5132BABE72B00204C06 /* SwiftCopyCodeGeneratorPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B93AF5102BABE62B00204C06 /* XCLocalSwiftPackageReference "https://github.com/davidscheutz/SwiftCopy.git" */;
@@ -1956,31 +2003,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B9D9C7742B7FB39100B15BA8 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftDependencyContainer" */;
 			productName = "plugin:SwiftDependencyContainerPlugin";
-		};
-		B9555D952BE90EA8002CAA3E /* SwiftEvolution */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B98D9CAA2BCAEDAE001EF14F /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
-			productName = SwiftEvolution;
-		};
-		B9555D9F2BE90EEE002CAA3E /* SwiftEvolution */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B98D9CAA2BCAEDAE001EF14F /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
-			productName = SwiftEvolution;
-		};
-		B9555DA12BE90EF9002CAA3E /* SwiftUDF */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B99839182B69AFB1003E87A9 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/swift-unidirectional-data-flow" */;
-			productName = SwiftUDF;
-		};
-		B9555DA52BE90EF9002CAA3E /* SwiftEvolution */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B98D9CAA2BCAEDAE001EF14F /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
-			productName = SwiftEvolution;
-		};
-		B9555DA72BE90F09002CAA3E /* SwiftUDF */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B99839182B69AFB1003E87A9 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/swift-unidirectional-data-flow" */;
-			productName = SwiftUDF;
 		};
 		B9555DAA2BED09C3002CAA3E /* SwiftCopy */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1997,26 +2019,6 @@
 			package = B9555DA92BED09B9002CAA3E /* XCRemoteSwiftPackageReference "SwiftCopy" */;
 			productName = SwiftCopy;
 		};
-		B9676D632BB327AF006F9273 /* SwiftCodeGenPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B9908E1B2B7538D5009D1309 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftCodeGen" */;
-			productName = "plugin:SwiftCodeGenPlugin";
-		};
-		B9858BEF2BAE609000DE5BF7 /* SwiftUDF */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B99839182B69AFB1003E87A9 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/swift-unidirectional-data-flow" */;
-			productName = SwiftUDF;
-		};
-		B9858BF12BAE609500DE5BF7 /* SwiftCodeGen */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B9908E1B2B7538D5009D1309 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftCodeGen" */;
-			productName = SwiftCodeGen;
-		};
-		B9858BF72BAE60B300DE5BF7 /* SwiftCodeGenPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B9908E1B2B7538D5009D1309 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftCodeGen" */;
-			productName = "plugin:SwiftCodeGenPlugin";
-		};
 		B9858BF92BAE60B300DE5BF7 /* SwiftDependencyContainerPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B9D9C7742B7FB39100B15BA8 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftDependencyContainer" */;
@@ -2026,21 +2028,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B93AF5102BABE62B00204C06 /* XCLocalSwiftPackageReference "https://github.com/davidscheutz/SwiftCopy.git" */;
 			productName = "plugin:SwiftCopyCodeGeneratorPlugin";
-		};
-		B9858C0D2BAF366900DE5BF7 /* SwiftUDF */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B99839182B69AFB1003E87A9 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/swift-unidirectional-data-flow" */;
-			productName = SwiftUDF;
-		};
-		B9858C0F2BAF366900DE5BF7 /* SwiftCodeGen */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B9908E1B2B7538D5009D1309 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftCodeGen" */;
-			productName = SwiftCodeGen;
-		};
-		B9858C152BAF367E00DE5BF7 /* SwiftCodeGenPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B9908E1B2B7538D5009D1309 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftCodeGen" */;
-			productName = "plugin:SwiftCodeGenPlugin";
 		};
 		B9858C172BAF367E00DE5BF7 /* SwiftDependencyContainerPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -2057,21 +2044,6 @@
 			package = B936DCAF2B8E89160087AA5F /* XCLocalSwiftPackageReference "../../../../Projects/DSC/InfiniteNavigation" */;
 			productName = InfiniteNavigation;
 		};
-		B98D9CAB2BCAEDAE001EF14F /* SwiftEvolution */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B98D9CAA2BCAEDAE001EF14F /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
-			productName = SwiftEvolution;
-		};
-		B98D9CB12BCAEFEE001EF14F /* SwiftEvolution */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B98D9CAA2BCAEDAE001EF14F /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
-			productName = SwiftEvolution;
-		};
-		B98D9CB72BCAEFF8001EF14F /* SwiftEvolution */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B98D9CAA2BCAEDAE001EF14F /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
-			productName = SwiftEvolution;
-		};
 		B9908E212B7B1418009D1309 /* SwiftDependencyContainer */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SwiftDependencyContainer;
@@ -2080,11 +2052,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B9908E202B7B1418009D1309 /* XCLocalSwiftPackageReference "../../../../Projects/DSC/SwiftDependencyContainer" */;
 			productName = "plugin:SwiftDependencyContainerPlugin";
-		};
-		B993F8E42BE7F9FB0055161C /* SwiftEvolution */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B98D9CAA2BCAEDAE001EF14F /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
-			productName = SwiftEvolution;
 		};
 		B9D9C7752B7FB39100B15BA8 /* SwiftDependencyContainer */ = {
 			isa = XCSwiftPackageProductDependency;
