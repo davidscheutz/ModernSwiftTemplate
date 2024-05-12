@@ -23,6 +23,7 @@
 		B900AB5E2BEFC57600F0A241 /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB5D2BEFC57600F0A241 /* SwiftEvolution */; };
 		B900AB602BEFC58800F0A241 /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB5F2BEFC58800F0A241 /* SwiftEvolution */; };
 		B900AB632BEFCFCC00F0A241 /* InfiniteNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB622BEFCFCC00F0A241 /* InfiniteNavigation */; };
+		B900AB652BF1249C00F0A241 /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB642BF1249C00F0A241 /* SwiftEvolution */; };
 		B90509982B6708EC00D3DE33 /* TemplateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90509972B6708EC00D3DE33 /* TemplateApp.swift */; };
 		B905099C2B6708EE00D3DE33 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B905099B2B6708EE00D3DE33 /* AppIcon.xcassets */; };
 		B90509AA2B6708EE00D3DE33 /* TemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90509A92B6708EE00D3DE33 /* TemplateTests.swift */; };
@@ -301,6 +302,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B900AB652BF1249C00F0A241 /* SwiftEvolution in Frameworks */,
 				B90ED49E2BB47C3F00AD2102 /* Onboarding.framework in Frameworks */,
 				B900AB4B2BEFA49300F0A241 /* SwiftUDF in Frameworks */,
 				B900AB402BEE5BDA00F0A241 /* SwiftDependencyContainer in Frameworks */,
@@ -779,6 +781,7 @@
 			packageProductDependencies = (
 				B900AB3F2BEE5BDA00F0A241 /* SwiftDependencyContainer */,
 				B900AB4A2BEFA49300F0A241 /* SwiftUDF */,
+				B900AB642BF1249C00F0A241 /* SwiftEvolution */,
 			);
 			productName = OnboardingTests;
 			productReference = B90ED49A2BB47C3F00AD2102 /* OnboardingTests.xctest */;
@@ -2002,6 +2005,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B900AB612BEFCFBF00F0A241 /* XCRemoteSwiftPackageReference "swiftui-infinite-navigation" */;
 			productName = InfiniteNavigation;
+		};
+		B900AB642BF1249C00F0A241 /* SwiftEvolution */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B900AB582BEFC53600F0A241 /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
+			productName = SwiftEvolution;
 		};
 		B93AF5132BABE72B00204C06 /* SwiftCopyCodeGeneratorPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
