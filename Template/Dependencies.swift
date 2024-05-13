@@ -2,6 +2,7 @@ import Foundation
 import Security
 import SwiftDependencyContainer
 import Core
+import KeychainSwift
 #if DEBUG
 import Onboarding
 import Todos
@@ -12,8 +13,7 @@ struct Dependencies: AutoSetup {
     
     func override(_ container: DependencyContainer) throws {
         try container.register(LocalStorage.self) { UserDefaults(suiteName: "Template_LocalStorage") }
-        // TODO: replace with Keychain once implemented
-        try container.register(SecureStorage.self) { UserDefaults(suiteName: "Template_SecureStorage") }
+        try container.register(SecureStorage.self) { KeychainSwift(keyPrefix: "Template_SecureStorage") }
         
         try container.register { ApiConfig(baseUrl: "https://example.server.com/api", authStore: resolve()) }
         

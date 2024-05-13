@@ -24,6 +24,8 @@
 		B900AB602BEFC58800F0A241 /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB5F2BEFC58800F0A241 /* SwiftEvolution */; };
 		B900AB632BEFCFCC00F0A241 /* InfiniteNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB622BEFCFCC00F0A241 /* InfiniteNavigation */; };
 		B900AB652BF1249C00F0A241 /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB642BF1249C00F0A241 /* SwiftEvolution */; };
+		B900AB682BF1B0FC00F0A241 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB672BF1B0FC00F0A241 /* KeychainSwift */; };
+		B900AB6A2BF1B13C00F0A241 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB692BF1B13C00F0A241 /* KeychainSwift */; };
 		B90509982B6708EC00D3DE33 /* TemplateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90509972B6708EC00D3DE33 /* TemplateApp.swift */; };
 		B905099C2B6708EE00D3DE33 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B905099B2B6708EE00D3DE33 /* AppIcon.xcassets */; };
 		B90509AA2B6708EE00D3DE33 /* TemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90509A92B6708EE00D3DE33 /* TemplateTests.swift */; };
@@ -284,6 +286,7 @@
 				B900AB602BEFC58800F0A241 /* SwiftEvolution in Frameworks */,
 				B9D9C7762B7FB39100B15BA8 /* SwiftDependencyContainer in Frameworks */,
 				B9858C082BAF362F00DE5BF7 /* Todos.framework in Frameworks */,
+				B900AB6A2BF1B13C00F0A241 /* KeychainSwift in Frameworks */,
 				B9908E222B7B1418009D1309 /* SwiftDependencyContainer in Frameworks */,
 				B9858BE62BAE605400DE5BF7 /* Onboarding.framework in Frameworks */,
 				B927F04A2BAB9A8E001D88BB /* Core.framework in Frameworks */,
@@ -315,6 +318,7 @@
 			files = (
 				B900AB5A2BEFC54700F0A241 /* SwiftEvolution in Frameworks */,
 				B900AB462BEE5BED00F0A241 /* SwiftDependencyContainer in Frameworks */,
+				B900AB682BF1B0FC00F0A241 /* KeychainSwift in Frameworks */,
 				B900AB512BEFA4A100F0A241 /* SwiftUDF in Frameworks */,
 				B9555DAF2BED09E1002CAA3E /* SwiftCopy in Frameworks */,
 			);
@@ -737,6 +741,7 @@
 				B9908E212B7B1418009D1309 /* SwiftDependencyContainer */,
 				B9D9C7752B7FB39100B15BA8 /* SwiftDependencyContainer */,
 				B900AB5F2BEFC58800F0A241 /* SwiftEvolution */,
+				B900AB692BF1B13C00F0A241 /* KeychainSwift */,
 			);
 			productName = Template;
 			productReference = B90509942B6708EC00D3DE33 /* Template.app */;
@@ -809,6 +814,7 @@
 				B900AB452BEE5BED00F0A241 /* SwiftDependencyContainer */,
 				B900AB502BEFA4A100F0A241 /* SwiftUDF */,
 				B900AB592BEFC54700F0A241 /* SwiftEvolution */,
+				B900AB672BF1B0FC00F0A241 /* KeychainSwift */,
 			);
 			productName = Core;
 			productReference = B927F0442BAB9A8E001D88BB /* Core.framework */;
@@ -943,6 +949,7 @@
 				B900AB472BEFA47300F0A241 /* XCRemoteSwiftPackageReference "SwiftUDF" */,
 				B900AB582BEFC53600F0A241 /* XCRemoteSwiftPackageReference "SwiftEvolution" */,
 				B900AB612BEFCFBF00F0A241 /* XCRemoteSwiftPackageReference "swiftui-infinite-navigation" */,
+				B900AB662BF1B0F500F0A241 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = B90509952B6708EC00D3DE33 /* Products */;
 			projectDirPath = "";
@@ -1900,6 +1907,14 @@
 				minimumVersion = 1.1.0;
 			};
 		};
+		B900AB662BF1B0F500F0A241 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 24.0.0;
+			};
+		};
 		B9555DA92BED09B9002CAA3E /* XCRemoteSwiftPackageReference "SwiftCopy" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/davidscheutz/SwiftCopy.git";
@@ -2010,6 +2025,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B900AB582BEFC53600F0A241 /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
 			productName = SwiftEvolution;
+		};
+		B900AB672BF1B0FC00F0A241 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B900AB662BF1B0F500F0A241 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		B900AB692BF1B13C00F0A241 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B900AB662BF1B0F500F0A241 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
 		};
 		B93AF5132BABE72B00204C06 /* SwiftCopyCodeGeneratorPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
