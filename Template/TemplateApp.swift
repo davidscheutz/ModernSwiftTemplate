@@ -7,9 +7,8 @@ import Todos
 struct TemplateApp: App {
 
     init() {
-        Appearance.setup()
-        
         Dependencies.setup()
+        Appearance.setup()
     }
     
     @StateObject private var coordinator = Dependencies.rootCoordinator

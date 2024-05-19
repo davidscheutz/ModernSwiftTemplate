@@ -26,6 +26,10 @@
 		B900AB652BF1249C00F0A241 /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB642BF1249C00F0A241 /* SwiftEvolution */; };
 		B900AB682BF1B0FC00F0A241 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB672BF1B0FC00F0A241 /* KeychainSwift */; };
 		B900AB6A2BF1B13C00F0A241 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB692BF1B13C00F0A241 /* KeychainSwift */; };
+		B900AB6C2BF3915B00F0A241 /* Collection+ReplaceWhere.swift in Sources */ = {isa = PBXBuildFile; fileRef = B900AB6B2BF3915B00F0A241 /* Collection+ReplaceWhere.swift */; };
+		B900AB6F2BF3927400F0A241 /* TodosServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B900AB6D2BF391DE00F0A241 /* TodosServiceTests.swift */; };
+		B900AB712BF39BF700F0A241 /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB702BF39BF700F0A241 /* SwiftEvolution */; };
+		B900AB742BFA422600F0A241 /* TodosApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B900AB722BFA41FA00F0A241 /* TodosApiMock.swift */; };
 		B90509982B6708EC00D3DE33 /* TemplateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90509972B6708EC00D3DE33 /* TemplateApp.swift */; };
 		B905099C2B6708EE00D3DE33 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B905099B2B6708EE00D3DE33 /* AppIcon.xcassets */; };
 		B90509AA2B6708EE00D3DE33 /* TemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90509A92B6708EE00D3DE33 /* TemplateTests.swift */; };
@@ -200,6 +204,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B900AB6B2BF3915B00F0A241 /* Collection+ReplaceWhere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+ReplaceWhere.swift"; sourceTree = "<group>"; };
+		B900AB6D2BF391DE00F0A241 /* TodosServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosServiceTests.swift; sourceTree = "<group>"; };
+		B900AB722BFA41FA00F0A241 /* TodosApiMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosApiMock.swift; sourceTree = "<group>"; };
 		B90509942B6708EC00D3DE33 /* Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90509972B6708EC00D3DE33 /* TemplateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateApp.swift; sourceTree = "<group>"; };
 		B90509992B6708EC00D3DE33 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -328,6 +335,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B900AB712BF39BF700F0A241 /* SwiftEvolution in Frameworks */,
 				B9555D882BE84A94002CAA3E /* Todos.framework in Frameworks */,
 				B900AB4F2BEFA49C00F0A241 /* SwiftUDF in Frameworks */,
 				B900AB442BEE5BE500F0A241 /* SwiftDependencyContainer in Frameworks */,
@@ -454,6 +462,7 @@
 			isa = PBXGroup;
 			children = (
 				B9154E272BC428E900A14BEF /* PreviewContent.swift */,
+				B900AB6B2BF3915B00F0A241 /* Collection+ReplaceWhere.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -471,6 +480,7 @@
 			isa = PBXGroup;
 			children = (
 				B9555D862BE84A94002CAA3E /* DetailTests.swift */,
+				B900AB6D2BF391DE00F0A241 /* TodosServiceTests.swift */,
 				B9555D902BE850E2002CAA3E /* Mocks */,
 			);
 			path = TodosTests;
@@ -480,6 +490,7 @@
 			isa = PBXGroup;
 			children = (
 				B9555D912BE850F4002CAA3E /* InMemoryStorage.swift */,
+				B900AB722BFA41FA00F0A241 /* TodosApiMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -838,6 +849,7 @@
 			packageProductDependencies = (
 				B900AB432BEE5BE500F0A241 /* SwiftDependencyContainer */,
 				B900AB4E2BEFA49C00F0A241 /* SwiftUDF */,
+				B900AB702BF39BF700F0A241 /* SwiftEvolution */,
 			);
 			productName = TodosTests;
 			productReference = B9555D842BE84A94002CAA3E /* TodosTests.xctest */;
@@ -1093,6 +1105,8 @@
 			files = (
 				B9555D872BE84A94002CAA3E /* DetailTests.swift in Sources */,
 				B9555D932BE85139002CAA3E /* InMemoryStorage.swift in Sources */,
+				B900AB742BFA422600F0A241 /* TodosApiMock.swift in Sources */,
+				B900AB6F2BF3927400F0A241 /* TodosServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1124,6 +1138,7 @@
 				B9858C1C2BAF36D200DE5BF7 /* ListView.swift in Sources */,
 				B9EBFCD62BB5D1E2005E3A2E /* Api.swift in Sources */,
 				B98D9CC12BD001D6001EF14F /* ApiMock.swift in Sources */,
+				B900AB6C2BF3915B00F0A241 /* Collection+ReplaceWhere.swift in Sources */,
 				B9858C292BAF377200DE5BF7 /* DetailView.swift in Sources */,
 				B9EBFCD42BB5D1CC005E3A2E /* Todo.swift in Sources */,
 				B9858C2A2BAF377200DE5BF7 /* DetailModel.swift in Sources */,
@@ -2035,6 +2050,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B900AB662BF1B0F500F0A241 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
+		};
+		B900AB702BF39BF700F0A241 /* SwiftEvolution */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B900AB582BEFC53600F0A241 /* XCRemoteSwiftPackageReference "SwiftEvolution" */;
+			productName = SwiftEvolution;
 		};
 		B93AF5132BABE72B00204C06 /* SwiftCopyCodeGeneratorPlugin */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -31,14 +31,20 @@ final class TodosService {
         return todo
     }
     
-    func updateTodo(with id: String, title: String, description: String) async throws {
-        _ = try await api.update(with: id, title: title, description: description)
+    func updateTodo(with id: String, title: String, description: String?) async throws {
+        let updated = try await api.update(with: id, title: title, description: description)
+        
+        // update immediately
+        source.value.replace(using: updated) { $0.id == updated.id }
         
         load()
     }
     
     func deleteTodo(with id: String) async throws {
         try await api.delete(with: id)
+        
+        // delete immediately
+        source.value.removeAll(where: { $0.id == id })
         
         load()
     }
