@@ -26,7 +26,6 @@
 		B900AB652BF1249C00F0A241 /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB642BF1249C00F0A241 /* SwiftEvolution */; };
 		B900AB682BF1B0FC00F0A241 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB672BF1B0FC00F0A241 /* KeychainSwift */; };
 		B900AB6A2BF1B13C00F0A241 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB692BF1B13C00F0A241 /* KeychainSwift */; };
-		B900AB6C2BF3915B00F0A241 /* Collection+ReplaceWhere.swift in Sources */ = {isa = PBXBuildFile; fileRef = B900AB6B2BF3915B00F0A241 /* Collection+ReplaceWhere.swift */; };
 		B900AB6F2BF3927400F0A241 /* TodosServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B900AB6D2BF391DE00F0A241 /* TodosServiceTests.swift */; };
 		B900AB712BF39BF700F0A241 /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB702BF39BF700F0A241 /* SwiftEvolution */; };
 		B900AB742BFA422600F0A241 /* TodosApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B900AB722BFA41FA00F0A241 /* TodosApiMock.swift */; };
@@ -204,7 +203,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B900AB6B2BF3915B00F0A241 /* Collection+ReplaceWhere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+ReplaceWhere.swift"; sourceTree = "<group>"; };
 		B900AB6D2BF391DE00F0A241 /* TodosServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosServiceTests.swift; sourceTree = "<group>"; };
 		B900AB722BFA41FA00F0A241 /* TodosApiMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosApiMock.swift; sourceTree = "<group>"; };
 		B90509942B6708EC00D3DE33 /* Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -458,15 +456,6 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
-		B9154E262BC428D400A14BEF /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				B9154E272BC428E900A14BEF /* PreviewContent.swift */,
-				B900AB6B2BF3915B00F0A241 /* Collection+ReplaceWhere.swift */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
 		B927F0452BAB9A8E001D88BB /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -548,7 +537,6 @@
 				B9B6459E2B8EDB5400FBE7CF /* Create */,
 				B9EBFCDB2BB5D297005E3A2E /* Data */,
 				B98D9CB92BCD5DB2001EF14F /* Designables */,
-				B9154E262BC428D400A14BEF /* Helper */,
 			);
 			path = Todos;
 			sourceTree = "<group>";
@@ -557,6 +545,7 @@
 			isa = PBXGroup;
 			children = (
 				B9154E292BC42C1D00A14BEF /* TodoInputView.swift */,
+				B9154E272BC428E900A14BEF /* PreviewContent.swift */,
 			);
 			path = Designables;
 			sourceTree = "<group>";
@@ -1138,7 +1127,6 @@
 				B9858C1C2BAF36D200DE5BF7 /* ListView.swift in Sources */,
 				B9EBFCD62BB5D1E2005E3A2E /* Api.swift in Sources */,
 				B98D9CC12BD001D6001EF14F /* ApiMock.swift in Sources */,
-				B900AB6C2BF3915B00F0A241 /* Collection+ReplaceWhere.swift in Sources */,
 				B9858C292BAF377200DE5BF7 /* DetailView.swift in Sources */,
 				B9EBFCD42BB5D1CC005E3A2E /* Todo.swift in Sources */,
 				B9858C2A2BAF377200DE5BF7 /* DetailModel.swift in Sources */,

@@ -38,43 +38,6 @@ final class TodosServiceTests: XCTestCase {
 
 // MARK: Helper
 
-import Combine
-
-extension Publisher {
-    
-    func collectFirst(timeout: TimeInterval = 1, where condition: @escaping (Output) -> Bool) async throws -> Output {
-        var subscription: AnyCancellable?
-
-        let result: Output = try await withCheckedThrowingContinuation { continuation in
-            subscription = self
-                .timeout(.seconds(timeout), scheduler: RunLoop.main)
-                .sink(
-                    receiveCompletion: { completion in
-                        guard subscription != nil else { return }
-                        
-                        if case .failure(let error) = completion {
-                            continuation.resume(throwing: error)
-                        } else {
-                            continuation.resume(throwing: NSError(domain: "Subscription cancelled", code: 0))
-                        }
-                    },
-                    receiveValue: { value in
-                        guard subscription != nil else { return }
-                        
-                        if condition(value) {
-                            continuation.resume(returning: value)
-                        }
-                    }
-                )
-        }
-        
-        subscription?.cancel()
-        subscription = nil
-        
-        return result
-    }
-}
-
 extension Todo: Equatable {
     public static func == (lhs: Todo, rhs: Todo) -> Bool {
         lhs.id == rhs.id
