@@ -50,7 +50,7 @@ struct LoginView: View, BindableView {
 }
 
 #Preview("Input Error") {
-    LoginView.preview(.initial.update(error: "Empty input", for: .username))
+    LoginView.preview(.initial.update(error: "Empty input", for: .username).update("secret", for: .password))
 }
 
 #Preview("Error") {

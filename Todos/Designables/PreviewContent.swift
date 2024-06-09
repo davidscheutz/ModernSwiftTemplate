@@ -1,8 +1,8 @@
 #if DEBUG
 extension Todo {
-    static let preview1 = Todo(id: "1", createdAt: .now, completed: false, title: "Master", description: "Native Mobile Development\n- iOS\n- Android", updatedAt: nil)
+    static let preview1 = Todo(id: "1", createdAt: .now, completed: false, title: "Master SwiftUI Animations", description: "Native Mobile Development\n- iOS\n- Android", updatedAt: nil)
     static let preview2 = Todo(id: "2", createdAt: .now, completed: false, title: "Relax", description: nil, updatedAt: nil)
-    static let preview3 = Todo(id: "3", createdAt: .now, completed: false, title: "Enjoy", description: "Life", updatedAt: nil)
+    static let preview3 = Todo(id: "3", createdAt: .now, completed: false, title: "Add readme", description: "Life", updatedAt: nil)
 }
 
 import Core

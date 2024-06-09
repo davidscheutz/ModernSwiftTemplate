@@ -2,7 +2,7 @@ import Core
 import Combine
 import SwiftEvolution
 
-/// @Singleton(types: [AuthenticationManager])
+/// @Singleton(AuthenticationManager)
 public final class AuthenticationManagerImpl: AuthenticationManager {
     private let api: OnboardingApi
     private let storage: LocalStorage
