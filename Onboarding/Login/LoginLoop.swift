@@ -33,7 +33,7 @@ final class LoginLoop: GeneratedBaseLoginLoop {
             return
         }
         
-        update { $0.copy(inputs: updatedInputs, isLoading: true) }
+        update(inputs: updatedInputs, isLoading: true)
         
         Task {
             do {

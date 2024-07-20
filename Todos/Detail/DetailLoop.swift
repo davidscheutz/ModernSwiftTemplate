@@ -30,7 +30,6 @@ final class DetailLoop: GeneratedBaseDetailLoop {
             } catch let error {
                 updateTodo(.error(message: error.localizedDescription))
             }
-            
         }
     }
     
@@ -60,9 +59,7 @@ final class DetailLoop: GeneratedBaseDetailLoop {
                 updateIsUpdating(false)
                 close()
             } catch {
-                update {
-                    $0.copy(isUpdating: false, error: .use(error.localizedDescription))
-                }
+                update(isUpdating: false, error: .use(error.localizedDescription))
             }
         }
     }
@@ -78,9 +75,7 @@ final class DetailLoop: GeneratedBaseDetailLoop {
                 updateIsDeleting(false)
                 close()
             } catch {
-                update {
-                    $0.copy(isDeleting: false, error: .use(error.localizedDescription))
-                }
+                update(isDeleting: false, error: .use(error.localizedDescription))
             }
         }
     }

@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftUDF
 import Core
 
-struct ListView: View, BindableView {
+struct ListView: BindableView {
     
     let state: State
     let handler: (Event) -> Void

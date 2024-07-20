@@ -40,9 +40,7 @@ final class CreateLoop: GeneratedBaseCreateLoop {
                 _ = try await service.createTodo(title: title.value, description: description.value)
                 navigation.closeSheet()
             } catch let error {
-                update {
-                    $0.copy(isLoading: false, error: .use(error.localizedDescription))
-                }
+                update(isLoading: false, error: .use(error.localizedDescription))
             }
         }
     }

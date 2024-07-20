@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftUDF
 import Core
 
-struct CreateView: View, BindableView {
+struct CreateView: BindableView {
     
     let state: State
     let handler: (Event) -> Void

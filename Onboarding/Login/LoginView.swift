@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftUDF
 import Core
 
-struct LoginView: View, BindableView {
+struct LoginView: BindableView {
     
     let state: State
     let handler: (Event) -> Void

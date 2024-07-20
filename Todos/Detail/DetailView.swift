@@ -3,7 +3,7 @@ import SwiftUDF
 import SwiftEvolution
 import Core
 
-struct DetailView: View, BindableView {
+struct DetailView: BindableView {
     
     let state: State
     let handler: (Event) -> Void
