@@ -1,4 +1,5 @@
 import SwiftEvolution
+import SwiftDependencyContainer
 
 public protocol AuthenticationManager {
     var isLoggedIn: CurrentValuePublisher<Bool> { get }
@@ -10,7 +11,7 @@ public protocol AuthenticationStore: AnyObject {
     var acccessToken: String? { get set }
 }
 
-/// @Singleton(AuthenticationStore)
+@Singleton(AuthenticationStore.self)
 public final class AuthenticationStoreImpl: AuthenticationStore {
     private let storage: SecureStorage
     private let accessTokenKey = "API_ACCESS_TOKEN"

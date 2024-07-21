@@ -1,5 +1,6 @@
 import Foundation
 import Core
+import SwiftDependencyContainer
 
 /// Used to coordinate the transition between independent features.
 /// In this example the 'Onboarding' and 'Todos' framework both
@@ -8,7 +9,7 @@ import Core
 /// would be the usage of completions, where one feature's work is
 /// completed and another feature takes over.
 
-/// @Singleton
+@Singleton
 final class RootCoordinator: ObservableObject {
     
     enum State {

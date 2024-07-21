@@ -3,7 +3,7 @@ import Combine
 import InfiniteNavigation
 import SwiftDependencyContainer
 
-/// @Singleton
+@Singleton
 final class Navigation {
     enum Destination: Hashable {
         case create

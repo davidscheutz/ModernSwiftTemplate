@@ -1,8 +1,9 @@
 import Foundation
 import SwiftUDF
 import SwiftEvolution
+import SwiftDependencyContainer
 
-/// @Singleton
+@Singleton
 final class TodosService {
     let todos: CurrentValuePublisher<[Todo]>
     
