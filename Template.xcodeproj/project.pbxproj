@@ -29,6 +29,8 @@
 		B900AB6F2BF3927400F0A241 /* TodosServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B900AB6D2BF391DE00F0A241 /* TodosServiceTests.swift */; };
 		B900AB712BF39BF700F0A241 /* SwiftEvolution in Frameworks */ = {isa = PBXBuildFile; productRef = B900AB702BF39BF700F0A241 /* SwiftEvolution */; };
 		B900AB742BFA422600F0A241 /* TodosApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B900AB722BFA41FA00F0A241 /* TodosApiMock.swift */; };
+		B900AB812C08DD9D00F0A241 /* Project Structure.png in Resources */ = {isa = PBXBuildFile; fileRef = B900AB7D2C08DD9D00F0A241 /* Project Structure.png */; };
+		B900AB832C08E3D800F0A241 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B900AB822C08E3D800F0A241 /* README.md */; };
 		B90509982B6708EC00D3DE33 /* TemplateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90509972B6708EC00D3DE33 /* TemplateApp.swift */; };
 		B905099C2B6708EE00D3DE33 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B905099B2B6708EE00D3DE33 /* AppIcon.xcassets */; };
 		B90509AA2B6708EE00D3DE33 /* TemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90509A92B6708EE00D3DE33 /* TemplateTests.swift */; };
@@ -205,6 +207,8 @@
 /* Begin PBXFileReference section */
 		B900AB6D2BF391DE00F0A241 /* TodosServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosServiceTests.swift; sourceTree = "<group>"; };
 		B900AB722BFA41FA00F0A241 /* TodosApiMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosApiMock.swift; sourceTree = "<group>"; };
+		B900AB7D2C08DD9D00F0A241 /* Project Structure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Project Structure.png"; sourceTree = "<group>"; };
+		B900AB822C08E3D800F0A241 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B90509942B6708EC00D3DE33 /* Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90509972B6708EC00D3DE33 /* TemplateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateApp.swift; sourceTree = "<group>"; };
 		B90509992B6708EC00D3DE33 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -371,6 +375,8 @@
 		B905098B2B6708EC00D3DE33 = {
 			isa = PBXGroup;
 			children = (
+				B900AB822C08E3D800F0A241 /* README.md */,
+				B900AB7D2C08DD9D00F0A241 /* Project Structure.png */,
 				B90509962B6708EC00D3DE33 /* Template */,
 				B9EBFCDD2BBED9AB005E3A2E /* Tests */,
 				B9858BE12BAE605400DE5BF7 /* Onboarding */,
@@ -972,6 +978,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B900AB812C08DD9D00F0A241 /* Project Structure.png in Resources */,
+				B900AB832C08E3D800F0A241 /* README.md in Resources */,
 				B905099C2B6708EE00D3DE33 /* AppIcon.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1882,8 +1890,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/davidscheutz/SwiftDependencyContainer.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.4.0;
+				branch = "feature/swift-macros-support";
+				kind = branch;
 			};
 		};
 		B900AB472BEFA47300F0A241 /* XCRemoteSwiftPackageReference "SwiftUDF" */ = {
