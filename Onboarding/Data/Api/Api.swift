@@ -8,9 +8,6 @@ protocol OnboardingApi {
 }
 
 @Singleton(OnboardingApi.self)
-extension OnboardingApiImpl {}
-
-
 final class OnboardingApiImpl: OnboardingApi {
     
     enum ApiError: Error {
