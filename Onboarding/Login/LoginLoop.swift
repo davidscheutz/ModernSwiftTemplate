@@ -1,9 +1,10 @@
 import Foundation
 import SwiftEvolution
 import Core
+import SwiftDependencyContainer
 
-/// @Factory
 /// @Loop(LoginState, LoginEvent)
+@Factory
 final class LoginLoop: GeneratedBaseLoginLoop {
     
     private let authenticationManager: AuthenticationManager
