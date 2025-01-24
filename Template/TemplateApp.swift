@@ -17,14 +17,14 @@ struct TemplateApp: App {
         WindowGroup {
             ZStack {
                 Dependencies.apply {
-                    switch coordinator.state {
+                    switch coordinator.appState {
                     case .loggedIn: Todos.start($0)
                     case .loggedOut: Onboarding.start($0)
                     }
                 }
                 .transition(.opacity)
             }
-            .animation(.easeInOut, value: coordinator.state)
+            .animation(.easeInOut, value: coordinator.appState)
         }
     }
 }
