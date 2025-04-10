@@ -2,6 +2,8 @@ import XCTest
 import SwiftUDF
 @testable import Onboarding
 
+extension AuthenticationManagerMock: LoginAuthProvider {}
+
 final class OnboardingTests: XCTestCase {
 
     var sut: LoginLoop!
@@ -9,7 +11,7 @@ final class OnboardingTests: XCTestCase {
     
     override func setUpWithError() throws {
         auth = AuthenticationManagerMock()
-        sut = LoginLoop(authenticationManager: auth)
+        sut = LoginLoop(loginProvider: auth)
         sut.start()
     }
 
