@@ -78,7 +78,7 @@
 		B9858C092BAF362F00DE5BF7 /* Todos.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9858C022BAF362F00DE5BF7 /* Todos.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9858C1C2BAF36D200DE5BF7 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90509992B6708EC00D3DE33 /* ListView.swift */; };
 		B9858C1D2BAF36D200DE5BF7 /* ListLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90509D92B671A8900D3DE33 /* ListLoop.swift */; };
-		B9858C1E2BAF36D200DE5BF7 /* ListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90509DB2B671B4600D3DE33 /* ListModels.swift */; };
+		B9858C1E2BAF36D200DE5BF7 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90509DB2B671B4600D3DE33 /* ListModel.swift */; };
 		B9858C1F2BAF372A00DE5BF7 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B927F0442BAB9A8E001D88BB /* Core.framework */; };
 		B9858C242BAF373300DE5BF7 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B927F0442BAB9A8E001D88BB /* Core.framework */; };
 		B9858C292BAF377200DE5BF7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D9C7842B838F3A00B15BA8 /* DetailView.swift */; };
@@ -217,7 +217,7 @@
 		B90509A52B6708EE00D3DE33 /* TemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90509A92B6708EE00D3DE33 /* TemplateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateTests.swift; sourceTree = "<group>"; };
 		B90509D92B671A8900D3DE33 /* ListLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLoop.swift; sourceTree = "<group>"; };
-		B90509DB2B671B4600D3DE33 /* ListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModels.swift; sourceTree = "<group>"; };
+		B90509DB2B671B4600D3DE33 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		B908F7062B918560006FD099 /* TodosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosService.swift; sourceTree = "<group>"; };
 		B90ED49A2BB47C3F00AD2102 /* OnboardingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B90ED49C2BB47C3F00AD2102 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
@@ -621,7 +621,7 @@
 			isa = PBXGroup;
 			children = (
 				B90509992B6708EC00D3DE33 /* ListView.swift */,
-				B90509DB2B671B4600D3DE33 /* ListModels.swift */,
+				B90509DB2B671B4600D3DE33 /* ListModel.swift */,
 				B90509D92B671A8900D3DE33 /* ListLoop.swift */,
 			);
 			path = List;
@@ -1140,7 +1140,7 @@
 				B9858C2A2BAF377200DE5BF7 /* DetailModel.swift in Sources */,
 				B9858C2B2BAF377200DE5BF7 /* DetailLoop.swift in Sources */,
 				B9858C1D2BAF36D200DE5BF7 /* ListLoop.swift in Sources */,
-				B9858C1E2BAF36D200DE5BF7 /* ListModels.swift in Sources */,
+				B9858C1E2BAF36D200DE5BF7 /* ListModel.swift in Sources */,
 				B9154E282BC428E900A14BEF /* PreviewContent.swift in Sources */,
 				B9EBFCDA2BB5D28D005E3A2E /* Todos.swift in Sources */,
 			);
@@ -1890,7 +1890,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/davidscheutz/SwiftDependencyContainer.git";
 			requirement = {
-				branch = "feature/type-aliases";
+				branch = master;
 				kind = branch;
 			};
 		};
