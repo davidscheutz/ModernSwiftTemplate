@@ -1,8 +1,9 @@
 import Foundation
 import Core
+import SwiftDependencyContainer
 
-/// @Factory
 /// @Loop(CreateState, CreateEvent)
+@Factory
 final class CreateLoop: GeneratedBaseCreateLoop {
     private let service: TodosService
     private let navigation: Navigation

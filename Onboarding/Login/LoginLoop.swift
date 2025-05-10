@@ -1,15 +1,22 @@
 import Foundation
 import SwiftEvolution
 import Core
+import SwiftDependencyContainer
 
-/// @Factory
+@Alias(for: AuthenticationManager.self)
+protocol LoginAuthProvider {
+    func login(username: String, password: String) async throws
+}
+extension AuthenticationManagerImpl: LoginAuthProvider {}
+
 /// @Loop(LoginState, LoginEvent)
+@Factory
 final class LoginLoop: GeneratedBaseLoginLoop {
     
-    private let authenticationManager: AuthenticationManager
+    private let loginProvider: LoginAuthProvider
     
-    init(authenticationManager: AuthenticationManager) {
-        self.authenticationManager = authenticationManager
+    init(loginProvider: LoginAuthProvider) {
+        self.loginProvider = loginProvider
         super.init(initial: .initial)
     }
     
@@ -37,7 +44,7 @@ final class LoginLoop: GeneratedBaseLoginLoop {
         
         Task {
             do {
-                try await authenticationManager.login(username: username, password: password)
+                try await loginProvider.login(username: username, password: password)
             } catch let error {
                 updateError(error.localizedDescription)
             }

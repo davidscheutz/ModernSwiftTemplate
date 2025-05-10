@@ -1,12 +1,13 @@
 import Foundation
 import Core
+import SwiftDependencyContainer
 
 protocol OnboardingApi {
     func login(username: String, password: String) async throws -> Bool
     func logout() async throws
 }
 
-/// @Singleton(OnboardingApi)
+@Singleton(OnboardingApi.self)
 final class OnboardingApiImpl: OnboardingApi {
     
     enum ApiError: Error {

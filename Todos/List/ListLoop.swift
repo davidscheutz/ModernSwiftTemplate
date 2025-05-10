@@ -1,8 +1,9 @@
 import Combine
 import Core
+import SwiftDependencyContainer
 
-/// @Factory
 /// @Loop(ListState, ListEvent)
+@Factory
 final class ListLoop: GeneratedBaseListLoop {
     private let todosService: TodosService
     private let authManager: AuthenticationManager

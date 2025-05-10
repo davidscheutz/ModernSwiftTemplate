@@ -15,29 +15,16 @@ struct TemplateApp: App {
     
     var body: some Scene {
         WindowGroup {
-            /// Depending on your app's view hierarchy, this will vary.
-            /// An example of a slighlty more complex structure could be:
-            
-            /// UNAUTHENTICATED
-            /// - Login
-            /// - Signup/Onboarding
-            
-            /// AUTHENTICATED
-            /// - TabBar
-            /// -- Feature A
-            /// -- Feature B
-            /// ...
-            
             ZStack {
                 Dependencies.apply {
-                    switch coordinator.state {
+                    switch coordinator.appState {
                     case .loggedIn: Todos.start($0)
                     case .loggedOut: Onboarding.start($0)
                     }
                 }
                 .transition(.opacity)
             }
-            .animation(.easeInOut, value: coordinator.state)
+            .animation(.easeInOut, value: coordinator.appState)
         }
     }
 }

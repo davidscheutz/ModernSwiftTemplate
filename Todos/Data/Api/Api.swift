@@ -1,5 +1,6 @@
 import Foundation
 import Core
+import SwiftDependencyContainer
 
 protocol TodoApi {
     func todos() async throws -> [Todo]
@@ -9,7 +10,7 @@ protocol TodoApi {
     func todo(for id: String) async throws -> Todo
 }
 
-/// @Singleton(TodoApi)
+@Singleton(TodoApi.self)
 final class TodoApiImpl: TodoApi {
     
     init(httpEngine: HttpEngine, config: ApiConfig) {

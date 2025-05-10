@@ -11,6 +11,15 @@
       }
     },
     {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-syntax.git",
+      "state" : {
+        "revision" : "64889f0c732f210a935a0ad7cda38f77f876262d",
+        "version" : "509.1.1"
+      }
+    },
+    {
       "identity" : "swiftcopy",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/davidscheutz/SwiftCopy.git",
@@ -24,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/davidscheutz/SwiftDependencyContainer.git",
       "state" : {
-        "revision" : "486c57b864172e83925c41a1587fd65fea3c03a9",
-        "version" : "0.4.0"
+        "branch" : "master",
+        "revision" : "826a2f84e17158b889e4c95bf68b2f56fd23cb75"
       }
     },
     {

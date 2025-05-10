@@ -1,9 +1,10 @@
 import Foundation
 import SwiftUDF
 import Core
+import SwiftDependencyContainer
 
-/// @Factory
 /// @Loop(DetailState, DetailEvent)
+@Factory
 final class DetailLoop: GeneratedBaseDetailLoop {
     private let id: String
     private let todosService: TodosService
