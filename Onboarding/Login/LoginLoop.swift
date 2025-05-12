@@ -1,6 +1,7 @@
 import Foundation
 import SwiftEvolution
 import Core
+import SwiftUDF
 import SwiftDependencyContainer
 
 @Alias(for: AuthenticationManager.self)
@@ -9,9 +10,9 @@ protocol LoginAuthProvider {
 }
 extension AuthenticationManagerImpl: LoginAuthProvider {}
 
-/// @Loop(LoginState, LoginEvent)
+@Loop(in: LoginEvent.self, out: LoginState.self)
 @Factory
-final class LoginLoop: GeneratedBaseLoginLoop {
+final class LoginLoop: LoginLoopBaseGenerated {
     
     private let loginProvider: LoginAuthProvider
     

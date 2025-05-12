@@ -1,10 +1,11 @@
 import Foundation
 import Core
 import SwiftDependencyContainer
+import SwiftUDF
 
-/// @Loop(CreateState, CreateEvent)
+@Loop(in: CreateEvent.self, out: CreateState.self)
 @Factory
-final class CreateLoop: GeneratedBaseCreateLoop {
+final class CreateLoop: CreateLoopBaseGenerated {
     private let service: TodosService
     private let navigation: Navigation
     

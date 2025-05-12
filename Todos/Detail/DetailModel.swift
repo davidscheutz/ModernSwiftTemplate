@@ -1,8 +1,9 @@
 import Foundation
 import SwiftCopy
 import Core
+import SwiftUDF
 
-/// @State(DetailView)
+@State(DetailView.self)
 struct DetailState: Copyable {
     let todo: LoadableData<Todo>
     let updatedTitle: SimpleTextInput
@@ -35,7 +36,7 @@ extension DetailState {
     }
 }
 
-/// @Event(DetailView)
+@Event(DetailView.self)
 enum DetailEvent {
     case close
     case update

@@ -1,10 +1,11 @@
 import Combine
 import Core
 import SwiftDependencyContainer
+import SwiftUDF
 
-/// @Loop(ListState, ListEvent)
 @Factory
-final class ListLoop: GeneratedBaseListLoop {
+@Loop(in: ListEvent.self, out: ListState.self)
+final class ListLoop: ListLoopBaseGenerated {
     private let todosService: TodosService
     private let authManager: AuthenticationManager
     private let navigation: Navigation

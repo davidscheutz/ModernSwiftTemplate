@@ -1,7 +1,8 @@
 import SwiftCopy
 import Core
+import SwiftUDF
 
-/// @State(LoginView)
+@State(LoginView.self)
 struct LoginState: Inputable, Copyable {
     let inputs: [Input]
     let isLoading: Bool
@@ -14,7 +15,7 @@ struct LoginState: Inputable, Copyable {
     }
 }
 
-/// @Event(LoginView)
+@Event(LoginView.self)
 enum LoginEvent {
     case inputChanged(field: Input.Field, value: String)
     case login
