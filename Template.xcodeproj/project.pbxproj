@@ -1943,8 +1943,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/davidscheutz/SwiftUDF.git";
 			requirement = {
-				branch = macros;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
 			};
 		};
 		B900AB582BEFC53600F0A241 /* XCRemoteSwiftPackageReference "SwiftEvolution" */ = {

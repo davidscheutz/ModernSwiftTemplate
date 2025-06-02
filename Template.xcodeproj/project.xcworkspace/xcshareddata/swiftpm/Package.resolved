@@ -51,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/davidscheutz/SwiftUDF.git",
       "state" : {
-        "branch" : "macros",
-        "revision" : "5167d94b9745eb8860fb442ef094bc21e3c22827"
+        "revision" : "7dcf1bdb85e729d5153bbab04b793d4780d860cb",
+        "version" : "0.0.4"
       }
     },
     {
