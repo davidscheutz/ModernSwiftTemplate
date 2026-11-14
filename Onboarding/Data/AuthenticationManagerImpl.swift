@@ -27,7 +27,7 @@ public final class AuthenticationManagerImpl: AuthenticationManager {
     }
     
     public func logout() async {
-        Task { try await api.logout() }
+        Task { try? await api.logout() }
         
         _isLoggedIn.value = false
     }
