@@ -49,11 +49,11 @@ final class OnboardingApiImpl: OnboardingApi {
 
 // MARK: Models
 
-struct LoginRequest: Encodable {
+nonisolated struct LoginRequest: Encodable, Sendable {
     let username: String
     let password: String
 }
 
-struct LoginResponse: Decodable {
+nonisolated struct LoginResponse: Decodable, Sendable {
     let accessToken: String
 }

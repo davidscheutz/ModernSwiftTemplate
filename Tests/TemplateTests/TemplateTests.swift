@@ -1,6 +1,7 @@
 import XCTest
 @testable import Template
 
+@MainActor
 final class TemplateTests: XCTestCase {
 
     /// The Template app target is the composition root,

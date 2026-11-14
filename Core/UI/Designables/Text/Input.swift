@@ -3,9 +3,9 @@ import SwiftCopy
 import SwiftUI
 import SwiftEvolution
 
-public struct Input: Copyable, Identifiable {
+public struct Input: Copyable, Identifiable, Sendable {
     
-    public enum Field: Equatable {
+    public enum Field: Equatable, Sendable {
         case username
         case password
         case message(lineLimit: Int)

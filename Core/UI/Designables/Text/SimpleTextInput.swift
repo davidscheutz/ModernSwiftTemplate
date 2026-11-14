@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 import SwiftCopy
 
-public struct SimpleTextInput: Copyable {
+public struct SimpleTextInput: Copyable, Sendable {
     public let value: String
     public let error: String?
     

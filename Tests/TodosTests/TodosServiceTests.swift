@@ -3,12 +3,13 @@ import Core
 import SwiftDependencyContainer
 @testable import Todos
 
+@MainActor
 final class TodosServiceTests: XCTestCase {
     
     let apiMock = TodosApiMock()
     var sut: TodosService!
     
-    override func setUpWithError() throws {
+    override func setUp() async throws {
         sut = TodosService(api: apiMock)
     }
     
@@ -25,7 +26,8 @@ final class TodosServiceTests: XCTestCase {
         
         sut.load()
         
-        let todos = try await sut.todos.collectFirst(where: { !$0.isEmpty })
+        try await waitUntil { !self.sut.todos.value.isEmpty }
+        let todos = sut.todos.value
         XCTAssertEqual(todos.first, todo)
         
         try await sut.updateTodo(
@@ -38,12 +40,25 @@ final class TodosServiceTests: XCTestCase {
 
 // MARK: Helper
 
-extension Todo: Equatable {
+extension Todo: @retroactive Equatable {
     public static func == (lhs: Todo, rhs: Todo) -> Bool {
         lhs.id == rhs.id
         && lhs.createdAt == rhs.createdAt
         && lhs.title == rhs.title
         && lhs.description == rhs.description
         && lhs.updatedAt == rhs.updatedAt
+    }
+}
+
+extension XCTestCase {
+    @MainActor
+    func waitUntil(timeout: TimeInterval = 1, _ check: @escaping () -> Bool) async throws {
+        let deadline = Date().addingTimeInterval(timeout)
+        while !check() {
+            guard Date() < deadline else {
+                throw NSError(domain: "Timeout for wait check...", code: 0)
+            }
+            try await Task.sleep(nanoseconds: 10_000_000)
+        }
     }
 }

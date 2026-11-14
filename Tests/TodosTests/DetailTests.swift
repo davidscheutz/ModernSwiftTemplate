@@ -3,12 +3,13 @@ import Core
 import SwiftDependencyContainer
 @testable import Todos
 
+@MainActor
 final class DetailTests: XCTestCase {
     
     let api = TodoApiMock()
     var container: DependencyContainer!
     
-    override func setUpWithError() throws {
+    override func setUp() async throws {
         container = DependencyContainer()
         
         // register all required dependencies
@@ -27,13 +28,13 @@ final class DetailTests: XCTestCase {
         
         XCTAssertFalse(sut.hasChanges)
         
-        try await sut.wait { $0.todo.loaded != nil }
+        try await waitUntil { sut.todo.loaded != nil }
     }
     
     func test_unknownTodoId() async throws {
         let sut = createSut(id: "unknwon")
         
-        try await sut.wait { $0.todo.isError }
+        try await waitUntil { sut.todo.isError }
         
         XCTAssertNil(sut.todo.loaded)
     }

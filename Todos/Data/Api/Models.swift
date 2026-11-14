@@ -1,6 +1,6 @@
 import Foundation
 
-struct TodoRequestBody: Codable {
+nonisolated struct TodoRequestBody: Codable, Sendable {
     let title: String
     let description: String?
     let completed: Bool

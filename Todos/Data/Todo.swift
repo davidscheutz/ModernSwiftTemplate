@@ -1,7 +1,7 @@
 import Foundation
 import SwiftCopy
 
-struct Todo: Decodable, Identifiable, Copyable {
+nonisolated struct Todo: Decodable, Identifiable, Copyable, Sendable {
     let id: String
     let createdAt: Date
     let completed: Bool

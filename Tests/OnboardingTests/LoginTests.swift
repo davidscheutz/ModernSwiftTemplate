@@ -4,12 +4,13 @@ import SwiftUDF
 
 extension AuthenticationManagerMock: LoginAuthProvider {}
 
+@MainActor
 final class OnboardingTests: XCTestCase {
 
     var sut: LoginLoop!
     var auth: AuthenticationManagerMock!
     
-    override func setUpWithError() throws {
+    override func setUp() async throws {
         auth = AuthenticationManagerMock()
         sut = LoginLoop(loginProvider: auth)
         sut.start()
@@ -52,7 +53,7 @@ final class OnboardingTests: XCTestCase {
         
         XCTAssertTrue(sut.isLoading)
         
-        try await sut.wait { !$0.isLoading }
+        try await waitUntil { !self.sut.isLoading }
         
         XCTAssertNotNil(sut.error)
     }
@@ -65,5 +66,17 @@ final class OnboardingTests: XCTestCase {
     
     private func update(password: String) {
         sut.handle(.inputChanged(field: .password, value: password))
+    }
+
+    // MARK: - Wait
+
+    private func waitUntil(timeout: TimeInterval = 1, _ check: @escaping () -> Bool) async throws {
+        let deadline = Date().addingTimeInterval(timeout)
+        while !check() {
+            guard Date() < deadline else {
+                throw NSError(domain: "Timeout for wait check...", code: 0)
+            }
+            try await Task.sleep(nanoseconds: 10_000_000)
+        }
     }
 }
