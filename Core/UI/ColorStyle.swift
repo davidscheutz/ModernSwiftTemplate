@@ -1,6 +1,6 @@
 import SwiftUI
 
-public enum ColorStyle {
+public enum ColorStyle: Sendable {
     case textPrimary
     case textSecondary
     case textInverted

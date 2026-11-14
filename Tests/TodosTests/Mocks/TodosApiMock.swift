@@ -2,6 +2,7 @@ import Foundation
 import Core
 @testable import Todos
 
+@MainActor
 class TodosApiMock: TodoApi {
     
     var todos = [[Todo]]()

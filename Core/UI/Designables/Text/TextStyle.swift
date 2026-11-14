@@ -1,6 +1,6 @@
 import SwiftUI
 
-public class TextStyle {
+public final class TextStyle: Sendable {
     fileprivate let lineHeight: CGFloat
     fileprivate let size: CGFloat
     fileprivate let systemStyle: Font.TextStyle
@@ -32,18 +32,21 @@ public class TextStyle {
     }
 }
 
+@MainActor
 extension Text {
     public func style(_ textStyle: TextStyle = .body, color: ColorStyle = .textPrimary, alignment: TextAlignment = .leading) -> some View {
         textAppearance(textStyle, colorStyle: color, alignment: alignment)
     }
 }
 
+@MainActor
 extension SecureField {
     public func style(_ textStyle: TextStyle = .body, color: ColorStyle = .textPrimary, alignment: TextAlignment = .leading) -> some View {
         textAppearance(textStyle, colorStyle: color, alignment: alignment)
     }
 }
 
+@MainActor
 extension TextField {
     public func style(_ textStyle: TextStyle = .body, color: ColorStyle = .textPrimary, alignment: TextAlignment = .leading) -> some View {
         textAppearance(textStyle, colorStyle: color, alignment: alignment)

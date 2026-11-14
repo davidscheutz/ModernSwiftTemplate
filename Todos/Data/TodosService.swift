@@ -51,6 +51,8 @@ final class TodosService {
     }
     
     func load() {
-        source.await { (try? await self.api.todos()) ?? [] }
+        Task {
+            source.send((try? await api.todos()) ?? [])
+        }
     }
 }

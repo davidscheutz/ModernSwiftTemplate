@@ -1,6 +1,7 @@
 import Foundation
 import Core
 
+@MainActor
 class InMemoryStorage: Storage {
     
     private var data: [AnyHashable: Data] = [:]

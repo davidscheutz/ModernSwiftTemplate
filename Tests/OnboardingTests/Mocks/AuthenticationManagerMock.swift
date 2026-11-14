@@ -3,6 +3,7 @@ import Combine
 import Core
 import SwiftEvolution
 
+@MainActor
 final class AuthenticationManagerMock: AuthenticationManager {
     var delay: TimeInterval = 0
     var shouldLoginPass = true

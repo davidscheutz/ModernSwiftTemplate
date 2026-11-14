@@ -1,6 +1,6 @@
 import SwiftUI
 
-protocol FontResolvable {
+protocol FontResolvable: Sendable {
     var name: String { get }
     var fileName: String { get }
     var fileExtension: String { get }
